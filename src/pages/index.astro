@@ -1,0 +1,27 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import CoverageStrip from '../components/CoverageStrip.astro';
+import Problem from '../components/Problem.astro';
+import Roles from '../components/Roles.astro';
+import Journey from '../components/Journey.astro';
+import StickyCta from '../components/StickyCta.astro';
+---
+
+<Base
+  title="Study Buddy — AI learning platform for schools and academies"
+  description="One AI platform for students, teachers, parents and management. Handwritten answer-sheet evaluation, fresh practice for CBSE, JEE and NEET."
+  ogTitle="Turn everyday learning into visible progress — Study Buddy"
+  ogDescription="AI answer-sheet evaluation, a question bank that doesn't repeat, and one dashboard for your whole institute. Start with a free demo."
+>
+  <Header />
+  <main id="main">
+    <Hero />
+    <CoverageStrip />
+    <Problem />
+    <Roles />
+    <Journey />
+  </main>
+  <StickyCta />
+</Base>

@@ -1,0 +1,94 @@
+---
+import Logo from './Logo.astro';
+import Button from './Button.astro';
+import Icon from './Icon.astro';
+import { NAV, CTA_PRIMARY, CTA_PRIMARY_HREF, CTA_WHATSAPP, WHATSAPP_HREF, SIGN_IN_HREF } from '../data/site';
+---
+
+<header id="top" class="sticky top-0 z-40 border-b border-line bg-paper">
+  <div class="container-page flex h-16 items-center justify-between gap-4 lg:h-[72px]">
+    <Logo />
+
+    <nav aria-label="Main" class="hidden lg:block">
+      <ul class="flex items-center gap-7">
+        {
+          NAV.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                class="py-2 text-[0.9375rem] text-ink-2 underline-offset-[6px] transition-colors duration-(--dur-fast) hover:text-ink hover:underline"
+              >
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <div class="flex items-center gap-2 sm:gap-5">
+      <a href={SIGN_IN_HREF} class="whitespace-nowrap px-2 py-3 text-[0.9375rem] font-semibold text-ink underline-offset-4 hover:underline">
+        Sign in
+      </a>
+      <div class="hidden lg:block">
+        <Button href={CTA_PRIMARY_HREF}>{CTA_PRIMARY}</Button>
+      </div>
+      <button
+        type="button"
+        class="grid size-12 place-items-center rounded-sm text-ink lg:hidden"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        data-menu-toggle
+      >
+        <span class="sr-only" data-menu-label>Open menu</span>
+        <span data-menu-icon="open"><Icon name="menu" size={24} /></span>
+        <span data-menu-icon="close" hidden><Icon name="x" size={24} /></span>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" hidden class="border-t border-line bg-paper lg:hidden">
+    <nav aria-label="Mobile" class="container-page py-4">
+      <ul class="divide-y divide-line">
+        {
+          NAV.map((item) => (
+            <li>
+              <a href={item.href} class="flex min-h-12 items-center text-lg text-ink" data-menu-link>
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <div class="mt-5 flex flex-col gap-3 pb-2">
+        <Button href={CTA_PRIMARY_HREF} block>{CTA_PRIMARY}</Button>
+        <Button href={WHATSAPP_HREF} variant="secondary" icon="message-circle" block>{CTA_WHATSAPP}</Button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>('[data-menu-toggle]');
+  const menu = document.getElementById('mobile-menu');
+  if (toggle && menu) {
+    const label = toggle.querySelector('[data-menu-label]')!;
+    const iconOpen = toggle.querySelector<HTMLElement>('[data-menu-icon="open"]')!;
+    const iconClose = toggle.querySelector<HTMLElement>('[data-menu-icon="close"]')!;
+    const setOpen = (open: boolean) => {
+      toggle.setAttribute('aria-expanded', String(open));
+      menu.hidden = !open;
+      iconOpen.hidden = open;
+      iconClose.hidden = !open;
+      label.textContent = open ? 'Close menu' : 'Open menu';
+    };
+    toggle.addEventListener('click', () => setOpen(toggle.getAttribute('aria-expanded') !== 'true'));
+    menu.querySelectorAll('[data-menu-link]').forEach((a) => a.addEventListener('click', () => setOpen(false)));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+        setOpen(false);
+        toggle.focus();
+      }
+    });
+  }
+</script>

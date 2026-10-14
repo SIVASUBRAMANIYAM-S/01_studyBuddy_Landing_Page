@@ -409,9 +409,11 @@ Tell us about your classes, your current assessment cycle and the results you wa
 - Icon button: WhatsApp (aria-label: "Chat on WhatsApp")
 
 ### WhatsApp pre-filled message
-Hi, I'm interested in a Study Buddy demo for my institute.
+Hi, I'd like to book a Study Buddy demo for [school name].
 
-**Link:** `https://wa.me/917397108049?text=Hi%2C%20I%27m%20interested%20in%20a%20Study%20Buddy%20demo%20for%20my%20institute.`
+The visitor replaces `[school name]` before sending, which tells sales which institute is enquiring.
+
+**Link:** `https://wa.me/917397108049?text=Hi%2C%20I'd%20like%20to%20book%20a%20Study%20Buddy%20demo%20for%20%5Bschool%20name%5D.`
 
 ---
 

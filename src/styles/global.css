@@ -1,0 +1,168 @@
+@import 'tailwindcss';
+
+/* Tokens mirror DESIGN.md §3–§6 and §9; change them there first. */
+@theme {
+  --color-*: initial;
+  --color-white: #ffffff;
+  --color-transparent: transparent;
+  --color-current: currentColor;
+
+  --color-paper: #fbf7f0;
+  --color-paper-2: #f3ece0;
+  --color-surface: #ffffff;
+
+  --color-ink: #12302a;
+  --color-ink-2: #4a5a55;
+  --color-ink-on-dark: #c9d6d1;
+
+  --color-accent: #c2541b;
+  --color-accent-hover: #a84716;
+  --color-accent-ink: #9e4314;
+  --color-accent-on-dark: #f08a4b;
+  --color-accent-tint: #fbe6d6;
+
+  --color-teal: #0e7c86;
+  --color-teal-ink: #0b6670;
+  --color-teal-tint: #e0f0ef;
+
+  --color-ochre: #d9a21b;
+
+  --color-line: #e4dccd;
+  --color-line-strong: #8c8273;
+
+  --color-error: #b42318;
+  --color-success: #1f7a4d;
+  --color-warning: #8a5a00;
+
+  --color-focus: #0b6670;
+
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'Source Sans 3', 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
+  --font-note: 'Caveat', 'Segoe Print', cursive;
+
+  --text-display: clamp(2.5rem, 1.72rem + 3.48vw, 4.5rem);
+  --text-display--line-height: 1.05;
+  --text-display--letter-spacing: -0.02em;
+  --text-h1: clamp(2rem, 1.41rem + 2.61vw, 3.5rem);
+  --text-h1--line-height: 1.1;
+  --text-h2: clamp(1.75rem, 1.46rem + 1.3vw, 2.5rem);
+  --text-h2--line-height: 1.15;
+  --text-h3: clamp(1.25rem, 1.15rem + 0.43vw, 1.5rem);
+  --text-h3--line-height: 1.25;
+  --text-lead: clamp(1.125rem, 1.08rem + 0.22vw, 1.25rem);
+  --text-lead--line-height: 1.55;
+  --text-body: clamp(1rem, 0.98rem + 0.11vw, 1.0625rem);
+  --text-body--line-height: 1.6;
+  --text-small: 0.875rem;
+  --text-small--line-height: 1.5;
+  --text-eyebrow: clamp(0.75rem, 0.73rem + 0.11vw, 0.8125rem);
+  --text-eyebrow--line-height: 1.3;
+  --text-eyebrow--letter-spacing: 0.12em;
+  --text-note: clamp(1.25rem, 1.1rem + 0.65vw, 1.625rem);
+  --text-note--line-height: 1.2;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-full: 999px;
+
+  --shadow-1: 0 1px 2px rgb(18 48 42 / 0.06), 0 1px 1px rgb(18 48 42 / 0.04);
+  --shadow-2: 0 12px 32px -12px rgb(18 48 42 / 0.18), 0 2px 6px rgb(18 48 42 / 0.06);
+
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --dur-fast: 150ms;
+  --dur-base: 250ms;
+  --dur-slow: 400ms;
+}
+
+@utility container-page {
+  width: min(100% - 2rem, 1200px);
+  margin-inline: auto;
+  @media (width >= 40rem) {
+    width: min(100% - 4rem, 1200px);
+  }
+}
+
+@utility grid-page {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: 1rem;
+  @media (width >= 40rem) {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    column-gap: 1.25rem;
+  }
+  @media (width >= 64rem) {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: 1.5rem;
+  }
+}
+
+@utility section-y {
+  padding-block: 4rem;
+  @media (width >= 64rem) {
+    padding-block: 7.5rem;
+  }
+}
+
+@utility measure {
+  max-width: 65ch;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    font-size: var(--text-body);
+    line-height: var(--text-body--line-height);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-variation-settings: 'SOFT' 50;
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+  ::selection {
+    background: var(--color-accent-tint);
+    color: var(--color-ink);
+  }
+}
+
+/* Reveal only once JS has confirmed motion is allowed (DESIGN.md §9). */
+.motion-ok [data-reveal] {
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity var(--dur-slow) var(--ease-out),
+    transform var(--dur-slow) var(--ease-out);
+  transition-delay: calc(var(--reveal-i, 0) * 60ms);
+}
+.motion-ok [data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

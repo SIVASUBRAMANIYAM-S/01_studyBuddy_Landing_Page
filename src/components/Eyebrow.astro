@@ -1,0 +1,18 @@
+---
+interface Props {
+  dark?: boolean;
+  class?: string;
+}
+const { dark = false, class: className = '' } = Astro.props;
+---
+
+<p
+  class:list={[
+    'flex items-center gap-2 text-eyebrow font-semibold uppercase',
+    dark ? 'text-accent-on-dark' : 'text-accent-ink',
+    className,
+  ]}
+>
+  <span aria-hidden="true" class="h-0.5 w-6 bg-accent"></span>
+  <slot />
+</p>

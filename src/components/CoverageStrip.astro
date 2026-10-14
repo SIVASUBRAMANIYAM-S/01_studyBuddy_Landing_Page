@@ -1,0 +1,35 @@
+---
+import Icon from './Icon.astro';
+
+const boards = ['CBSE', 'Tamil Nadu State Board'];
+const tags = ['JEE Main', 'JEE Advanced', 'NEET', 'Classes 8 to 12', 'NCERT-aligned'];
+---
+
+<section aria-labelledby="coverage-title" class="border-y border-line bg-paper-2">
+  <div class="container-page flex flex-col gap-5 py-7 lg:flex-row lg:items-center lg:gap-10 lg:py-8">
+    <h2 id="coverage-title" class="shrink-0 font-body text-small font-semibold text-ink lg:max-w-[16ch]">
+      Built around the syllabus you already teach
+    </h2>
+
+    <div class="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-6">
+      <ul class="flex flex-wrap gap-2.5" aria-label="Boards">
+        {
+          boards.map((b) => (
+            <li class="inline-flex min-h-11 items-center gap-2 rounded-sm border border-line bg-surface px-3.5 text-[0.9375rem] font-semibold text-ink shadow-1">
+              <Icon name="landmark" size={18} class="text-teal" />
+              {b}
+            </li>
+          ))
+        }
+      </ul>
+
+      <span aria-hidden="true" class="hidden h-8 w-px bg-line-strong/40 sm:block"></span>
+
+      <div class="overflow-hidden">
+        <ul class="-ml-3 flex flex-wrap gap-y-1 text-[0.9375rem] text-ink-2" aria-label="Exams and classes">
+          {tags.map((t) => <li class="-ml-px border-l border-line-strong/50 px-3 leading-6">{t}</li>)}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

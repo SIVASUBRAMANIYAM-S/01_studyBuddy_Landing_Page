@@ -1,0 +1,41 @@
+---
+import Icon from './Icon.astro';
+
+interface Props {
+  href: string;
+  variant?: 'primary' | 'secondary';
+  icon?: string;
+  arrow?: boolean;
+  block?: boolean;
+  class?: string;
+}
+
+const { href, variant = 'primary', icon, arrow = variant === 'primary', block = false, class: className = '' } = Astro.props;
+const external = /^https?:/.test(href);
+
+const base =
+  'group inline-flex min-h-12 items-center justify-center gap-2 rounded-sm px-[22px] py-3 text-base font-semibold leading-tight transition-colors duration-(--dur-fast) ease-(--ease-out) active:translate-y-px lg:min-h-11';
+const variants = {
+  primary: 'bg-accent text-white hover:bg-accent-hover',
+  secondary: 'border-[1.5px] border-ink bg-transparent text-ink hover:bg-ink hover:text-paper',
+};
+---
+
+<a
+  href={href}
+  class:list={[base, variants[variant], block && 'w-full sm:w-auto', className]}
+  {...external ? { target: '_blank', rel: 'noopener' } : {}}
+>
+  {icon && <Icon name={icon} size={20} />}
+  <slot />
+  {
+    arrow && (
+      <Icon
+        name="arrow-right"
+        size={18}
+        class="transition-transform duration-(--dur-fast) ease-(--ease-out) group-hover:translate-x-[3px]"
+      />
+    )
+  }
+  {external && <span class="sr-only">(opens in a new tab)</span>}
+</a>

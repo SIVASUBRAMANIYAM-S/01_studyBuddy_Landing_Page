@@ -1,0 +1,212 @@
+---
+import Eyebrow from './Eyebrow.astro';
+import Icon from './Icon.astro';
+
+const roles = [
+  {
+    id: 'management',
+    tab: 'Management',
+    headline: 'See the whole institute at a glance.',
+    points: [
+      'Participation, practice and mock-test trends by class, section and subject.',
+      'Spot the topics and cohorts that need support before results are affected.',
+      'Download reports for academic reviews, board meetings and parent–teacher meetings.',
+      "Manage users, classes and your institute's own branding from one admin panel.",
+    ],
+    tools: ['Institute hub', 'Reports', 'User management', 'Client branding'],
+  },
+  {
+    id: 'teachers',
+    tab: 'Teachers',
+    headline: 'Less correcting, more teaching.',
+    points: [
+      'Upload handwritten answer sheets and get them graded in seconds, with every mistake highlighted.',
+      'Assign chapter tests and school tests in a few clicks.',
+      'Track individual and group progress, find weak topics across a class and compare groups side by side.',
+      'Know which students need a follow-up conversation this week.',
+    ],
+    tools: ['Teacher portal', 'Answer-sheet upload', 'School tests', 'Question bank'],
+  },
+  {
+    id: 'parents',
+    tab: 'Parents',
+    headline: "A clear view of their child's progress.",
+    points: [
+      'See practice activity, test results, strengths and focus areas in plain language.',
+      'See how regularly their child is actually using Study Buddy.',
+      'Fewer anxious calls to your staff, and more confidence in your institute.',
+    ],
+    tools: ['Parent portal', 'Progress reports', 'Marks tracker'],
+  },
+  {
+    id: 'students',
+    tab: 'Students',
+    headline: 'Personal practice at their own pace and level.',
+    points: [
+      "Read NCERT chapters, then practise with questions that never repeat.",
+      'Ask the AI tutor any doubt, any time, and get a step-by-step answer in under 30 seconds.',
+      'Every wrong answer goes into a Mistake Notebook, with flashcards and a formula hub for revision.',
+      'Group study rooms for peer learning and solving problems together.',
+      'XP, challenges and badges they can share keep practice regular.',
+    ],
+    tools: ['NCERT chapters', 'AI tutor', 'Mistake notebook', 'Formula hub', 'Group study', 'Flashcards'],
+  },
+];
+---
+
+<section id="platform" aria-labelledby="platform-title" class="section-y bg-paper-2">
+  <div class="container-page">
+    <div class="max-w-[46rem]" data-reveal>
+      <Eyebrow>One platform</Eyebrow>
+      <h2 id="platform-title" class="mt-4 text-h2 lg:mt-5">One platform for students, teachers, parents and management.</h2>
+      <p class="measure mt-4 text-ink-2 lg:mt-5">
+        Everyone works from the same data, so nobody is guessing. Each role sees only what it needs.
+      </p>
+    </div>
+
+    <div class="roles mt-10 lg:mt-14" data-tabs>
+      <div class="tabs-scroll relative -mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0" data-tablist-wrap hidden>
+        <div role="tablist" aria-label="Roles" class="relative flex min-w-max gap-1 border-b border-line sm:gap-4">
+          {
+            roles.map((r, i) => (
+              <button
+                type="button"
+                role="tab"
+                id={`tab-${r.id}`}
+                aria-controls={`panel-${r.id}`}
+                aria-selected={i === 0 ? 'true' : 'false'}
+                tabindex={i === 0 ? 0 : -1}
+                class="min-h-12 px-3 text-base text-ink-2 transition-colors duration-(--dur-fast) hover:text-ink aria-selected:font-semibold aria-selected:text-ink sm:px-4 sm:text-[1.0625rem]"
+              >
+                {r.tab}
+              </button>
+            ))
+          }
+          <span
+            aria-hidden="true"
+            data-indicator
+            class="absolute bottom-[-1px] left-0 h-0.5 w-0 bg-accent transition-[transform,width] duration-(--dur-base) ease-(--ease-out)"
+          ></span>
+        </div>
+      </div>
+
+      {
+        roles.map((r) => (
+          <div
+            role="tabpanel"
+            id={`panel-${r.id}`}
+            aria-labelledby={`tab-${r.id}`}
+            tabindex="0"
+            class="tab-panel grid-page gap-y-8 pt-8 lg:pt-12"
+            data-panel
+          >
+            <div class="col-span-4 sm:col-span-8 lg:col-span-7">
+              <p class="text-eyebrow font-semibold uppercase text-teal-ink" data-panel-label>
+                {r.tab}
+              </p>
+              <h3 class="mt-2 text-h3 font-semibold">{r.headline}</h3>
+              <ul class="mt-5 space-y-3.5">
+                {r.points.map((p) => (
+                  <li class="flex gap-3 text-ink">
+                    <Icon name="check" size={20} class="mt-[3px] text-teal" />
+                    <span>{p}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <aside class="col-span-4 sm:col-span-8 lg:col-span-4 lg:col-start-9" aria-label={`${r.tab} tools in Study Buddy`}>
+              <div class="rounded-md border border-line bg-surface p-5 shadow-1 sm:p-6">
+                <p class="text-small font-semibold text-ink-2">Where they work in Study Buddy</p>
+                <ul class="mt-4 flex flex-wrap gap-2">
+                  {r.tools.map((t) => (
+                    <li class="rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-ink">{t}</li>
+                  ))}
+                </ul>
+              </div>
+            </aside>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .tabs-scroll {
+    scrollbar-width: none;
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 16px, #000 calc(100% - 24px), transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0, #000 16px, #000 calc(100% - 24px), transparent 100%);
+  }
+  .tabs-scroll::-webkit-scrollbar {
+    display: none;
+  }
+  @media (width >= 40rem) {
+    .tabs-scroll {
+      -webkit-mask-image: none;
+      mask-image: none;
+    }
+  }
+  .tab-panel + .tab-panel {
+    border-top: 1px solid var(--color-line);
+    margin-top: 2.5rem;
+  }
+  :global(.tabs-ready) .tab-panel + .tab-panel {
+    border-top: 0;
+    margin-top: 0;
+  }
+  :global(.tabs-ready) [data-panel-label] {
+    display: none;
+  }
+  .tab-panel:focus-visible {
+    outline-offset: 6px;
+  }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-tabs]').forEach((root) => {
+    const wrap = root.querySelector<HTMLElement>('[data-tablist-wrap]')!;
+    const tabs = Array.from(root.querySelectorAll<HTMLButtonElement>('[role="tab"]'));
+    const panels = Array.from(root.querySelectorAll<HTMLElement>('[data-panel]'));
+    const indicator = root.querySelector<HTMLElement>('[data-indicator]')!;
+
+    wrap.hidden = false;
+    root.classList.add('tabs-ready');
+
+    const moveIndicator = (tab: HTMLElement) => {
+      indicator.style.width = `${tab.offsetWidth}px`;
+      indicator.style.transform = `translateX(${tab.offsetLeft}px)`;
+    };
+
+    const select = (index: number, focus = false) => {
+      tabs.forEach((t, i) => {
+        const on = i === index;
+        t.setAttribute('aria-selected', String(on));
+        t.tabIndex = on ? 0 : -1;
+        panels[i].hidden = !on;
+      });
+      const tab = tabs[index];
+      moveIndicator(tab);
+      tab.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+      if (focus) tab.focus();
+    };
+
+    tabs.forEach((tab, i) => {
+      tab.addEventListener('click', () => select(i));
+      tab.addEventListener('keydown', (e) => {
+        const last = tabs.length - 1;
+        const next = { ArrowRight: i === last ? 0 : i + 1, ArrowLeft: i === 0 ? last : i - 1, Home: 0, End: last }[e.key];
+        if (next !== undefined) {
+          e.preventDefault();
+          select(next, true);
+        }
+      });
+    });
+
+    const initial = Math.max(0, tabs.findIndex((t) => t.getAttribute('aria-selected') === 'true'));
+    panels.forEach((p, i) => (p.hidden = i !== initial));
+    moveIndicator(tabs[initial]);
+    window.addEventListener('resize', () => moveIndicator(tabs.find((t) => t.tabIndex === 0) ?? tabs[0]));
+    document.fonts?.ready.then(() => moveIndicator(tabs.find((t) => t.tabIndex === 0) ?? tabs[0]));
+  });
+</script>
