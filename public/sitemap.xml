@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Hand-written: this site is a single static page today. If /privacy-policy
+  and /terms-of-use (currently dead links in the footer) are built, add them
+  here, or switch to @astrojs/sitemap once there's more than one route.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://studybuddy.vivodha.com/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>

@@ -7,7 +7,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "check": "astro check"
+    "check": "astro check",
+    "lighthouse": "lighthouse http://localhost:4321/ --preset=perf --form-factor=mobile --screenEmulation.mobile --screenEmulation.width=390 --screenEmulation.height=844 --screenEmulation.deviceScaleFactor=2 --throttling-method=simulate --only-categories=performance,accessibility,best-practices,seo --view"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",
@@ -16,5 +17,9 @@
     "lucide-static": "^1.56.0",
     "sharp": "^0.35.5",
     "tailwindcss": "^4.3.3"
+  },
+  "devDependencies": {
+    "chrome-launcher": "^1.2.2",
+    "lighthouse": "^13.5.0"
   }
 }
