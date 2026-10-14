@@ -15,7 +15,7 @@ const tags = ['JEE Main', 'JEE Advanced', 'NEET', 'Classes 8 to 12', 'NCERT-alig
       <ul class="flex flex-wrap gap-2.5" aria-label="Boards">
         {
           boards.map((b) => (
-            <li class="card-lift inline-flex min-h-11 items-center gap-2 rounded-sm border border-line bg-surface px-3.5 text-[0.9375rem] font-semibold text-ink shadow-1">
+            <li class="card-lift inline-flex min-h-11 items-center gap-2 rounded-sm border border-line bg-surface px-3.5 text-base font-semibold text-ink shadow-1">
               <Icon name="landmark" size={18} class="text-teal" />
               {b}
             </li>
@@ -26,7 +26,7 @@ const tags = ['JEE Main', 'JEE Advanced', 'NEET', 'Classes 8 to 12', 'NCERT-alig
       <span aria-hidden="true" class="hidden h-8 w-px bg-line-strong/40 sm:block"></span>
 
       <div class="overflow-hidden">
-        <ul class="-ml-3 flex flex-wrap gap-y-1 text-[0.9375rem] text-ink-2" aria-label="Exams and classes">
+        <ul class="-ml-3 flex flex-wrap gap-y-1 text-base text-ink-2" aria-label="Exams and classes">
           {tags.map((t) => <li class="-ml-px border-l border-line-strong/50 px-3 leading-6">{t}</li>)}
         </ul>
       </div>

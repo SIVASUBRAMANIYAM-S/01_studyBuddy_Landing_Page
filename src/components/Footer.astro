@@ -30,7 +30,7 @@ const columns = [
 ];
 
 const signIn = ['Student', 'Parent', 'Teacher', 'Management'];
-const link = 'inline-flex min-h-11 items-center text-ink-2 underline-offset-4 transition-colors hover:text-ink hover:underline';
+const link = 'inline-flex min-h-11 min-w-11 items-center text-ink-2 underline-offset-4 transition-colors hover:text-ink hover:underline';
 ---
 
 <footer class="border-t border-line bg-paper-2" data-hide-sticky>
@@ -38,7 +38,7 @@ const link = 'inline-flex min-h-11 items-center text-ink-2 underline-offset-4 tr
     <div class="col-span-4 sm:col-span-8 lg:col-span-4">
       <Logo />
       <p class="mt-5 font-display text-h3 italic text-ink">We build the path, you build the future.</p>
-      <ul class="mt-6 space-y-1 text-[0.9375rem]">
+      <ul class="mt-6 space-y-1 text-base">
         <li>
           <a href={WHATSAPP_HREF} target="_blank" rel="noopener" class:list={[link, 'gap-2']}>
             <Icon name="message-circle" size={18} class="text-teal" />
@@ -59,7 +59,7 @@ const link = 'inline-flex min-h-11 items-center text-ink-2 underline-offset-4 tr
         columns.map((c) => (
           <div>
             <h2 class="font-body text-small font-semibold text-ink">{c.title}</h2>
-            <ul class="mt-2 text-[0.9375rem]">
+            <ul class="mt-2 text-base">
               {c.links.map((l) => (
                 <li>
                   <a href={l.href} class={link}>
@@ -75,7 +75,7 @@ const link = 'inline-flex min-h-11 items-center text-ink-2 underline-offset-4 tr
 
     <div class="col-span-4 sm:col-span-8 lg:col-span-2 lg:col-start-11">
       <h2 class="font-body text-small font-semibold text-ink">Sign in</h2>
-      <ul class="mt-2 grid grid-cols-2 gap-x-6 text-[0.9375rem] lg:grid-cols-1">
+      <ul class="mt-2 grid grid-cols-2 gap-x-6 text-base lg:grid-cols-1">
         {
           signIn.map((role) => (
             <li>

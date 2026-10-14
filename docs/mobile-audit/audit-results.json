@@ -1,0 +1,3326 @@
+{
+  "360": {
+    "hScroll": 0,
+    "fold": {
+      "h1Bottom": 291,
+      "ctaBottom": 613,
+      "foldHeight": 650,
+      "h1Fits": true,
+      "ctaFits": true
+    },
+    "tapTargets": [
+      {
+        "tag": "A",
+        "cls": "sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left",
+        "text": "Skip to content",
+        "w": 1,
+        "h": 1
+      },
+      {
+        "tag": "A",
+        "cls": "font-semibold text-accent-ink underline decoration-1 underli",
+        "text": "Chat on WhatsApp (opens in a new tab)",
+        "w": 126,
+        "h": 22
+      }
+    ],
+    "smallText": [
+      {
+        "tag": "SPAN",
+        "cls": "mt-1 text-[0.75rem] text-ink-2",
+        "text": "by Vivodha",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "text-eyebrow font-semibold uppercase",
+        "text": "For principals, school ownersand academy directors",
+        "size": 12.08
+      },
+      {
+        "tag": "LI",
+        "cls": "flex items-center gap-2",
+        "text": "Trusted by 10,000+ students",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "flex items-center gap-2",
+        "text": "Live in your institute within 48 hours",
+        "size": 14
+      },
+      {
+        "tag": "P",
+        "cls": "text-[0.9375rem] font-semibold leading-tight",
+        "text": "Academic overview",
+        "size": 15
+      },
+      {
+        "tag": "P",
+        "cls": "mt-1 text-[0.75rem] text-ink-2",
+        "text": "Illustrative preview",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "inline-flex items-center gap-1.5 rounded-sm border border-line px-2 py",
+        "text": "Weekly view",
+        "size": 12
+      },
+      {
+        "tag": "P",
+        "cls": "text-[0.6875rem] leading-tight text-ink-2 sm:text-[0.75rem]",
+        "text": "Participation",
+        "size": 11
+      },
+      {
+        "tag": "P",
+        "cls": "mt-1 text-[0.8125rem] font-semibold leading-tight",
+        "text": "By class",
+        "size": 13
+      },
+      {
+        "tag": "P",
+        "cls": "text-[0.6875rem] leading-tight text-ink-2 sm:text-[0.75rem]",
+        "text": "Topic progress",
+        "size": 11
+      },
+      {
+        "tag": "P",
+        "cls": "mt-1 text-[0.8125rem] font-semibold leading-tight",
+        "text": "By subject",
+        "size": 13
+      },
+      {
+        "tag": "P",
+        "cls": "text-[0.6875rem] leading-tight text-ink-2 sm:text-[0.75rem]",
+        "text": "Mock-test trends",
+        "size": 11
+      },
+      {
+        "tag": "P",
+        "cls": "mt-1 text-[0.8125rem] font-semibold leading-tight",
+        "text": "Over time",
+        "size": 13
+      },
+      {
+        "tag": "P",
+        "cls": "text-[0.875rem] font-semibold leading-tight",
+        "text": "Signals for the next check-in",
+        "size": 14
+      },
+      {
+        "tag": "P",
+        "cls": "mt-1 text-[0.75rem] text-ink-2",
+        "text": "Example indicators, not school results",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold",
+        "text": "Practice completed",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "text-[0.6875rem] text-ink-2",
+        "text": "Weekly view",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold",
+        "text": "Topics needing support",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "text-[0.6875rem] text-ink-2",
+        "text": "By subject",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold",
+        "text": "Mock-test readiness",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "text-[0.6875rem] text-ink-2",
+        "text": "Trend over time",
+        "size": 11
+      },
+      {
+        "tag": "P",
+        "cls": "",
+        "text": "Use learning signals to plan teacher follow-up, re",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "flex items-center gap-1.5",
+        "text": "Management · Teacher · Parent · Student views",
+        "size": 11
+      },
+      {
+        "tag": "H2",
+        "cls": "shrink-0 font-body text-small font-semibold text-ink lg:max-w-[16ch]",
+        "text": "Built around the syllabus you already teach",
+        "size": 14
+      },
+      {
+        "tag": "P",
+        "cls": "flex items-center gap-2 text-eyebrow font-semibold uppercase text-acce",
+        "text": "The problem",
+        "size": 12.08
+      },
+      {
+        "tag": "P",
+        "cls": "flex items-center gap-2 text-eyebrow font-semibold uppercase text-acce",
+        "text": "One platform",
+        "size": 12.08
+      },
+      {
+        "tag": "P",
+        "cls": "text-small font-semibold text-ink-2",
+        "text": "Where they work in Study Buddy",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "Institute hub",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "Reports",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "User management",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "Client branding",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "Teacher portal",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "Answer-sheet upload",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "School tests",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "Question bank",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "Parent portal",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "Progress reports",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "Marks tracker",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "NCERT chapters",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "AI tutor",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "Mistake notebook",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "Formula hub",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "Group study",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "Flashcards",
+        "size": 14
+      },
+      {
+        "tag": "P",
+        "cls": "flex items-center gap-2 text-eyebrow font-semibold uppercase text-acce",
+        "text": "How students learn",
+        "size": 12.08
+      },
+      {
+        "tag": "SPAN",
+        "cls": "text-small font-semibold tabular-nums text-accent-ink",
+        "text": "01",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "text-small font-semibold tabular-nums text-accent-ink",
+        "text": "02",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "text-small font-semibold tabular-nums text-accent-ink",
+        "text": "03",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "text-small font-semibold tabular-nums text-accent-ink",
+        "text": "04",
+        "size": 14
+      },
+      {
+        "tag": "P",
+        "cls": "flex items-center gap-2 text-eyebrow font-semibold uppercase text-acce",
+        "text": "What makes Study Buddy different",
+        "size": 12.08
+      },
+      {
+        "tag": "SPAN",
+        "cls": "",
+        "text": "Unit test · Mathematics",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "",
+        "text": "Class 8 B",
+        "size": 11
+      },
+      {
+        "tag": "P",
+        "cls": "mt-3 pl-7 text-[0.8125rem] font-semibold text-ink",
+        "text": "Q3. Solve: 2x + 5 = 17",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "text-[0.75rem] font-semibold",
+        "text": "Graded in seconds",
+        "size": 12
+      },
+      {
+        "tag": "P",
+        "cls": "text-[0.875rem] font-semibold leading-tight text-ink",
+        "text": "Q3 · Linear equations",
+        "size": 14
+      },
+      {
+        "tag": "P",
+        "cls": "mt-0.5 text-[0.6875rem] text-ink-2",
+        "text": "Illustrative example",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "",
+        "text": "Added to",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold text-ink",
+        "text": "Class report",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "text-line-strong",
+        "text": "·",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold text-ink",
+        "text": "Student report",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold text-ink",
+        "text": "Parent report",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold uppercase tracking-[0.1em] text-teal-ink",
+        "text": "Linear equations · Medium",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "rounded-sm bg-paper-2 px-2 py-0.5 text-ink-2",
+        "text": "Fresh set 1",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "rounded-sm bg-paper-2 px-2 py-0.5 text-ink-2",
+        "text": "Fresh set 2",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "rounded-sm bg-paper-2 px-2 py-0.5 text-ink-2",
+        "text": "Fresh set 3",
+        "size": 11
+      },
+      {
+        "tag": "P",
+        "cls": "flex items-center gap-2 text-small text-ink-on-dark",
+        "text": "Mistake Notebook · illustrative entry",
+        "size": 14
+      },
+      {
+        "tag": "DT",
+        "cls": "text-[0.75rem] uppercase tracking-[0.1em] text-ink-on-dark",
+        "text": "Student's answer",
+        "size": 12
+      },
+      {
+        "tag": "DT",
+        "cls": "text-[0.75rem] uppercase tracking-[0.1em] text-ink-on-dark",
+        "text": "Correct answer",
+        "size": 12
+      },
+      {
+        "tag": "DT",
+        "cls": "text-[0.75rem] uppercase tracking-[0.1em] text-ink-on-dark",
+        "text": "Worked solution",
+        "size": 12
+      },
+      {
+        "tag": "DT",
+        "cls": "text-[0.75rem] uppercase tracking-[0.1em] text-ink-on-dark",
+        "text": "Memory tip",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "",
+        "text": "Your brand colour",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "block text-[0.75rem] font-semibold sm:text-[0.8125rem]",
+        "text": "Your School Name",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "block text-[0.625rem] text-white/75",
+        "text": "Learning portal",
+        "size": 10
+      },
+      {
+        "tag": "SPAN",
+        "cls": "truncate",
+        "text": "Dashboard",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "truncate",
+        "text": "NCERT chapters",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "truncate",
+        "text": "Practice exams",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "truncate",
+        "text": "Analytics",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "truncate",
+        "text": "Parent portal",
+        "size": 11
+      },
+      {
+        "tag": "P",
+        "cls": "mt-auto pt-6 text-[0.5625rem] tracking-[0.04em] text-white/55",
+        "text": "Powered by Vivodha",
+        "size": 9
+      },
+      {
+        "tag": "P",
+        "cls": "text-[0.6875rem] text-ink-2",
+        "text": "Class 9 A",
+        "size": 11
+      },
+      {
+        "tag": "P",
+        "cls": "text-[0.6875rem] text-ink-2",
+        "text": "Today's practice",
+        "size": 11
+      },
+      {
+        "tag": "P",
+        "cls": "mt-0.5 text-[0.75rem] font-semibold text-ink sm:text-[0.8125rem]",
+        "text": "Science · Chapter 4",
+        "size": 12
+      },
+      {
+        "tag": "P",
+        "cls": "text-[0.6875rem] text-ink-2",
+        "text": "Next test",
+        "size": 11
+      },
+      {
+        "tag": "P",
+        "cls": "mt-0.5 text-[0.75rem] font-semibold text-ink sm:text-[0.8125rem]",
+        "text": "Maths unit test · Friday",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "mt-3 inline-flex items-center gap-1.5 rounded-sm bg-(--school) px-2.5 ",
+        "text": "Ask a doubt",
+        "size": 11
+      },
+      {
+        "tag": "P",
+        "cls": "mt-3 text-[0.75rem] text-ink-2",
+        "text": "Placeholder school branding, for illustration.",
+        "size": 12
+      },
+      {
+        "tag": "P",
+        "cls": "flex items-center gap-2 text-eyebrow font-semibold uppercase text-acce",
+        "text": "For management",
+        "size": 12.08
+      },
+      {
+        "tag": "P",
+        "cls": "text-[0.9375rem] font-semibold",
+        "text": "Institute overview",
+        "size": 15
+      },
+      {
+        "tag": "SPAN",
+        "cls": "text-[0.75rem] text-ink-2",
+        "text": "Illustrative preview",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "relative inline-flex items-center gap-1.5 rounded-sm bg-ink px-2.5 py-",
+        "text": "Download report6",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "marker -top-2.5 -right-2.5",
+        "text": "6",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "marker top-4 right-4",
+        "text": "1",
+        "size": 12
+      },
+      {
+        "tag": "P",
+        "cls": "panel-title",
+        "text": "Participation by section",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold tabular-nums",
+        "text": "10 A",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold tabular-nums",
+        "text": "10 B",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold tabular-nums",
+        "text": "10 C",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold tabular-nums",
+        "text": "10 D",
+        "size": 13
+      },
+      {
+        "tag": "P",
+        "cls": "mt-4 text-[0.75rem] text-accent-ink",
+        "text": "10 C has gone quiet this week",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "marker top-4 right-4",
+        "text": "2",
+        "size": 12
+      },
+      {
+        "tag": "P",
+        "cls": "panel-title",
+        "text": "Topics needing support",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold",
+        "text": "Electricity",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "text-[0.6875rem] text-ink-2",
+        "text": "Physics",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold",
+        "text": "Quadratic equations",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "text-[0.6875rem] text-ink-2",
+        "text": "Maths",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold",
+        "text": "Carbon compounds",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "text-[0.6875rem] text-ink-2",
+        "text": "Chemistry",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "marker top-4 right-4",
+        "text": "5",
+        "size": 12
+      },
+      {
+        "tag": "P",
+        "cls": "panel-title",
+        "text": "Teacher activity",
+        "size": 14
+      },
+      {
+        "tag": "P",
+        "cls": "text-[0.8125rem] font-semibold",
+        "text": "Ms. Kavitha · Maths",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-normal text-ink-2",
+        "text": "· Maths",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "",
+        "text": "3 tests",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "",
+        "text": "42 sheets",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "",
+        "text": "5 follow-ups",
+        "size": 12
+      },
+      {
+        "tag": "P",
+        "cls": "text-[0.8125rem] font-semibold",
+        "text": "Mr. Arun · Physics",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-normal text-ink-2",
+        "text": "· Physics",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "",
+        "text": "2 tests",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "",
+        "text": "38 sheets",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "",
+        "text": "3 follow-ups",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "marker top-4 right-4",
+        "text": "3",
+        "size": 12
+      },
+      {
+        "tag": "P",
+        "cls": "panel-title",
+        "text": "Exam readiness trend",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "",
+        "text": "Week 1",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "flex items-center gap-1.5",
+        "text": "Predicted",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "",
+        "text": "Week 8",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "marker top-4 right-4",
+        "text": "4",
+        "size": 12
+      },
+      {
+        "tag": "P",
+        "cls": "panel-title",
+        "text": "Section comparison",
+        "size": 14
+      },
+      {
+        "tag": "TH",
+        "cls": "pb-2 font-normal",
+        "text": "Maths",
+        "size": 11
+      },
+      {
+        "tag": "TH",
+        "cls": "pb-2 font-normal",
+        "text": "Physics",
+        "size": 11
+      },
+      {
+        "tag": "TH",
+        "cls": "pb-2 font-normal",
+        "text": "Chemistry",
+        "size": 11
+      },
+      {
+        "tag": "TD",
+        "cls": "py-2 font-semibold tabular-nums",
+        "text": "10 A",
+        "size": 13
+      },
+      {
+        "tag": "TD",
+        "cls": "py-2 font-semibold tabular-nums",
+        "text": "10 B",
+        "size": 13
+      },
+      {
+        "tag": "TD",
+        "cls": "py-2 font-semibold tabular-nums",
+        "text": "10 C",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "marker static mt-0.5 shrink-0",
+        "text": "1",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "marker static mt-0.5 shrink-0",
+        "text": "2",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "marker static mt-0.5 shrink-0",
+        "text": "3",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "marker static mt-0.5 shrink-0",
+        "text": "4",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "marker static mt-0.5 shrink-0",
+        "text": "5",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "marker static mt-0.5 shrink-0",
+        "text": "6",
+        "size": 12
+      },
+      {
+        "tag": "P",
+        "cls": "flex items-center gap-2 text-eyebrow font-semibold uppercase text-acce",
+        "text": "Foundation years",
+        "size": 12.08
+      },
+      {
+        "tag": "DIV",
+        "cls": "col-span-3 mr-3 border-t-2 border-teal pt-3 text-teal-ink",
+        "text": "Foundation years · NCERT concepts and habits",
+        "size": 12.08
+      },
+      {
+        "tag": "DIV",
+        "cls": "col-span-2 border-t-2 border-accent pt-3 text-accent-ink",
+        "text": "Boards · JEE · NEET",
+        "size": 12.08
+      },
+      {
+        "tag": "SPAN",
+        "cls": "mt-3 text-small font-semibold text-ink",
+        "text": "Class 8",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "mt-1 text-small text-ink-2",
+        "text": "Start here",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "mt-3 text-small font-semibold text-ink",
+        "text": "Class 9",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "mt-3 text-small font-semibold text-ink",
+        "text": "Class 10",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "mt-3 text-small font-semibold text-ink",
+        "text": "Class 11",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "mt-1 text-small text-ink-2",
+        "text": "Ready for serious preparation",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "mt-3 text-small font-semibold text-ink",
+        "text": "Class 12",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "block text-small text-ink-2",
+        "text": "Foundation years · Start here",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "block text-small text-ink-2",
+        "text": "Foundation years",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "block text-small text-ink-2",
+        "text": "Boards · JEE · NEET · Ready for serious preparatio",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "block text-small text-ink-2",
+        "text": "Boards · JEE · NEET",
+        "size": 14
+      },
+      {
+        "tag": "P",
+        "cls": "flex items-center gap-2 text-eyebrow font-semibold uppercase text-acce",
+        "text": "The outcome",
+        "size": 12.08
+      },
+      {
+        "tag": "P",
+        "cls": "flex items-center gap-2 text-eyebrow font-semibold uppercase text-acce",
+        "text": "Results so far",
+        "size": 12.08
+      },
+      {
+        "tag": "P",
+        "cls": "mt-5 text-small text-ink-2",
+        "text": "Based on Study Buddy platform data.",
+        "size": 14
+      },
+      {
+        "tag": "P",
+        "cls": "flex items-center gap-2 text-eyebrow font-semibold uppercase text-acce",
+        "text": "Start with evidence",
+        "size": 12.08
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold tabular-nums text-accent-ink",
+        "text": "01",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "rounded-sm bg-teal-tint px-2 py-0.5 text-[0.8125rem] font-semibold tex",
+        "text": "Day 0",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold tabular-nums text-accent-ink",
+        "text": "02",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "rounded-sm bg-teal-tint px-2 py-0.5 text-[0.8125rem] font-semibold tex",
+        "text": "Within 48 hours",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold tabular-nums text-accent-ink",
+        "text": "03",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "rounded-sm bg-teal-tint px-2 py-0.5 text-[0.8125rem] font-semibold tex",
+        "text": "Days 1–30",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold tabular-nums text-accent-ink",
+        "text": "04",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "rounded-sm bg-teal-tint px-2 py-0.5 text-[0.8125rem] font-semibold tex",
+        "text": "Day 30",
+        "size": 13
+      },
+      {
+        "tag": "P",
+        "cls": "flex items-center gap-2 text-eyebrow font-semibold uppercase text-acce",
+        "text": "Questions",
+        "size": 12.08
+      },
+      {
+        "tag": "P",
+        "cls": "flex items-center gap-2 text-eyebrow font-semibold uppercase text-acce",
+        "text": "Plan your next step",
+        "size": 12.08
+      },
+      {
+        "tag": "LABEL",
+        "cls": "block text-[0.875rem] font-semibold text-ink",
+        "text": "Your name",
+        "size": 14
+      },
+      {
+        "tag": "LABEL",
+        "cls": "block text-[0.875rem] font-semibold text-ink",
+        "text": "Your role",
+        "size": 14
+      },
+      {
+        "tag": "LABEL",
+        "cls": "block text-[0.875rem] font-semibold text-ink",
+        "text": "Number of students",
+        "size": 14
+      },
+      {
+        "tag": "LABEL",
+        "cls": "block text-[0.875rem] font-semibold text-ink",
+        "text": "Institution name",
+        "size": 14
+      },
+      {
+        "tag": "LABEL",
+        "cls": "block text-[0.875rem] font-semibold text-ink",
+        "text": "City",
+        "size": 14
+      },
+      {
+        "tag": "LABEL",
+        "cls": "block text-[0.875rem] font-semibold text-ink",
+        "text": "WhatsApp number",
+        "size": 14
+      },
+      {
+        "tag": "P",
+        "cls": "mt-3 text-center text-[0.875rem] text-ink-2",
+        "text": "We'll only use these details to arrange your demo.",
+        "size": 14
+      },
+      {
+        "tag": "H2",
+        "cls": "font-body text-small font-semibold text-ink",
+        "text": "Platform",
+        "size": 14
+      },
+      {
+        "tag": "H2",
+        "cls": "font-body text-small font-semibold text-ink",
+        "text": "Company",
+        "size": 14
+      },
+      {
+        "tag": "H2",
+        "cls": "font-body text-small font-semibold text-ink",
+        "text": "Legal",
+        "size": 14
+      },
+      {
+        "tag": "H2",
+        "cls": "font-body text-small font-semibold text-ink",
+        "text": "Sign in",
+        "size": 14
+      },
+      {
+        "tag": "P",
+        "cls": "",
+        "text": "CBSE · Tamil Nadu State Board · JEE · NEET",
+        "size": 13
+      },
+      {
+        "tag": "P",
+        "cls": "",
+        "text": "© 2026 Vivodha Pvt Ltd. All rights reserved.",
+        "size": 13
+      }
+    ],
+    "images": [
+      {
+        "src": "hero-students-classroom.iLWJ4q0Y_1GaV12.avif",
+        "alt": "Two students in school uniform at their classroom desk, one reading her textbook and one writing notes.",
+        "w": 328,
+        "h": 410,
+        "naturalW": 328,
+        "naturalH": 184,
+        "objectFit": "cover",
+        "objectPosition": "68% 40%"
+      }
+    ]
+  },
+  "390": {
+    "hScroll": 0,
+    "fold": {
+      "h1Bottom": 294,
+      "ctaBottom": 592,
+      "foldHeight": 660,
+      "h1Fits": true,
+      "ctaFits": true
+    },
+    "tapTargets": [
+      {
+        "tag": "A",
+        "cls": "sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left",
+        "text": "Skip to content",
+        "w": 1,
+        "h": 1
+      },
+      {
+        "tag": "A",
+        "cls": "font-semibold text-accent-ink underline decoration-1 underli",
+        "text": "Chat on WhatsApp (opens in a new tab)",
+        "w": 126,
+        "h": 22
+      }
+    ],
+    "smallText": [
+      {
+        "tag": "SPAN",
+        "cls": "mt-1 text-[0.75rem] text-ink-2",
+        "text": "by Vivodha",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "text-eyebrow font-semibold uppercase",
+        "text": "For principals, school ownersand academy directors",
+        "size": 12.11
+      },
+      {
+        "tag": "LI",
+        "cls": "flex items-center gap-2",
+        "text": "Trusted by 10,000+ students",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "flex items-center gap-2",
+        "text": "Live in your institute within 48 hours",
+        "size": 14
+      },
+      {
+        "tag": "P",
+        "cls": "text-[0.9375rem] font-semibold leading-tight",
+        "text": "Academic overview",
+        "size": 15
+      },
+      {
+        "tag": "P",
+        "cls": "mt-1 text-[0.75rem] text-ink-2",
+        "text": "Illustrative preview",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "inline-flex items-center gap-1.5 rounded-sm border border-line px-2 py",
+        "text": "Weekly view",
+        "size": 12
+      },
+      {
+        "tag": "P",
+        "cls": "text-[0.6875rem] leading-tight text-ink-2 sm:text-[0.75rem]",
+        "text": "Participation",
+        "size": 11
+      },
+      {
+        "tag": "P",
+        "cls": "mt-1 text-[0.8125rem] font-semibold leading-tight",
+        "text": "By class",
+        "size": 13
+      },
+      {
+        "tag": "P",
+        "cls": "text-[0.6875rem] leading-tight text-ink-2 sm:text-[0.75rem]",
+        "text": "Topic progress",
+        "size": 11
+      },
+      {
+        "tag": "P",
+        "cls": "mt-1 text-[0.8125rem] font-semibold leading-tight",
+        "text": "By subject",
+        "size": 13
+      },
+      {
+        "tag": "P",
+        "cls": "text-[0.6875rem] leading-tight text-ink-2 sm:text-[0.75rem]",
+        "text": "Mock-test trends",
+        "size": 11
+      },
+      {
+        "tag": "P",
+        "cls": "mt-1 text-[0.8125rem] font-semibold leading-tight",
+        "text": "Over time",
+        "size": 13
+      },
+      {
+        "tag": "P",
+        "cls": "text-[0.875rem] font-semibold leading-tight",
+        "text": "Signals for the next check-in",
+        "size": 14
+      },
+      {
+        "tag": "P",
+        "cls": "mt-1 text-[0.75rem] text-ink-2",
+        "text": "Example indicators, not school results",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold",
+        "text": "Practice completed",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "text-[0.6875rem] text-ink-2",
+        "text": "Weekly view",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold",
+        "text": "Topics needing support",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "text-[0.6875rem] text-ink-2",
+        "text": "By subject",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold",
+        "text": "Mock-test readiness",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "text-[0.6875rem] text-ink-2",
+        "text": "Trend over time",
+        "size": 11
+      },
+      {
+        "tag": "P",
+        "cls": "",
+        "text": "Use learning signals to plan teacher follow-up, re",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "flex items-center gap-1.5",
+        "text": "Management · Teacher · Parent · Student views",
+        "size": 11
+      },
+      {
+        "tag": "H2",
+        "cls": "shrink-0 font-body text-small font-semibold text-ink lg:max-w-[16ch]",
+        "text": "Built around the syllabus you already teach",
+        "size": 14
+      },
+      {
+        "tag": "P",
+        "cls": "flex items-center gap-2 text-eyebrow font-semibold uppercase text-acce",
+        "text": "The problem",
+        "size": 12.11
+      },
+      {
+        "tag": "P",
+        "cls": "flex items-center gap-2 text-eyebrow font-semibold uppercase text-acce",
+        "text": "One platform",
+        "size": 12.11
+      },
+      {
+        "tag": "P",
+        "cls": "text-small font-semibold text-ink-2",
+        "text": "Where they work in Study Buddy",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "Institute hub",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "Reports",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "User management",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "Client branding",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "Teacher portal",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "Answer-sheet upload",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "School tests",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "Question bank",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "Parent portal",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "Progress reports",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "Marks tracker",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "NCERT chapters",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "AI tutor",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "Mistake notebook",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "Formula hub",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "Group study",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "Flashcards",
+        "size": 14
+      },
+      {
+        "tag": "P",
+        "cls": "flex items-center gap-2 text-eyebrow font-semibold uppercase text-acce",
+        "text": "How students learn",
+        "size": 12.11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "text-small font-semibold tabular-nums text-accent-ink",
+        "text": "01",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "text-small font-semibold tabular-nums text-accent-ink",
+        "text": "02",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "text-small font-semibold tabular-nums text-accent-ink",
+        "text": "03",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "text-small font-semibold tabular-nums text-accent-ink",
+        "text": "04",
+        "size": 14
+      },
+      {
+        "tag": "P",
+        "cls": "flex items-center gap-2 text-eyebrow font-semibold uppercase text-acce",
+        "text": "What makes Study Buddy different",
+        "size": 12.11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "",
+        "text": "Unit test · Mathematics",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "",
+        "text": "Class 8 B",
+        "size": 11
+      },
+      {
+        "tag": "P",
+        "cls": "mt-3 pl-7 text-[0.8125rem] font-semibold text-ink",
+        "text": "Q3. Solve: 2x + 5 = 17",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "text-[0.75rem] font-semibold",
+        "text": "Graded in seconds",
+        "size": 12
+      },
+      {
+        "tag": "P",
+        "cls": "text-[0.875rem] font-semibold leading-tight text-ink",
+        "text": "Q3 · Linear equations",
+        "size": 14
+      },
+      {
+        "tag": "P",
+        "cls": "mt-0.5 text-[0.6875rem] text-ink-2",
+        "text": "Illustrative example",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "",
+        "text": "Added to",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold text-ink",
+        "text": "Class report",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "text-line-strong",
+        "text": "·",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold text-ink",
+        "text": "Student report",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold text-ink",
+        "text": "Parent report",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold uppercase tracking-[0.1em] text-teal-ink",
+        "text": "Linear equations · Medium",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "rounded-sm bg-paper-2 px-2 py-0.5 text-ink-2",
+        "text": "Fresh set 1",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "rounded-sm bg-paper-2 px-2 py-0.5 text-ink-2",
+        "text": "Fresh set 2",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "rounded-sm bg-paper-2 px-2 py-0.5 text-ink-2",
+        "text": "Fresh set 3",
+        "size": 11
+      },
+      {
+        "tag": "P",
+        "cls": "flex items-center gap-2 text-small text-ink-on-dark",
+        "text": "Mistake Notebook · illustrative entry",
+        "size": 14
+      },
+      {
+        "tag": "DT",
+        "cls": "text-[0.75rem] uppercase tracking-[0.1em] text-ink-on-dark",
+        "text": "Student's answer",
+        "size": 12
+      },
+      {
+        "tag": "DT",
+        "cls": "text-[0.75rem] uppercase tracking-[0.1em] text-ink-on-dark",
+        "text": "Correct answer",
+        "size": 12
+      },
+      {
+        "tag": "DT",
+        "cls": "text-[0.75rem] uppercase tracking-[0.1em] text-ink-on-dark",
+        "text": "Worked solution",
+        "size": 12
+      },
+      {
+        "tag": "DT",
+        "cls": "text-[0.75rem] uppercase tracking-[0.1em] text-ink-on-dark",
+        "text": "Memory tip",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "",
+        "text": "Your brand colour",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "block text-[0.75rem] font-semibold sm:text-[0.8125rem]",
+        "text": "Your School Name",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "block text-[0.625rem] text-white/75",
+        "text": "Learning portal",
+        "size": 10
+      },
+      {
+        "tag": "SPAN",
+        "cls": "truncate",
+        "text": "Dashboard",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "truncate",
+        "text": "NCERT chapters",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "truncate",
+        "text": "Practice exams",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "truncate",
+        "text": "Analytics",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "truncate",
+        "text": "Parent portal",
+        "size": 11
+      },
+      {
+        "tag": "P",
+        "cls": "mt-auto pt-6 text-[0.5625rem] tracking-[0.04em] text-white/55",
+        "text": "Powered by Vivodha",
+        "size": 9
+      },
+      {
+        "tag": "P",
+        "cls": "text-[0.6875rem] text-ink-2",
+        "text": "Class 9 A",
+        "size": 11
+      },
+      {
+        "tag": "P",
+        "cls": "text-[0.6875rem] text-ink-2",
+        "text": "Today's practice",
+        "size": 11
+      },
+      {
+        "tag": "P",
+        "cls": "mt-0.5 text-[0.75rem] font-semibold text-ink sm:text-[0.8125rem]",
+        "text": "Science · Chapter 4",
+        "size": 12
+      },
+      {
+        "tag": "P",
+        "cls": "text-[0.6875rem] text-ink-2",
+        "text": "Next test",
+        "size": 11
+      },
+      {
+        "tag": "P",
+        "cls": "mt-0.5 text-[0.75rem] font-semibold text-ink sm:text-[0.8125rem]",
+        "text": "Maths unit test · Friday",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "mt-3 inline-flex items-center gap-1.5 rounded-sm bg-(--school) px-2.5 ",
+        "text": "Ask a doubt",
+        "size": 11
+      },
+      {
+        "tag": "P",
+        "cls": "mt-3 text-[0.75rem] text-ink-2",
+        "text": "Placeholder school branding, for illustration.",
+        "size": 12
+      },
+      {
+        "tag": "P",
+        "cls": "flex items-center gap-2 text-eyebrow font-semibold uppercase text-acce",
+        "text": "For management",
+        "size": 12.11
+      },
+      {
+        "tag": "P",
+        "cls": "text-[0.9375rem] font-semibold",
+        "text": "Institute overview",
+        "size": 15
+      },
+      {
+        "tag": "SPAN",
+        "cls": "text-[0.75rem] text-ink-2",
+        "text": "Illustrative preview",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "relative inline-flex items-center gap-1.5 rounded-sm bg-ink px-2.5 py-",
+        "text": "Download report6",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "marker -top-2.5 -right-2.5",
+        "text": "6",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "marker top-4 right-4",
+        "text": "1",
+        "size": 12
+      },
+      {
+        "tag": "P",
+        "cls": "panel-title",
+        "text": "Participation by section",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold tabular-nums",
+        "text": "10 A",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold tabular-nums",
+        "text": "10 B",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold tabular-nums",
+        "text": "10 C",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold tabular-nums",
+        "text": "10 D",
+        "size": 13
+      },
+      {
+        "tag": "P",
+        "cls": "mt-4 text-[0.75rem] text-accent-ink",
+        "text": "10 C has gone quiet this week",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "marker top-4 right-4",
+        "text": "2",
+        "size": 12
+      },
+      {
+        "tag": "P",
+        "cls": "panel-title",
+        "text": "Topics needing support",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold",
+        "text": "Electricity",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "text-[0.6875rem] text-ink-2",
+        "text": "Physics",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold",
+        "text": "Quadratic equations",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "text-[0.6875rem] text-ink-2",
+        "text": "Maths",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold",
+        "text": "Carbon compounds",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "text-[0.6875rem] text-ink-2",
+        "text": "Chemistry",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "marker top-4 right-4",
+        "text": "5",
+        "size": 12
+      },
+      {
+        "tag": "P",
+        "cls": "panel-title",
+        "text": "Teacher activity",
+        "size": 14
+      },
+      {
+        "tag": "P",
+        "cls": "text-[0.8125rem] font-semibold",
+        "text": "Ms. Kavitha · Maths",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-normal text-ink-2",
+        "text": "· Maths",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "",
+        "text": "3 tests",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "",
+        "text": "42 sheets",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "",
+        "text": "5 follow-ups",
+        "size": 12
+      },
+      {
+        "tag": "P",
+        "cls": "text-[0.8125rem] font-semibold",
+        "text": "Mr. Arun · Physics",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-normal text-ink-2",
+        "text": "· Physics",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "",
+        "text": "2 tests",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "",
+        "text": "38 sheets",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "",
+        "text": "3 follow-ups",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "marker top-4 right-4",
+        "text": "3",
+        "size": 12
+      },
+      {
+        "tag": "P",
+        "cls": "panel-title",
+        "text": "Exam readiness trend",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "",
+        "text": "Week 1",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "flex items-center gap-1.5",
+        "text": "Predicted",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "",
+        "text": "Week 8",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "marker top-4 right-4",
+        "text": "4",
+        "size": 12
+      },
+      {
+        "tag": "P",
+        "cls": "panel-title",
+        "text": "Section comparison",
+        "size": 14
+      },
+      {
+        "tag": "TH",
+        "cls": "pb-2 font-normal",
+        "text": "Maths",
+        "size": 11
+      },
+      {
+        "tag": "TH",
+        "cls": "pb-2 font-normal",
+        "text": "Physics",
+        "size": 11
+      },
+      {
+        "tag": "TH",
+        "cls": "pb-2 font-normal",
+        "text": "Chemistry",
+        "size": 11
+      },
+      {
+        "tag": "TD",
+        "cls": "py-2 font-semibold tabular-nums",
+        "text": "10 A",
+        "size": 13
+      },
+      {
+        "tag": "TD",
+        "cls": "py-2 font-semibold tabular-nums",
+        "text": "10 B",
+        "size": 13
+      },
+      {
+        "tag": "TD",
+        "cls": "py-2 font-semibold tabular-nums",
+        "text": "10 C",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "marker static mt-0.5 shrink-0",
+        "text": "1",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "marker static mt-0.5 shrink-0",
+        "text": "2",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "marker static mt-0.5 shrink-0",
+        "text": "3",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "marker static mt-0.5 shrink-0",
+        "text": "4",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "marker static mt-0.5 shrink-0",
+        "text": "5",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "marker static mt-0.5 shrink-0",
+        "text": "6",
+        "size": 12
+      },
+      {
+        "tag": "P",
+        "cls": "flex items-center gap-2 text-eyebrow font-semibold uppercase text-acce",
+        "text": "Foundation years",
+        "size": 12.11
+      },
+      {
+        "tag": "DIV",
+        "cls": "col-span-3 mr-3 border-t-2 border-teal pt-3 text-teal-ink",
+        "text": "Foundation years · NCERT concepts and habits",
+        "size": 12.11
+      },
+      {
+        "tag": "DIV",
+        "cls": "col-span-2 border-t-2 border-accent pt-3 text-accent-ink",
+        "text": "Boards · JEE · NEET",
+        "size": 12.11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "mt-3 text-small font-semibold text-ink",
+        "text": "Class 8",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "mt-1 text-small text-ink-2",
+        "text": "Start here",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "mt-3 text-small font-semibold text-ink",
+        "text": "Class 9",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "mt-3 text-small font-semibold text-ink",
+        "text": "Class 10",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "mt-3 text-small font-semibold text-ink",
+        "text": "Class 11",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "mt-1 text-small text-ink-2",
+        "text": "Ready for serious preparation",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "mt-3 text-small font-semibold text-ink",
+        "text": "Class 12",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "block text-small text-ink-2",
+        "text": "Foundation years · Start here",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "block text-small text-ink-2",
+        "text": "Foundation years",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "block text-small text-ink-2",
+        "text": "Boards · JEE · NEET · Ready for serious preparatio",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "block text-small text-ink-2",
+        "text": "Boards · JEE · NEET",
+        "size": 14
+      },
+      {
+        "tag": "P",
+        "cls": "flex items-center gap-2 text-eyebrow font-semibold uppercase text-acce",
+        "text": "The outcome",
+        "size": 12.11
+      },
+      {
+        "tag": "P",
+        "cls": "flex items-center gap-2 text-eyebrow font-semibold uppercase text-acce",
+        "text": "Results so far",
+        "size": 12.11
+      },
+      {
+        "tag": "P",
+        "cls": "mt-5 text-small text-ink-2",
+        "text": "Based on Study Buddy platform data.",
+        "size": 14
+      },
+      {
+        "tag": "P",
+        "cls": "flex items-center gap-2 text-eyebrow font-semibold uppercase text-acce",
+        "text": "Start with evidence",
+        "size": 12.11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold tabular-nums text-accent-ink",
+        "text": "01",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "rounded-sm bg-teal-tint px-2 py-0.5 text-[0.8125rem] font-semibold tex",
+        "text": "Day 0",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold tabular-nums text-accent-ink",
+        "text": "02",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "rounded-sm bg-teal-tint px-2 py-0.5 text-[0.8125rem] font-semibold tex",
+        "text": "Within 48 hours",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold tabular-nums text-accent-ink",
+        "text": "03",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "rounded-sm bg-teal-tint px-2 py-0.5 text-[0.8125rem] font-semibold tex",
+        "text": "Days 1–30",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold tabular-nums text-accent-ink",
+        "text": "04",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "rounded-sm bg-teal-tint px-2 py-0.5 text-[0.8125rem] font-semibold tex",
+        "text": "Day 30",
+        "size": 13
+      },
+      {
+        "tag": "P",
+        "cls": "flex items-center gap-2 text-eyebrow font-semibold uppercase text-acce",
+        "text": "Questions",
+        "size": 12.11
+      },
+      {
+        "tag": "P",
+        "cls": "flex items-center gap-2 text-eyebrow font-semibold uppercase text-acce",
+        "text": "Plan your next step",
+        "size": 12.11
+      },
+      {
+        "tag": "LABEL",
+        "cls": "block text-[0.875rem] font-semibold text-ink",
+        "text": "Your name",
+        "size": 14
+      },
+      {
+        "tag": "LABEL",
+        "cls": "block text-[0.875rem] font-semibold text-ink",
+        "text": "Your role",
+        "size": 14
+      },
+      {
+        "tag": "LABEL",
+        "cls": "block text-[0.875rem] font-semibold text-ink",
+        "text": "Number of students",
+        "size": 14
+      },
+      {
+        "tag": "LABEL",
+        "cls": "block text-[0.875rem] font-semibold text-ink",
+        "text": "Institution name",
+        "size": 14
+      },
+      {
+        "tag": "LABEL",
+        "cls": "block text-[0.875rem] font-semibold text-ink",
+        "text": "City",
+        "size": 14
+      },
+      {
+        "tag": "LABEL",
+        "cls": "block text-[0.875rem] font-semibold text-ink",
+        "text": "WhatsApp number",
+        "size": 14
+      },
+      {
+        "tag": "P",
+        "cls": "mt-3 text-center text-[0.875rem] text-ink-2",
+        "text": "We'll only use these details to arrange your demo.",
+        "size": 14
+      },
+      {
+        "tag": "H2",
+        "cls": "font-body text-small font-semibold text-ink",
+        "text": "Platform",
+        "size": 14
+      },
+      {
+        "tag": "H2",
+        "cls": "font-body text-small font-semibold text-ink",
+        "text": "Company",
+        "size": 14
+      },
+      {
+        "tag": "H2",
+        "cls": "font-body text-small font-semibold text-ink",
+        "text": "Legal",
+        "size": 14
+      },
+      {
+        "tag": "H2",
+        "cls": "font-body text-small font-semibold text-ink",
+        "text": "Sign in",
+        "size": 14
+      },
+      {
+        "tag": "P",
+        "cls": "",
+        "text": "CBSE · Tamil Nadu State Board · JEE · NEET",
+        "size": 13
+      },
+      {
+        "tag": "P",
+        "cls": "",
+        "text": "© 2026 Vivodha Pvt Ltd. All rights reserved.",
+        "size": 13
+      }
+    ],
+    "images": [
+      {
+        "src": "hero-students-classroom.iLWJ4q0Y_1GaV12.avif",
+        "alt": "Two students in school uniform at their classroom desk, one reading her textbook and one writing notes.",
+        "w": 358,
+        "h": 448,
+        "naturalW": 357,
+        "naturalH": 201,
+        "objectFit": "cover",
+        "objectPosition": "68% 40%"
+      }
+    ]
+  },
+  "430": {
+    "hScroll": 0,
+    "fold": {
+      "h1Bottom": 298,
+      "ctaBottom": 569,
+      "foldHeight": 760,
+      "h1Fits": true,
+      "ctaFits": true
+    },
+    "tapTargets": [
+      {
+        "tag": "A",
+        "cls": "sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left",
+        "text": "Skip to content",
+        "w": 1,
+        "h": 1
+      },
+      {
+        "tag": "A",
+        "cls": "font-semibold text-accent-ink underline decoration-1 underli",
+        "text": "Chat on WhatsApp (opens in a new tab)",
+        "w": 126,
+        "h": 23
+      }
+    ],
+    "smallText": [
+      {
+        "tag": "SPAN",
+        "cls": "mt-1 text-[0.75rem] text-ink-2",
+        "text": "by Vivodha",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "text-eyebrow font-semibold uppercase",
+        "text": "For principals, school ownersand academy directors",
+        "size": 12.15
+      },
+      {
+        "tag": "LI",
+        "cls": "flex items-center gap-2",
+        "text": "Trusted by 10,000+ students",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "flex items-center gap-2",
+        "text": "Live in your institute within 48 hours",
+        "size": 14
+      },
+      {
+        "tag": "P",
+        "cls": "text-[0.9375rem] font-semibold leading-tight",
+        "text": "Academic overview",
+        "size": 15
+      },
+      {
+        "tag": "P",
+        "cls": "mt-1 text-[0.75rem] text-ink-2",
+        "text": "Illustrative preview",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "inline-flex items-center gap-1.5 rounded-sm border border-line px-2 py",
+        "text": "Weekly view",
+        "size": 12
+      },
+      {
+        "tag": "P",
+        "cls": "text-[0.6875rem] leading-tight text-ink-2 sm:text-[0.75rem]",
+        "text": "Participation",
+        "size": 11
+      },
+      {
+        "tag": "P",
+        "cls": "mt-1 text-[0.8125rem] font-semibold leading-tight",
+        "text": "By class",
+        "size": 13
+      },
+      {
+        "tag": "P",
+        "cls": "text-[0.6875rem] leading-tight text-ink-2 sm:text-[0.75rem]",
+        "text": "Topic progress",
+        "size": 11
+      },
+      {
+        "tag": "P",
+        "cls": "mt-1 text-[0.8125rem] font-semibold leading-tight",
+        "text": "By subject",
+        "size": 13
+      },
+      {
+        "tag": "P",
+        "cls": "text-[0.6875rem] leading-tight text-ink-2 sm:text-[0.75rem]",
+        "text": "Mock-test trends",
+        "size": 11
+      },
+      {
+        "tag": "P",
+        "cls": "mt-1 text-[0.8125rem] font-semibold leading-tight",
+        "text": "Over time",
+        "size": 13
+      },
+      {
+        "tag": "P",
+        "cls": "text-[0.875rem] font-semibold leading-tight",
+        "text": "Signals for the next check-in",
+        "size": 14
+      },
+      {
+        "tag": "P",
+        "cls": "mt-1 text-[0.75rem] text-ink-2",
+        "text": "Example indicators, not school results",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold",
+        "text": "Practice completed",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "text-[0.6875rem] text-ink-2",
+        "text": "Weekly view",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold",
+        "text": "Topics needing support",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "text-[0.6875rem] text-ink-2",
+        "text": "By subject",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold",
+        "text": "Mock-test readiness",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "text-[0.6875rem] text-ink-2",
+        "text": "Trend over time",
+        "size": 11
+      },
+      {
+        "tag": "P",
+        "cls": "",
+        "text": "Use learning signals to plan teacher follow-up, re",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "flex items-center gap-1.5",
+        "text": "Management · Teacher · Parent · Student views",
+        "size": 11
+      },
+      {
+        "tag": "H2",
+        "cls": "shrink-0 font-body text-small font-semibold text-ink lg:max-w-[16ch]",
+        "text": "Built around the syllabus you already teach",
+        "size": 14
+      },
+      {
+        "tag": "P",
+        "cls": "flex items-center gap-2 text-eyebrow font-semibold uppercase text-acce",
+        "text": "The problem",
+        "size": 12.15
+      },
+      {
+        "tag": "P",
+        "cls": "flex items-center gap-2 text-eyebrow font-semibold uppercase text-acce",
+        "text": "One platform",
+        "size": 12.15
+      },
+      {
+        "tag": "P",
+        "cls": "text-small font-semibold text-ink-2",
+        "text": "Where they work in Study Buddy",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "Institute hub",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "Reports",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "User management",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "Client branding",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "Teacher portal",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "Answer-sheet upload",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "School tests",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "Question bank",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "Parent portal",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "Progress reports",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "Marks tracker",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "NCERT chapters",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "AI tutor",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "Mistake notebook",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "Formula hub",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "Group study",
+        "size": 14
+      },
+      {
+        "tag": "LI",
+        "cls": "rounded-sm border border-line bg-paper px-2.5 py-1.5 text-small text-i",
+        "text": "Flashcards",
+        "size": 14
+      },
+      {
+        "tag": "P",
+        "cls": "flex items-center gap-2 text-eyebrow font-semibold uppercase text-acce",
+        "text": "How students learn",
+        "size": 12.15
+      },
+      {
+        "tag": "SPAN",
+        "cls": "text-small font-semibold tabular-nums text-accent-ink",
+        "text": "01",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "text-small font-semibold tabular-nums text-accent-ink",
+        "text": "02",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "text-small font-semibold tabular-nums text-accent-ink",
+        "text": "03",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "text-small font-semibold tabular-nums text-accent-ink",
+        "text": "04",
+        "size": 14
+      },
+      {
+        "tag": "P",
+        "cls": "flex items-center gap-2 text-eyebrow font-semibold uppercase text-acce",
+        "text": "What makes Study Buddy different",
+        "size": 12.15
+      },
+      {
+        "tag": "SPAN",
+        "cls": "",
+        "text": "Unit test · Mathematics",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "",
+        "text": "Class 8 B",
+        "size": 11
+      },
+      {
+        "tag": "P",
+        "cls": "mt-3 pl-7 text-[0.8125rem] font-semibold text-ink",
+        "text": "Q3. Solve: 2x + 5 = 17",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "text-[0.75rem] font-semibold",
+        "text": "Graded in seconds",
+        "size": 12
+      },
+      {
+        "tag": "P",
+        "cls": "text-[0.875rem] font-semibold leading-tight text-ink",
+        "text": "Q3 · Linear equations",
+        "size": 14
+      },
+      {
+        "tag": "P",
+        "cls": "mt-0.5 text-[0.6875rem] text-ink-2",
+        "text": "Illustrative example",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "",
+        "text": "Added to",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold text-ink",
+        "text": "Class report",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "text-line-strong",
+        "text": "·",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold text-ink",
+        "text": "Student report",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold text-ink",
+        "text": "Parent report",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold uppercase tracking-[0.1em] text-teal-ink",
+        "text": "Linear equations · Medium",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "rounded-sm bg-paper-2 px-2 py-0.5 text-ink-2",
+        "text": "Fresh set 1",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "rounded-sm bg-paper-2 px-2 py-0.5 text-ink-2",
+        "text": "Fresh set 2",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "rounded-sm bg-paper-2 px-2 py-0.5 text-ink-2",
+        "text": "Fresh set 3",
+        "size": 11
+      },
+      {
+        "tag": "P",
+        "cls": "flex items-center gap-2 text-small text-ink-on-dark",
+        "text": "Mistake Notebook · illustrative entry",
+        "size": 14
+      },
+      {
+        "tag": "DT",
+        "cls": "text-[0.75rem] uppercase tracking-[0.1em] text-ink-on-dark",
+        "text": "Student's answer",
+        "size": 12
+      },
+      {
+        "tag": "DT",
+        "cls": "text-[0.75rem] uppercase tracking-[0.1em] text-ink-on-dark",
+        "text": "Correct answer",
+        "size": 12
+      },
+      {
+        "tag": "DT",
+        "cls": "text-[0.75rem] uppercase tracking-[0.1em] text-ink-on-dark",
+        "text": "Worked solution",
+        "size": 12
+      },
+      {
+        "tag": "DT",
+        "cls": "text-[0.75rem] uppercase tracking-[0.1em] text-ink-on-dark",
+        "text": "Memory tip",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "",
+        "text": "Your brand colour",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "block text-[0.75rem] font-semibold sm:text-[0.8125rem]",
+        "text": "Your School Name",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "block text-[0.625rem] text-white/75",
+        "text": "Learning portal",
+        "size": 10
+      },
+      {
+        "tag": "SPAN",
+        "cls": "truncate",
+        "text": "Dashboard",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "truncate",
+        "text": "NCERT chapters",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "truncate",
+        "text": "Practice exams",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "truncate",
+        "text": "Analytics",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "truncate",
+        "text": "Parent portal",
+        "size": 11
+      },
+      {
+        "tag": "P",
+        "cls": "mt-auto pt-6 text-[0.5625rem] tracking-[0.04em] text-white/55",
+        "text": "Powered by Vivodha",
+        "size": 9
+      },
+      {
+        "tag": "P",
+        "cls": "text-[0.6875rem] text-ink-2",
+        "text": "Class 9 A",
+        "size": 11
+      },
+      {
+        "tag": "P",
+        "cls": "text-[0.6875rem] text-ink-2",
+        "text": "Today's practice",
+        "size": 11
+      },
+      {
+        "tag": "P",
+        "cls": "mt-0.5 text-[0.75rem] font-semibold text-ink sm:text-[0.8125rem]",
+        "text": "Science · Chapter 4",
+        "size": 12
+      },
+      {
+        "tag": "P",
+        "cls": "text-[0.6875rem] text-ink-2",
+        "text": "Next test",
+        "size": 11
+      },
+      {
+        "tag": "P",
+        "cls": "mt-0.5 text-[0.75rem] font-semibold text-ink sm:text-[0.8125rem]",
+        "text": "Maths unit test · Friday",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "mt-3 inline-flex items-center gap-1.5 rounded-sm bg-(--school) px-2.5 ",
+        "text": "Ask a doubt",
+        "size": 11
+      },
+      {
+        "tag": "P",
+        "cls": "mt-3 text-[0.75rem] text-ink-2",
+        "text": "Placeholder school branding, for illustration.",
+        "size": 12
+      },
+      {
+        "tag": "P",
+        "cls": "flex items-center gap-2 text-eyebrow font-semibold uppercase text-acce",
+        "text": "For management",
+        "size": 12.15
+      },
+      {
+        "tag": "P",
+        "cls": "text-[0.9375rem] font-semibold",
+        "text": "Institute overview",
+        "size": 15
+      },
+      {
+        "tag": "SPAN",
+        "cls": "text-[0.75rem] text-ink-2",
+        "text": "Illustrative preview",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "relative inline-flex items-center gap-1.5 rounded-sm bg-ink px-2.5 py-",
+        "text": "Download report6",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "marker -top-2.5 -right-2.5",
+        "text": "6",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "marker top-4 right-4",
+        "text": "1",
+        "size": 12
+      },
+      {
+        "tag": "P",
+        "cls": "panel-title",
+        "text": "Participation by section",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold tabular-nums",
+        "text": "10 A",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold tabular-nums",
+        "text": "10 B",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold tabular-nums",
+        "text": "10 C",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold tabular-nums",
+        "text": "10 D",
+        "size": 13
+      },
+      {
+        "tag": "P",
+        "cls": "mt-4 text-[0.75rem] text-accent-ink",
+        "text": "10 C has gone quiet this week",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "marker top-4 right-4",
+        "text": "2",
+        "size": 12
+      },
+      {
+        "tag": "P",
+        "cls": "panel-title",
+        "text": "Topics needing support",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold",
+        "text": "Electricity",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "text-[0.6875rem] text-ink-2",
+        "text": "Physics",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold",
+        "text": "Quadratic equations",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "text-[0.6875rem] text-ink-2",
+        "text": "Maths",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold",
+        "text": "Carbon compounds",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "text-[0.6875rem] text-ink-2",
+        "text": "Chemistry",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "marker top-4 right-4",
+        "text": "5",
+        "size": 12
+      },
+      {
+        "tag": "P",
+        "cls": "panel-title",
+        "text": "Teacher activity",
+        "size": 14
+      },
+      {
+        "tag": "P",
+        "cls": "text-[0.8125rem] font-semibold",
+        "text": "Ms. Kavitha · Maths",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-normal text-ink-2",
+        "text": "· Maths",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "",
+        "text": "3 tests",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "",
+        "text": "42 sheets",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "",
+        "text": "5 follow-ups",
+        "size": 12
+      },
+      {
+        "tag": "P",
+        "cls": "text-[0.8125rem] font-semibold",
+        "text": "Mr. Arun · Physics",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-normal text-ink-2",
+        "text": "· Physics",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "",
+        "text": "2 tests",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "",
+        "text": "38 sheets",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "",
+        "text": "3 follow-ups",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "marker top-4 right-4",
+        "text": "3",
+        "size": 12
+      },
+      {
+        "tag": "P",
+        "cls": "panel-title",
+        "text": "Exam readiness trend",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "",
+        "text": "Week 1",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "flex items-center gap-1.5",
+        "text": "Predicted",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "",
+        "text": "Week 8",
+        "size": 11
+      },
+      {
+        "tag": "SPAN",
+        "cls": "marker top-4 right-4",
+        "text": "4",
+        "size": 12
+      },
+      {
+        "tag": "P",
+        "cls": "panel-title",
+        "text": "Section comparison",
+        "size": 14
+      },
+      {
+        "tag": "TH",
+        "cls": "pb-2 font-normal",
+        "text": "Maths",
+        "size": 11
+      },
+      {
+        "tag": "TH",
+        "cls": "pb-2 font-normal",
+        "text": "Physics",
+        "size": 11
+      },
+      {
+        "tag": "TH",
+        "cls": "pb-2 font-normal",
+        "text": "Chemistry",
+        "size": 11
+      },
+      {
+        "tag": "TD",
+        "cls": "py-2 font-semibold tabular-nums",
+        "text": "10 A",
+        "size": 13
+      },
+      {
+        "tag": "TD",
+        "cls": "py-2 font-semibold tabular-nums",
+        "text": "10 B",
+        "size": 13
+      },
+      {
+        "tag": "TD",
+        "cls": "py-2 font-semibold tabular-nums",
+        "text": "10 C",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "marker static mt-0.5 shrink-0",
+        "text": "1",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "marker static mt-0.5 shrink-0",
+        "text": "2",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "marker static mt-0.5 shrink-0",
+        "text": "3",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "marker static mt-0.5 shrink-0",
+        "text": "4",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "marker static mt-0.5 shrink-0",
+        "text": "5",
+        "size": 12
+      },
+      {
+        "tag": "SPAN",
+        "cls": "marker static mt-0.5 shrink-0",
+        "text": "6",
+        "size": 12
+      },
+      {
+        "tag": "P",
+        "cls": "flex items-center gap-2 text-eyebrow font-semibold uppercase text-acce",
+        "text": "Foundation years",
+        "size": 12.15
+      },
+      {
+        "tag": "DIV",
+        "cls": "col-span-3 mr-3 border-t-2 border-teal pt-3 text-teal-ink",
+        "text": "Foundation years · NCERT concepts and habits",
+        "size": 12.15
+      },
+      {
+        "tag": "DIV",
+        "cls": "col-span-2 border-t-2 border-accent pt-3 text-accent-ink",
+        "text": "Boards · JEE · NEET",
+        "size": 12.15
+      },
+      {
+        "tag": "SPAN",
+        "cls": "mt-3 text-small font-semibold text-ink",
+        "text": "Class 8",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "mt-1 text-small text-ink-2",
+        "text": "Start here",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "mt-3 text-small font-semibold text-ink",
+        "text": "Class 9",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "mt-3 text-small font-semibold text-ink",
+        "text": "Class 10",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "mt-3 text-small font-semibold text-ink",
+        "text": "Class 11",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "mt-1 text-small text-ink-2",
+        "text": "Ready for serious preparation",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "mt-3 text-small font-semibold text-ink",
+        "text": "Class 12",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "block text-small text-ink-2",
+        "text": "Foundation years · Start here",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "block text-small text-ink-2",
+        "text": "Foundation years",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "block text-small text-ink-2",
+        "text": "Boards · JEE · NEET · Ready for serious preparatio",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "block text-small text-ink-2",
+        "text": "Boards · JEE · NEET",
+        "size": 14
+      },
+      {
+        "tag": "P",
+        "cls": "flex items-center gap-2 text-eyebrow font-semibold uppercase text-acce",
+        "text": "The outcome",
+        "size": 12.15
+      },
+      {
+        "tag": "P",
+        "cls": "flex items-center gap-2 text-eyebrow font-semibold uppercase text-acce",
+        "text": "Results so far",
+        "size": 12.15
+      },
+      {
+        "tag": "P",
+        "cls": "mt-5 text-small text-ink-2",
+        "text": "Based on Study Buddy platform data.",
+        "size": 14
+      },
+      {
+        "tag": "P",
+        "cls": "flex items-center gap-2 text-eyebrow font-semibold uppercase text-acce",
+        "text": "Start with evidence",
+        "size": 12.15
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold tabular-nums text-accent-ink",
+        "text": "01",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "rounded-sm bg-teal-tint px-2 py-0.5 text-[0.8125rem] font-semibold tex",
+        "text": "Day 0",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold tabular-nums text-accent-ink",
+        "text": "02",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "rounded-sm bg-teal-tint px-2 py-0.5 text-[0.8125rem] font-semibold tex",
+        "text": "Within 48 hours",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold tabular-nums text-accent-ink",
+        "text": "03",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "rounded-sm bg-teal-tint px-2 py-0.5 text-[0.8125rem] font-semibold tex",
+        "text": "Days 1–30",
+        "size": 13
+      },
+      {
+        "tag": "SPAN",
+        "cls": "font-semibold tabular-nums text-accent-ink",
+        "text": "04",
+        "size": 14
+      },
+      {
+        "tag": "SPAN",
+        "cls": "rounded-sm bg-teal-tint px-2 py-0.5 text-[0.8125rem] font-semibold tex",
+        "text": "Day 30",
+        "size": 13
+      },
+      {
+        "tag": "P",
+        "cls": "flex items-center gap-2 text-eyebrow font-semibold uppercase text-acce",
+        "text": "Questions",
+        "size": 12.15
+      },
+      {
+        "tag": "P",
+        "cls": "flex items-center gap-2 text-eyebrow font-semibold uppercase text-acce",
+        "text": "Plan your next step",
+        "size": 12.15
+      },
+      {
+        "tag": "LABEL",
+        "cls": "block text-[0.875rem] font-semibold text-ink",
+        "text": "Your name",
+        "size": 14
+      },
+      {
+        "tag": "LABEL",
+        "cls": "block text-[0.875rem] font-semibold text-ink",
+        "text": "Your role",
+        "size": 14
+      },
+      {
+        "tag": "LABEL",
+        "cls": "block text-[0.875rem] font-semibold text-ink",
+        "text": "Number of students",
+        "size": 14
+      },
+      {
+        "tag": "LABEL",
+        "cls": "block text-[0.875rem] font-semibold text-ink",
+        "text": "Institution name",
+        "size": 14
+      },
+      {
+        "tag": "LABEL",
+        "cls": "block text-[0.875rem] font-semibold text-ink",
+        "text": "City",
+        "size": 14
+      },
+      {
+        "tag": "LABEL",
+        "cls": "block text-[0.875rem] font-semibold text-ink",
+        "text": "WhatsApp number",
+        "size": 14
+      },
+      {
+        "tag": "P",
+        "cls": "mt-3 text-center text-[0.875rem] text-ink-2",
+        "text": "We'll only use these details to arrange your demo.",
+        "size": 14
+      },
+      {
+        "tag": "H2",
+        "cls": "font-body text-small font-semibold text-ink",
+        "text": "Platform",
+        "size": 14
+      },
+      {
+        "tag": "H2",
+        "cls": "font-body text-small font-semibold text-ink",
+        "text": "Company",
+        "size": 14
+      },
+      {
+        "tag": "H2",
+        "cls": "font-body text-small font-semibold text-ink",
+        "text": "Legal",
+        "size": 14
+      },
+      {
+        "tag": "H2",
+        "cls": "font-body text-small font-semibold text-ink",
+        "text": "Sign in",
+        "size": 14
+      },
+      {
+        "tag": "P",
+        "cls": "",
+        "text": "CBSE · Tamil Nadu State Board · JEE · NEET",
+        "size": 13
+      },
+      {
+        "tag": "P",
+        "cls": "",
+        "text": "© 2026 Vivodha Pvt Ltd. All rights reserved.",
+        "size": 13
+      }
+    ],
+    "images": [
+      {
+        "src": "hero-students-classroom.iLWJ4q0Y_1GaV12.avif",
+        "alt": "Two students in school uniform at their classroom desk, one reading her textbook and one writing notes.",
+        "w": 398,
+        "h": 498,
+        "naturalW": 397,
+        "naturalH": 223,
+        "objectFit": "cover",
+        "objectPosition": "68% 40%"
+      }
+    ]
+  }
+}
