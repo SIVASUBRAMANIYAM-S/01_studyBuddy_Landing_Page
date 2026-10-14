@@ -46,7 +46,13 @@ const steps = [
       </div>
     </div>
 
-    <p aria-hidden="true" class="mt-10 -rotate-2 font-note text-note text-accent-ink lg:mt-14">start small ↓</p>
+    <p aria-hidden="true" class="mt-10 flex items-end gap-1 font-note text-note text-accent-ink lg:mt-14" data-reveal>
+      <span class="-rotate-2">start small</span>
+      <svg class="draw-scroll mb-[-10px] h-8 w-6" style="--draw-delay:300ms" viewBox="0 0 24 32" fill="none">
+        <path d="M5 3 C 14 8, 15 18, 12 27" stroke="currentColor" stroke-width="2" stroke-linecap="round" pathLength="1"></path>
+        <path d="M7 22 L 12 28 L 17 22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" pathLength="1" style="--draw-delay:650ms;--draw-dur:200ms"></path>
+      </svg>
+    </p>
 
     <ol class="relative mt-6 grid gap-0 lg:grid-cols-4 lg:gap-6">
       {

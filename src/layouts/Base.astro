@@ -69,6 +69,14 @@ const fontsNote = 'https://fonts.googleapis.com/css2?family=Caveat:wght@500&disp
       } else {
         document.querySelectorAll('[data-reveal]').forEach((el) => el.classList.add('is-visible'));
       }
+
+      if (root.classList.contains('motion-ok')) {
+        const loadMotion = () => import('../scripts/motion').then((m) => m.initMotion());
+        const whenIdle = () =>
+          'requestIdleCallback' in window ? requestIdleCallback(loadMotion, { timeout: 2000 }) : setTimeout(loadMotion, 200);
+        if (document.readyState === 'complete') whenIdle();
+        else window.addEventListener('load', whenIdle, { once: true });
+      }
     </script>
   </body>
 </html>

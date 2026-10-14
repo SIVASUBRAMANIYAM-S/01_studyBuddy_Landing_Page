@@ -157,6 +157,62 @@
   transform: none;
 }
 
+/* Hand-drawn marks: paths need pathLength="1". .draw-load runs on first paint, .draw-scroll when its [data-reveal] ancestor becomes visible. */
+@media (prefers-reduced-motion: no-preference) {
+  .draw-load path {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: draw var(--draw-dur, 450ms) var(--ease-out) var(--draw-delay, 0ms) forwards;
+  }
+  .motion-ok .draw-scroll path {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+  }
+  .motion-ok .is-visible .draw-scroll path,
+  .motion-ok .draw-scroll.is-visible path {
+    animation: draw var(--draw-dur, 450ms) var(--ease-out) var(--draw-delay, 150ms) forwards;
+  }
+}
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@utility btn-press {
+  transition:
+    background-color var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out),
+    box-shadow var(--dur-fast) var(--ease-out),
+    transform 120ms var(--ease-out);
+  @media (hover: hover) {
+    &:hover {
+      box-shadow: var(--shadow-2);
+    }
+  }
+  &:active {
+    transform: scale(0.97);
+    box-shadow: var(--shadow-1);
+  }
+}
+
+@utility card-lift {
+  transition:
+    transform var(--dur-fast) var(--ease-out),
+    box-shadow var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out);
+  @media (hover: hover) {
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-2);
+      border-color: var(--color-line-strong);
+    }
+  }
+  &:active {
+    transform: scale(0.99);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

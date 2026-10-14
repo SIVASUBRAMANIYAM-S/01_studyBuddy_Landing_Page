@@ -2,11 +2,12 @@
 import Eyebrow from './Eyebrow.astro';
 
 const figures = [
-  { figure: '10,000+', context: 'students learning on Study Buddy' },
-  { figure: '98%', context: 'pass rate among Study Buddy students' },
-  { figure: '94%', context: 'of students reported improvement with the AI study plan' },
-  { from: '68', to: '95', context: "one student's JEE Main percentile after focused practice" },
+  { values: [10000], suffix: '+', context: 'students learning on Study Buddy' },
+  { values: [98], suffix: '%', context: 'pass rate among Study Buddy students' },
+  { values: [94], suffix: '%', context: 'of students reported improvement with the AI study plan' },
+  { values: [68, 95], suffix: '', context: "one student's JEE Main percentile after focused practice" },
 ];
+const fmt = (n: number) => n.toLocaleString('en-IN');
 
 interface Testimonial {
   quote: string;
@@ -26,7 +27,7 @@ const testimonials: Testimonial[] = [];
     </div>
 
     <div class="col-span-4 sm:col-span-8 lg:col-span-7 lg:col-start-6">
-      <dl class="grid border-t border-line-strong/40 sm:grid-cols-2">
+      <dl class="grid border-t border-line-strong/40 sm:grid-cols-2" data-counters>
         {
           figures.map((f, i) => (
             <div
@@ -40,14 +41,26 @@ const testimonials: Testimonial[] = [];
             >
               <dt class="max-w-[28ch] text-ink-2">{f.context}</dt>
               <dd class="font-display text-[clamp(2.75rem,2.2rem+2.4vw,4rem)] leading-none font-medium tracking-[-0.02em] text-ink tabular-nums">
-                {f.figure ?? (
-                  <span class="inline-flex items-baseline gap-3">
-                    <span class="text-ink-2">{f.from}</span>
-                    <span class="text-[0.6em] text-accent" aria-hidden="true">→</span>
-                    <span class="sr-only">to</span>
-                    <span>{f.to}</span>
-                  </span>
-                )}
+                <span class="inline-flex items-baseline gap-3">
+                  {f.values.map((n, j) => (
+                    <>
+                      {j > 0 && (
+                        <>
+                          <span class="text-[0.6em] text-accent" aria-hidden="true">→</span>
+                          <span class="sr-only">to</span>
+                        </>
+                      )}
+                      <span class:list={['relative inline-block', f.values.length > 1 && j === 0 && 'text-ink-2']}>
+                        <span class="invisible">{fmt(n)}</span>
+                        <span class="absolute inset-0 text-right" aria-hidden="true" data-count={n}>
+                          {fmt(n)}
+                        </span>
+                        <span class="sr-only">{fmt(n)}</span>
+                      </span>
+                    </>
+                  ))}
+                </span>
+                {f.suffix}
               </dd>
             </div>
           ))

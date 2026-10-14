@@ -25,15 +25,19 @@ const steps = [
       </p>
     </div>
 
-    <ol class="mt-10 grid sm:grid-cols-2 sm:gap-x-8 lg:mt-14 lg:grid-cols-4 lg:gap-x-0">
+    <ol class="mt-10 grid gap-9 lg:mt-14 lg:grid-cols-4 lg:gap-8" data-journey>
       {
         steps.map((s, i) => (
-          <li
-            class="relative border-l border-line pb-8 pl-6 last:pb-0 sm:border-l-0 sm:border-t sm:pt-6 sm:pl-0 lg:border-t-0 lg:border-l lg:px-7 lg:pt-0 lg:pb-0 lg:first:border-l-0 lg:first:pl-0"
-            data-reveal
-            style={`--reveal-i:${i}`}
-          >
-            <span aria-hidden="true" class="absolute top-1 -left-[5px] size-2.5 rounded-full bg-accent sm:hidden" />
+          <li class="relative pl-8 lg:pt-9 lg:pl-0" data-reveal style={`--reveal-i:${i}`}>
+            {i < steps.length - 1 && (
+              <span
+                aria-hidden="true"
+                class="absolute top-3 -bottom-9 left-[4px] w-0.5 bg-line lg:top-[4px] lg:right-[-2rem] lg:bottom-auto lg:left-3 lg:h-0.5 lg:w-auto"
+              >
+                <span class="block size-full origin-top bg-accent lg:origin-left" data-journey-segment />
+              </span>
+            )}
+            <span aria-hidden="true" class="absolute top-0 left-0 size-2.5 rounded-full bg-accent ring-4 ring-paper" />
             <div class="flex items-center justify-between gap-4">
               <span class="text-small font-semibold tabular-nums text-accent-ink">{s.n}</span>
               <span class="text-teal">

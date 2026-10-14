@@ -294,7 +294,7 @@ Example: `—  A SMARTER WAY TO LEARN`
 - **Content:** title "Academic overview" with a sub-label **"Illustrative preview"**, which is always visible. Then a 3-column header (Participation · Topic progress · Mock trends), then 3 horizontal progress bars (`--accent`, `--teal`, `--ochre`) on `--paper-2` tracks with labels and tabular numbers. Then a teal-tint note: "Use learning signals to guide teacher follow-up…"
 - **Build:** real HTML/CSS rather than a screenshot, so it's crisp, translatable and lightweight. Bars may grow once on reveal.
 - **Placement:** on desktop it overlaps the hero photo's lower-left edge by about 15% (poster 3). On mobile it sits below the photo, full width, with a −32px overlap.
-- **Don't:** use a dark theme, neon charts, invented KPIs ("94.6% pass rate"), 3D tilt, or glow.
+- **Don't:** use a dark theme, neon charts, invented KPIs ("94.6% pass rate"), or glow. The only 3D allowed is the hero's subtle scroll-linked perspective tilt in §9 (at most 10°, CSS transforms only).
 
 ---
 
@@ -319,11 +319,19 @@ Example: `—  A SMARTER WAY TO LEARN`
 
 **Allowed**
 - Section reveal: opacity 0→1 plus translateY 12px→0, once per element, with a 60ms stagger and at most 4 items.
-- Hero underline draws in once (`stroke-dashoffset`, 400ms, 200ms delay).
+- Hero headline: words settle in on first paint (CSS only, 450ms each, 55ms stagger). Words start at 35% opacity, never hidden, so the headline is readable and the CTA clickable from the first frame.
+- Hero dashboard: tilts to a subtle perspective (≤ 10°) on load, then flattens as the hero scrolls away (scrubbed to scroll position).
+- Hand-drawn marks (hero underline and arrow, pilot "start small" arrow) draw in once with `stroke-dashoffset`.
+- Student journey: the connecting line fills step to step, tied to scroll position.
+- Answer-sheet spotlight: mistakes reveal one at a time (highlight sweep, then cross mark, then feedback row), once.
+- Proof figures count up from 0 in 600ms, once per page view, with the final value's width reserved so nothing shifts.
 - Dashboard bars grow from 0 to their value once (400ms).
 - Tab indicator slide, accordion expand, sticky bar slide, button arrow nudge.
+- Hover/tap: buttons gain `--shadow-2` on hover and press to `scale(0.97)`; cards lift 2px with `--shadow-2`. All ≤ 150ms.
 
-**Forbidden:** parallax, auto-playing carousels, looping or pulsing animation, number counters ticking up, scroll-jacking, and animating layout properties (only `transform` and `opacity` are used).
+**Implementation:** GSAP + ScrollTrigger, loaded as a separate chunk after `load` when the browser is idle, and never downloaded under `prefers-reduced-motion: reduce`. Budget: ≤ 60KB gzipped for all animation JS.
+
+**Forbidden:** parallax backgrounds, auto-playing carousels, looping or pulsing animation, counters that re-run on every scroll, scroll-jacking, WebGL/Three.js, and animating layout properties (only `transform`, `opacity` and SVG stroke properties are animated).
 
 **Reduced motion:**
 ```css
