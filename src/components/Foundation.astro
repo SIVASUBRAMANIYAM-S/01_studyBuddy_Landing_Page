@@ -1,0 +1,107 @@
+---
+import Eyebrow from './Eyebrow.astro';
+
+const classes = [8, 9, 10, 11, 12];
+const points = [
+  { who: 'For students', body: 'Strong fundamentals in maths and science, built progressively and without pressure.' },
+  { who: 'For parents', body: 'Early visibility, and a clear reason to stay with your institute.' },
+  {
+    who: 'For your institute',
+    body: 'A continuous Class 8 to 12 pathway that helps retain students into senior secondary and your entrance-coaching programmes.',
+  },
+];
+---
+
+<section id="foundation" aria-labelledby="foundation-title" class="section-y bg-paper-2">
+  <div class="container-page">
+    <div class="grid-page gap-y-5">
+      <div class="col-span-4 sm:col-span-8 lg:col-span-6" data-reveal>
+        <Eyebrow>Foundation years</Eyebrow>
+        <h2 id="foundation-title" class="mt-4 text-h2 lg:mt-5">Build the JEE and NEET foundation from Class 8.</h2>
+      </div>
+      <p class="col-span-4 text-ink-2 sm:col-span-8 lg:col-span-5 lg:col-start-8 lg:self-end" data-reveal>
+        Entrance-exam success starts with strong concepts in Classes 8, 9 and 10. The earlier students start, the more
+        time they have to build fundamentals and steady study habits. Study Buddy gives younger students the same
+        structured practice and progress tracking, aligned with NCERT, so they reach Class 11 ready for serious
+        preparation.
+      </p>
+    </div>
+
+    <figure class="mt-12 lg:mt-20" data-reveal>
+      <figcaption class="sr-only">
+        A Class 8 to 12 pathway. Classes 8, 9 and 10 are the foundation years. From Class 11, students move into board,
+        JEE and NEET preparation.
+      </figcaption>
+
+      <div aria-hidden="true" class="hidden lg:block">
+        <div class="grid grid-cols-5 text-eyebrow font-semibold uppercase">
+          <div class="col-span-3 mr-3 border-t-2 border-teal pt-3 text-teal-ink">Foundation years · NCERT concepts and habits</div>
+          <div class="col-span-2 border-t-2 border-accent pt-3 text-accent-ink">Boards · JEE · NEET</div>
+        </div>
+        <ol class="relative mt-10 grid grid-cols-5">
+          <span class="absolute top-[1.375rem] right-[10%] left-[10%] h-px bg-line-strong/50"></span>
+          {
+            classes.map((c) => (
+              <li class="relative flex flex-col items-center">
+                <span
+                  class:list={[
+                    'relative z-10 grid size-11 place-items-center rounded-full border-2 font-display text-[1.125rem] font-semibold tabular-nums',
+                    c === 8 && 'border-teal bg-teal text-white',
+                    c > 8 && c < 11 && 'border-teal bg-paper-2 text-teal-ink',
+                    c === 11 && 'border-accent bg-accent text-white',
+                    c === 12 && 'border-accent bg-paper-2 text-accent-ink',
+                  ]}
+                >
+                  {c}
+                </span>
+                <span class="mt-3 text-small font-semibold text-ink">Class {c}</span>
+                {c === 8 && <span class="mt-1 text-small text-ink-2">Start here</span>}
+                {c === 11 && <span class="mt-1 text-small text-ink-2">Ready for serious preparation</span>}
+              </li>
+            ))
+          }
+        </ol>
+      </div>
+
+      <ol aria-hidden="true" class="relative space-y-6 lg:hidden">
+        <span class="absolute top-2 bottom-2 left-[1.0625rem] w-px bg-line-strong/50"></span>
+        {
+          classes.map((c) => (
+            <li class="relative flex items-center gap-4">
+              <span
+                class:list={[
+                  'relative z-10 grid size-9 shrink-0 place-items-center rounded-full border-2 font-display font-semibold tabular-nums',
+                  c === 8 && 'border-teal bg-teal text-white',
+                  c > 8 && c < 11 && 'border-teal bg-paper-2 text-teal-ink',
+                  c === 11 && 'border-accent bg-accent text-white',
+                  c === 12 && 'border-accent bg-paper-2 text-accent-ink',
+                ]}
+              >
+                {c}
+              </span>
+              <span>
+                <span class="block font-semibold">Class {c}</span>
+                <span class="block text-small text-ink-2">
+                  {c < 11 ? 'Foundation years' : 'Boards · JEE · NEET'}
+                  {c === 8 && ' · Start here'}
+                  {c === 11 && ' · Ready for serious preparation'}
+                </span>
+              </span>
+            </li>
+          ))
+        }
+      </ol>
+    </figure>
+
+    <ul class="mt-14 grid gap-y-6 sm:grid-cols-3 sm:gap-x-8 lg:mt-20">
+      {
+        points.map((p, i) => (
+          <li class="border-t border-line-strong/40 pt-5" data-reveal style={`--reveal-i:${i}`}>
+            <p class="font-display text-h3 font-semibold">{p.who}</p>
+            <p class="mt-2 text-ink-2">{p.body}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,242 @@
+---
+import Eyebrow from './Eyebrow.astro';
+import Icon from './Icon.astro';
+import { CTA_PRIMARY_HREF } from '../data/site';
+
+const legend = [
+  { title: 'Participation by class', body: 'which sections are practising regularly and which have gone quiet.' },
+  { title: 'Topics needing support', body: 'subject and chapter areas where many students are struggling.' },
+  {
+    title: 'Exam readiness and predictions',
+    body: 'whether readiness for boards, JEE and NEET is rising, and where scores are heading.',
+  },
+  { title: 'Group comparisons', body: 'compare sections, batches and subjects side by side.' },
+  { title: 'Teacher activity', body: 'tests assigned, sheets evaluated and student follow-ups.' },
+  { title: 'Reports on demand', body: 'ready for academic reviews and parent–teacher meetings.' },
+];
+
+const sections = [
+  { name: '10 A', w: '86%' },
+  { name: '10 B', w: '72%' },
+  { name: '10 C', w: '41%', low: true },
+  { name: '10 D', w: '68%' },
+];
+
+const topics = [
+  { subject: 'Physics', topic: 'Electricity', w: '62%' },
+  { subject: 'Maths', topic: 'Quadratic equations', w: '48%' },
+  { subject: 'Chemistry', topic: 'Carbon compounds', w: '35%' },
+];
+
+const compare = [
+  { name: '10 A', v: [3, 3, 2] },
+  { name: '10 B', v: [2, 3, 3] },
+  { name: '10 C', v: [1, 2, 2] },
+];
+
+const teachers = [
+  { name: 'Ms. Kavitha', subject: 'Maths', tests: 3, sheets: 42, follow: 5 },
+  { name: 'Mr. Arun', subject: 'Physics', tests: 2, sheets: 38, follow: 3 },
+];
+---
+
+<section id="management" aria-labelledby="management-title" class="section-y">
+  <div class="container-page">
+    <div class="grid-page items-end gap-y-5">
+      <div class="col-span-4 sm:col-span-8 lg:col-span-6" data-reveal>
+        <Eyebrow>For management</Eyebrow>
+        <h2 id="management-title" class="mt-4 text-h1 lg:mt-5">Every class, subject and teacher on one screen.</h2>
+      </div>
+      <div class="col-span-4 sm:col-span-8 lg:col-span-5 lg:col-start-8" data-reveal>
+        <p class="text-lead text-ink-2">
+          Stop waiting for end-of-term compilations. The management dashboard shows what is happening in your
+          institute this week, so academic decisions are based on evidence, not guesswork.
+        </p>
+        <a
+          href={CTA_PRIMARY_HREF}
+          class="group mt-4 inline-flex min-h-11 items-center gap-1.5 font-semibold text-accent-ink underline decoration-1 underline-offset-[3px] hover:decoration-2"
+        >
+          See the dashboard in a free demo
+          <Icon name="arrow-right" size={18} class="transition-transform duration-(--dur-fast) group-hover:translate-x-[3px]" />
+        </a>
+      </div>
+    </div>
+
+    <figure class="mt-12 lg:mt-16" data-reveal>
+      <figcaption class="sr-only">
+        Illustrative preview of the management dashboard. Example indicators, not real school results.
+      </figcaption>
+      <div aria-hidden="true" class="overflow-hidden rounded-lg border border-line bg-surface shadow-2">
+        <div class="flex flex-wrap items-center justify-between gap-3 border-b border-line bg-paper-2 px-4 py-3 sm:px-6">
+          <div class="flex items-center gap-3">
+            <p class="text-[0.9375rem] font-semibold">Institute overview</p>
+            <span class="text-[0.75rem] text-ink-2">Illustrative preview</span>
+          </div>
+          <div class="flex flex-wrap items-center gap-2 text-[0.75rem]">
+            <span class="hidden items-center gap-1.5 rounded-sm border border-line bg-surface px-2.5 py-1.5 text-ink-2 sm:inline-flex">
+              <Icon name="filter" size={14} /> Class 10 · All sections · This week
+            </span>
+            <span class="relative inline-flex items-center gap-1.5 rounded-sm bg-ink px-2.5 py-1.5 font-semibold text-white">
+              <Icon name="download" size={14} /> Download report
+              <span class="marker -top-2.5 -right-2.5">6</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="grid gap-px bg-line lg:grid-cols-12">
+          <div class="relative bg-surface p-5 lg:col-span-4">
+            <span class="marker top-4 right-4">1</span>
+            <p class="panel-title">Participation by section</p>
+            <ul class="mt-4 space-y-3">
+              {
+                sections.map((s) => (
+                  <li class="grid grid-cols-[2.75rem_1fr] items-center gap-3 text-[0.8125rem]">
+                    <span class="font-semibold tabular-nums">{s.name}</span>
+                    <span class="h-2 overflow-hidden rounded-full bg-paper-2">
+                      <span class:list={['block h-full rounded-full', s.low ? 'bg-accent' : 'bg-teal']} style={`width:${s.w}`} />
+                    </span>
+                  </li>
+                ))
+              }
+            </ul>
+            <p class="mt-4 text-[0.75rem] text-accent-ink">10 C has gone quiet this week</p>
+          </div>
+
+          <div class="relative bg-surface p-5 lg:col-span-4">
+            <span class="marker top-4 right-4">2</span>
+            <p class="panel-title">Topics needing support</p>
+            <ul class="mt-4 space-y-3.5">
+              {
+                topics.map((t) => (
+                  <li>
+                    <div class="flex items-baseline justify-between gap-2 text-[0.8125rem]">
+                      <span class="font-semibold">{t.topic}</span>
+                      <span class="text-[0.6875rem] text-ink-2">{t.subject}</span>
+                    </div>
+                    <span class="mt-1.5 block h-1.5 overflow-hidden rounded-full bg-paper-2">
+                      <span class="block h-full rounded-full bg-ochre" style={`width:${t.w}`} />
+                    </span>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+
+          <div class="relative bg-surface p-5 lg:col-span-4">
+            <span class="marker top-4 right-4">5</span>
+            <p class="panel-title">Teacher activity</p>
+            <ul class="mt-4 divide-y divide-line">
+              {
+                teachers.map((t) => (
+                  <li class="py-2.5 first:pt-0">
+                    <p class="text-[0.8125rem] font-semibold">
+                      {t.name} <span class="font-normal text-ink-2">· {t.subject}</span>
+                    </p>
+                    <p class="mt-1 flex flex-wrap gap-x-3 text-[0.75rem] text-ink-2 tabular-nums">
+                      <span>{t.tests} tests</span>
+                      <span>{t.sheets} sheets</span>
+                      <span>{t.follow} follow-ups</span>
+                    </p>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+
+          <div class="relative bg-surface p-5 lg:col-span-7">
+            <span class="marker top-4 right-4">3</span>
+            <p class="panel-title">Exam readiness trend</p>
+            <svg class="mt-4 h-36 w-full" viewBox="0 0 400 140" preserveAspectRatio="none" fill="none">
+              <g stroke="var(--color-line)" stroke-width="1">
+                <line x1="0" y1="20" x2="400" y2="20" />
+                <line x1="0" y1="65" x2="400" y2="65" />
+                <line x1="0" y1="110" x2="400" y2="110" />
+              </g>
+              <path d="M0 110 L50 104 L100 96 L150 98 L200 84 L250 74 L280 66" stroke="var(--color-teal)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke" />
+              <path d="M280 66 L330 54 L400 40" stroke="var(--color-teal)" stroke-width="2.5" stroke-dasharray="5 5" stroke-linecap="round" vector-effect="non-scaling-stroke" />
+              <circle cx="280" cy="66" r="4" fill="var(--color-teal)" />
+            </svg>
+            <div class="mt-2 flex justify-between text-[0.6875rem] text-ink-2">
+              <span>Week 1</span>
+              <span class="flex items-center gap-1.5"><span class="h-px w-4 border-t border-dashed border-teal"></span>Predicted</span>
+              <span>Week 8</span>
+            </div>
+          </div>
+
+          <div class="relative bg-surface p-5 lg:col-span-5">
+            <span class="marker top-4 right-4">4</span>
+            <p class="panel-title">Section comparison</p>
+            <table class="mt-4 w-full text-[0.8125rem]">
+              <thead>
+                <tr class="text-left text-[0.6875rem] text-ink-2">
+                  <th class="pb-2 font-normal"></th>
+                  <th class="pb-2 font-normal">Maths</th>
+                  <th class="pb-2 font-normal">Physics</th>
+                  <th class="pb-2 font-normal">Chemistry</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-line">
+                {
+                  compare.map((r) => (
+                    <tr>
+                      <td class="py-2 font-semibold tabular-nums">{r.name}</td>
+                      {r.v.map((v) => (
+                        <td class="py-2">
+                          <span class="flex gap-1">
+                            {[1, 2, 3].map((d) => (
+                              <span class:list={['h-1.5 w-4 rounded-full', d <= v ? 'bg-teal' : 'bg-paper-2']} />
+                            ))}
+                          </span>
+                        </td>
+                      ))}
+                    </tr>
+                  ))
+                }
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </figure>
+
+    <ol class="mt-10 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:mt-12 lg:grid-cols-3">
+      {
+        legend.map((l, i) => (
+          <li class="flex gap-4" data-reveal style={`--reveal-i:${i % 3}`}>
+            <span aria-hidden="true" class="marker static mt-0.5 shrink-0">
+              {i + 1}
+            </span>
+            <p class="text-ink-2">
+              <strong class="font-semibold text-ink">{l.title}:</strong> {l.body}
+            </p>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</section>
+
+<style>
+  .marker {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 999px;
+    background: var(--color-accent);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+  }
+  .marker.static {
+    position: static;
+  }
+  .panel-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding-right: 2rem;
+  }
+</style>

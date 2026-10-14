@@ -1,0 +1,33 @@
+---
+const sets = [
+  { n: 1, q: 'Solve 3x − 7 = 11.' },
+  { n: 2, q: 'Solve 5(x + 2) = 35.' },
+  { n: 3, q: 'A number is doubled and then increased by 9. The result is 31. Find the number.' },
+];
+---
+
+<figure class="relative" data-reveal>
+  <figcaption class="sr-only">
+    Illustrative example. Three practice sets on the same chapter, linear equations, each with a different question.
+  </figcaption>
+  <ol aria-hidden="true" class="relative grid gap-3 lg:block lg:h-[22rem]">
+    {
+      sets.map((s, i) => (
+        <li
+          class:list={[
+            'rounded-md border border-white/10 bg-surface p-5 text-ink shadow-2 lg:absolute lg:w-[78%]',
+            i === 0 && 'lg:top-0 lg:left-0',
+            i === 1 && 'lg:top-[6.5rem] lg:left-[11%]',
+            i === 2 && 'lg:top-[13rem] lg:left-[22%]',
+          ]}
+        >
+          <div class="flex items-center justify-between gap-3 text-[0.6875rem]">
+            <span class="font-semibold uppercase tracking-[0.1em] text-teal-ink">Linear equations · Medium</span>
+            <span class="rounded-sm bg-paper-2 px-2 py-0.5 text-ink-2">Fresh set {s.n}</span>
+          </div>
+          <p class="mt-3 font-display text-[1.125rem] leading-snug">{s.q}</p>
+        </li>
+      ))
+    }
+  </ol>
+</figure>

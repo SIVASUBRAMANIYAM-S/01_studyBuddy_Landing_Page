@@ -1,0 +1,144 @@
+---
+import Eyebrow from './Eyebrow.astro';
+import Icon from './Icon.astro';
+import AnswerSheetVisual from './spotlights/AnswerSheetVisual.astro';
+import QuestionSetsVisual from './spotlights/QuestionSetsVisual.astro';
+import BrandingVisual from './spotlights/BrandingVisual.astro';
+
+const answerPoints = [
+  'Works with your existing written tests. No need to move to online-only exams.',
+  'Every mistake is highlighted, so students know exactly what to fix.',
+  'Teachers stay in charge of final results.',
+  'Results flow straight into class, student and parent reports.',
+];
+
+const bankPoints = [
+  'Chapter-wise questions for CBSE, Tamil Nadu State Board, JEE and NEET.',
+  "Practice matches each student's level, so weaker students build up and strong students are stretched.",
+  'Teachers build school tests from the same bank. 500+ ready tests to start from.',
+];
+
+const mistakeFields = [
+  { term: "Student's answer", value: 'x = 11', tone: 'wrong' },
+  { term: 'Correct answer', value: 'x = 6', tone: 'right' },
+  { term: 'Worked solution', value: '2x = 17 − 5 = 12, so x = 6.' },
+  { term: 'Memory tip', value: 'Whatever you do to one side, do to the other.' },
+];
+---
+
+<section id="features" aria-labelledby="features-title">
+  <div class="border-t border-line">
+    <div class="container-page section-y">
+      <div class="max-w-[46rem]" data-reveal>
+        <Eyebrow>What makes Study Buddy different</Eyebrow>
+        <h2 id="features-title" class="mt-4 text-h2 lg:mt-5">Built for how Indian schools actually run.</h2>
+      </div>
+
+      <div class="grid-page mt-12 items-center gap-y-12 lg:mt-20">
+        <div class="col-span-4 sm:col-span-8 lg:col-span-5" data-reveal>
+          <h3 class="text-h2 font-medium">Handwritten answer sheets, evaluated by AI.</h3>
+          <p class="measure mt-5 text-ink-2">
+            Students keep writing on paper, just as they will in the board exam. Teachers scan or photograph the
+            sheets, and Study Buddy grades them in seconds, highlighting every mistake with step-wise feedback. Your
+            teachers see each evaluated sheet and remain in charge of the final result.
+          </p>
+          <ul class="mt-6 space-y-3">
+            {
+              answerPoints.map((p) => (
+                <li class="flex gap-3">
+                  <Icon name="check" size={20} class="mt-[3px] text-teal" />
+                  <span>{p}</span>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+        <div class="col-span-4 sm:col-span-8 lg:col-span-7">
+          <AnswerSheetVisual />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-ink text-white">
+    <div class="container-page section-y">
+      <div class="grid-page items-center gap-y-12">
+        <div class="col-span-4 sm:col-span-8 lg:col-span-5" data-reveal>
+          <h3 class="text-h2 font-medium text-white">A question bank that doesn't repeat itself.</h3>
+          <p class="measure mt-5 text-ink-on-dark">
+            Questions are generated fresh by chapter, difficulty and exam pattern, so students can take as many
+            practice tests as they need without memorising answers. They have to understand the concept.
+          </p>
+          <ul class="mt-6 space-y-3 text-ink-on-dark">
+            {
+              bankPoints.map((p) => (
+                <li class="flex gap-3">
+                  <Icon name="check" size={20} class="mt-[3px] text-teal-tint" />
+                  <span>{p}</span>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+        <div class="col-span-4 sm:col-span-8 lg:col-span-6 lg:col-start-7">
+          <QuestionSetsVisual />
+        </div>
+      </div>
+
+      <div class="grid-page mt-16 gap-y-8 border-t border-white/15 pt-12 lg:mt-24 lg:pt-16">
+        <div class="col-span-4 sm:col-span-8 lg:col-span-5" data-reveal>
+          <h3 class="text-h3 font-semibold text-white">Every wrong answer becomes a revision plan.</h3>
+          <p class="measure mt-4 text-ink-on-dark">
+            Each mistake is saved with the student's answer, the correct answer, a worked solution and a memory tip.
+            An AI study plan then tells each student what to revise next, and teachers can see which mistakes keep
+            coming back across the class.
+          </p>
+        </div>
+        <div class="col-span-4 sm:col-span-8 lg:col-span-6 lg:col-start-7" data-reveal>
+          <p class="flex items-center gap-2 text-small text-ink-on-dark">
+            <Icon name="notebook-pen" size={18} />
+            Mistake Notebook · illustrative entry
+          </p>
+          <dl class="mt-4 grid grid-cols-2 border-t border-l border-white/15">
+            {
+              mistakeFields.map((f) => (
+                <div class="border-r border-b border-white/15 p-4">
+                  <dt class="text-[0.75rem] uppercase tracking-[0.1em] text-ink-on-dark">{f.term}</dt>
+                  <dd
+                    class:list={[
+                      'mt-1.5',
+                      f.tone ? 'font-display text-[1.25rem]' : 'text-[0.9375rem]',
+                      f.tone === 'wrong' && 'text-accent-on-dark line-through decoration-1',
+                      f.tone === 'right' && 'text-white',
+                      !f.tone && 'text-white',
+                    ]}
+                  >
+                    {f.value}
+                  </dd>
+                </div>
+              ))
+            }
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-paper-2">
+    <div class="container-page section-y">
+      <div class="grid-page items-center gap-y-10">
+        <div class="order-2 col-span-4 sm:col-span-8 lg:order-1 lg:col-span-7">
+          <BrandingVisual />
+        </div>
+        <div class="order-1 col-span-4 sm:col-span-8 lg:order-2 lg:col-span-4 lg:col-start-9" data-reveal>
+          <h3 class="text-h2 font-medium">Your logo, your name, your colours.</h3>
+          <p class="mt-5 text-ink-2">
+            Make the platform your own. Your institute's logo, name and brand colours appear across the student,
+            parent and teacher dashboards. Families see your trusted brand, with a small "Powered by Vivodha" mark in
+            the corner.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -143,6 +143,8 @@ A warm paper base with deep-green ink, one burnt-orange accent, and teal taken f
 
 Caveat text is always decorative: either `aria-hidden="true"` with the same meaning present in real text, or short enough that a screen reader can read it naturally. It is never used for body text, buttons, or anything under 20px. *Why the cap:* past three uses it stops feeling personal and starts feeling like a gimmick.
 
+**Exception:** student handwriting *inside a product illustration* (e.g. the scanned answer sheet in the answer-sheet evaluation spotlight) may use Caveat. It depicts a real artefact, not a margin note, so it doesn't count toward the 3 annotations. It must sit inside an `aria-hidden` illustration with a text equivalent in the `figcaption`.
+
 ### Type scale (fluid, 360px → 1280px)
 
 | Token | Mobile | Desktop | `clamp()` | Line-height | Font / weight |
