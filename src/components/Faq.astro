@@ -1,0 +1,102 @@
+---
+import Eyebrow from './Eyebrow.astro';
+import Icon from './Icon.astro';
+import { CTA_WHATSAPP, WHATSAPP_HREF } from '../data/site';
+
+const faqs = [
+  {
+    q: 'How long does setup take, and do we need an IT team?',
+    a: "No IT team is needed. Study Buddy runs in the cloud and opens on phones, tablets and computers. We configure your branded portal, student rosters and teacher accounts, and you're live within 48 hours.",
+  },
+  {
+    q: 'How does handwritten answer-sheet evaluation work, and can we trust it?',
+    a: 'Teachers scan or photograph answer sheets and upload them. Study Buddy grades them in seconds, highlights every mistake and gives step-wise feedback. Your teachers see every evaluated sheet and stay in charge of the final result.',
+  },
+  {
+    q: 'Will this replace our teachers?',
+    a: 'No. Study Buddy takes on repetitive work like correction, test creation and late-night doubts, so teachers can spend more time teaching and supporting the students who need them most.',
+  },
+  {
+    q: 'What does it cost?',
+    a: "Pricing is tailored to your institute's size and the modules you need, so we don't publish a single price. Book a free demo and we'll share a plan that fits your school, along with the pilot details.",
+  },
+  {
+    q: 'Which boards, classes and exams do you cover?',
+    a: 'CBSE and Tamil Nadu State Board for Classes 8 to 12, plus JEE Main, JEE Advanced and NEET preparation. Content is aligned with NCERT chapters.',
+  },
+  {
+    q: "Is our students' data safe? Who owns it?",
+    a: 'Your institute owns its data. It is hosted in India, encrypted at rest and in transit, and protected by role-based access, so each person sees only what they should. We follow the Digital Personal Data Protection (DPDP) Act, including parent consent and data deletion on request.',
+  },
+  {
+    q: "Can the platform carry our school's name?",
+    a: 'Yes. Your logo, name and brand colours appear across the student, parent and teacher dashboards, with a small "Powered by Vivodha" mark.',
+  },
+  {
+    q: "What happens if the pilot doesn't work for us?",
+    a: "Then you don't expand. The 30-day pilot exists so you can decide on evidence. We agree the measures with you at the start and review them together at the end. There's no long-term commitment.",
+  },
+];
+---
+
+<section id="faq" aria-labelledby="faq-title" class="section-y border-t border-line">
+  <div class="container-page grid-page gap-y-10">
+    <div class="col-span-4 sm:col-span-8 lg:col-span-4">
+      <div class="lg:sticky lg:top-28" data-reveal>
+        <Eyebrow>Questions</Eyebrow>
+        <h2 id="faq-title" class="mt-4 text-h2 lg:mt-5">What school leaders usually ask us.</h2>
+        <p class="mt-6 hidden text-ink-2 lg:block">
+          Still have a question?{" "}
+          <a href={WHATSAPP_HREF} target="_blank" rel="noopener" class="font-semibold text-accent-ink underline decoration-1 underline-offset-[3px] hover:decoration-2">
+            {CTA_WHATSAPP}<span class="sr-only"> (opens in a new tab)</span>
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <div class="col-span-4 sm:col-span-8 lg:col-span-7 lg:col-start-6">
+      <div class="border-t border-line">
+        {
+          faqs.map((f) => (
+            <details class="faq group border-b border-line">
+              <summary class="flex min-h-14 cursor-pointer list-none items-center justify-between gap-6 py-4 text-[1.125rem] font-semibold text-ink [&::-webkit-details-marker]:hidden">
+                <span>{f.q}</span>
+                <span class="grid size-8 shrink-0 place-items-center rounded-full text-teal-ink transition-transform duration-200 ease-(--ease-out) group-open:rotate-45">
+                  <Icon name="plus" size={22} />
+                </span>
+              </summary>
+              <p class="max-w-[65ch] pr-10 pb-6 text-ink-2">{f.a}</p>
+            </details>
+          ))
+        }
+      </div>
+      <p class="mt-8 text-ink-2 lg:hidden">
+        Still have a question?{" "}
+        <a href={WHATSAPP_HREF} target="_blank" rel="noopener" class="font-semibold text-accent-ink underline decoration-1 underline-offset-[3px]">
+          {CTA_WHATSAPP}<span class="sr-only"> (opens in a new tab)</span>
+        </a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq::details-content {
+    block-size: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition:
+      block-size var(--dur-base) var(--ease-out),
+      opacity var(--dur-base) var(--ease-out),
+      content-visibility var(--dur-base) allow-discrete;
+  }
+  .faq[open]::details-content {
+    block-size: auto;
+    opacity: 1;
+  }
+  .faq summary:hover > span:first-child {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+  }
+</style>

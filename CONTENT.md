@@ -326,7 +326,7 @@ No institute-wide rollout on day one. Run a 30-day pilot with a small group, mea
 
 | # | Title | Copy |
 |---|---|---|
-| 01 | Book a free demo | A walkthrough for your leadership team, built around your boards, classes and goals. |
+| 01 | Set a baseline | In your free demo, choose one cohort, the subjects and the measures you want to improve. |
 | 02 | Go live in 48 hours | We set up your branded portal, student rosters and teacher accounts. |
 | 03 | Run a 30-day pilot | Daily practice, the AI tutor, mock tests and answer-sheet evaluation for one cohort. |
 | 04 | Review the evidence | Compare participation and results with your baseline, then decide how far to expand. |
@@ -402,6 +402,7 @@ Tell us about your classes, your current assessment cycle and the results you wa
 | Submitting | Sending… |
 | Success heading | Thank you, {first name}. |
 | Success body | Our team will message you on WhatsApp shortly to fix a demo time. |
+| Success body (no form backend yet, details handed to WhatsApp) | Send the message we've prepared in WhatsApp, and our team will reply to fix a demo time. |
 | Network error | Something went wrong. Please try again, or message us on WhatsApp. |
 
 ### Sticky mobile bar (DESIGN.md §7.8)

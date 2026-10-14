@@ -1,0 +1,214 @@
+---
+import Icon from './Icon.astro';
+import { CTA_PRIMARY, DEMO_FORM_ENDPOINT, WHATSAPP_NUMBER } from '../data/site';
+
+const roles = ['Principal', 'Owner / Director', 'Academic head', 'Other'];
+const sizes = ['Under 200', '200–500', '500–1,000', '1,000–2,500', '2,500+'];
+
+const label = 'block text-[0.875rem] font-semibold text-ink';
+const control =
+  'block h-12 w-full rounded-sm border border-line-strong bg-surface px-3.5 text-base text-ink placeholder:text-ink-2/70 transition-colors duration-(--dur-fast) focus:border-focus focus:outline-2 focus:outline-offset-0 focus:outline-focus aria-invalid:border-error';
+const error = 'mt-1.5 flex items-center gap-1.5 text-[0.875rem] text-error';
+---
+
+<div class="rounded-lg bg-surface p-5 text-ink shadow-2 sm:p-8" data-demo>
+  <form
+    novalidate
+    data-demo-form
+    data-endpoint={DEMO_FORM_ENDPOINT}
+    data-wa={WHATSAPP_NUMBER}
+    aria-describedby="demo-privacy"
+    class="grid gap-5 sm:grid-cols-2"
+  >
+    <div class="sm:col-span-2">
+      <label for="demo-name" class={label}>Your name</label>
+      <input id="demo-name" name="name" type="text" autocomplete="name" required class:list={[control, 'mt-1.5']} data-field="your name" />
+      <p id="demo-name-error" class={error} hidden></p>
+    </div>
+
+    <div>
+      <label for="demo-role" class={label}>Your role</label>
+      <div class="relative mt-1.5">
+        <select id="demo-role" name="role" required class:list={[control, 'appearance-none pr-10']} data-field="your role" data-select>
+          <option value="">Select</option>
+          {roles.map((r) => <option>{r}</option>)}
+        </select>
+        <Icon name="chevron-down" size={18} class="pointer-events-none absolute top-1/2 right-3 mt-[3px] -translate-y-1/2 text-ink-2" />
+      </div>
+      <p id="demo-role-error" class={error} hidden></p>
+    </div>
+
+    <div>
+      <label for="demo-students" class={label}>Number of students</label>
+      <div class="relative mt-1.5">
+        <select id="demo-students" name="students" required class:list={[control, 'appearance-none pr-10']} data-field="the number of students" data-select>
+          <option value="">Select</option>
+          {sizes.map((s) => <option>{s}</option>)}
+        </select>
+        <Icon name="chevron-down" size={18} class="pointer-events-none absolute top-1/2 right-3 mt-[3px] -translate-y-1/2 text-ink-2" />
+      </div>
+      <p id="demo-students-error" class={error} hidden></p>
+    </div>
+
+    <div class="sm:col-span-2">
+      <label for="demo-institution" class={label}>Institution name</label>
+      <input id="demo-institution" name="institution" type="text" autocomplete="organization" required class:list={[control, 'mt-1.5']} data-field="your institution name" />
+      <p id="demo-institution-error" class={error} hidden></p>
+    </div>
+
+    <div>
+      <label for="demo-city" class={label}>City</label>
+      <input id="demo-city" name="city" type="text" autocomplete="address-level2" required class:list={[control, 'mt-1.5']} data-field="your city" />
+      <p id="demo-city-error" class={error} hidden></p>
+    </div>
+
+    <div>
+      <label for="demo-whatsapp" class={label}>WhatsApp number</label>
+      <div class="mt-1.5 flex">
+        <span class="grid h-12 place-items-center rounded-l-sm border border-r-0 border-line-strong bg-paper-2 px-3 text-base text-ink-2" aria-hidden="true">+91</span>
+        <input
+          id="demo-whatsapp"
+          name="whatsapp"
+          type="tel"
+          inputmode="numeric"
+          autocomplete="tel-national"
+          maxlength="11"
+          required
+          class:list={[control, 'rounded-l-none tabular-nums']}
+          data-field="your WhatsApp number"
+          data-phone
+        />
+      </div>
+      <p id="demo-whatsapp-error" class={error} hidden></p>
+    </div>
+
+    <div class="sm:col-span-2">
+      <button
+        type="submit"
+        class="group inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-sm bg-accent px-[22px] py-3 text-base font-semibold text-white transition-colors duration-(--dur-fast) hover:bg-accent-hover active:translate-y-px disabled:cursor-not-allowed disabled:opacity-60"
+        data-submit
+      >
+        <span data-submit-label>{CTA_PRIMARY}</span>
+        <Icon name="arrow-right" size={18} class="transition-transform duration-(--dur-fast) group-hover:translate-x-[3px]" />
+      </button>
+      <p id="demo-privacy" class="mt-3 text-center text-[0.875rem] text-ink-2">
+        We'll only use these details to arrange your demo. No spam, ever.
+      </p>
+      <p class={error} role="alert" data-form-error hidden></p>
+    </div>
+  </form>
+
+  <div hidden data-demo-success class="py-6 text-center sm:py-10">
+    <span class="mx-auto grid size-14 place-items-center rounded-full bg-teal-tint text-teal-ink">
+      <Icon name="check" size={28} />
+    </span>
+    <h3 class="mt-5 text-h3 font-semibold" tabindex="-1" data-success-title></h3>
+    <p class="mx-auto mt-3 max-w-[36ch] text-ink-2" data-success-body></p>
+  </div>
+</div>
+
+<script>
+  const root = document.querySelector<HTMLElement>('[data-demo]');
+  const form = root?.querySelector<HTMLFormElement>('[data-demo-form]');
+  if (root && form) {
+    const controls = Array.from(form.querySelectorAll<HTMLInputElement | HTMLSelectElement>('[data-field]'));
+    const submit = form.querySelector<HTMLButtonElement>('[data-submit]')!;
+    const submitLabel = form.querySelector<HTMLElement>('[data-submit-label]')!;
+    const formError = form.querySelector<HTMLElement>('[data-form-error]')!;
+    const success = root.querySelector<HTMLElement>('[data-demo-success]')!;
+    const defaultLabel = submitLabel.textContent ?? '';
+    let attempted = false;
+
+    const digits = (v: string) => v.replace(/\D/g, '');
+
+    const messageFor = (el: HTMLInputElement | HTMLSelectElement) => {
+      const value = el.value.trim();
+      const field = el.dataset.field!;
+      if (!value) return el.hasAttribute('data-select') ? `Please select ${field}.` : `Please enter ${field}.`;
+      if (el.hasAttribute('data-phone') && !/^[6-9]\d{9}$/.test(digits(value))) {
+        return 'Please enter a 10-digit mobile number, e.g. 98765 43210.';
+      }
+      return '';
+    };
+
+    const check = (el: HTMLInputElement | HTMLSelectElement) => {
+      const msg = messageFor(el);
+      const out = document.getElementById(`${el.id}-error`)!;
+      el.setAttribute('aria-invalid', String(Boolean(msg)));
+      if (msg) {
+        el.setAttribute('aria-describedby', out.id);
+        out.textContent = msg;
+        out.hidden = false;
+      } else {
+        el.removeAttribute('aria-describedby');
+        out.hidden = true;
+      }
+      return !msg;
+    };
+
+    controls.forEach((el) => {
+      const handler = () => attempted && check(el);
+      el.addEventListener('input', handler);
+      el.addEventListener('change', handler);
+    });
+
+    const showSuccess = (name: string, viaWhatsApp: boolean) => {
+      const first = name.trim().split(/\s+/)[0];
+      root.querySelector('[data-success-title]')!.textContent = `Thank you, ${first}.`;
+      root.querySelector('[data-success-body]')!.textContent = viaWhatsApp
+        ? "Send the message we've prepared in WhatsApp, and our team will reply to fix a demo time."
+        : 'Our team will message you on WhatsApp shortly to fix a demo time.';
+      form.hidden = true;
+      success.hidden = false;
+      root.querySelector<HTMLElement>('[data-success-title]')!.focus();
+    };
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      attempted = true;
+      formError.hidden = true;
+      const results = controls.map(check);
+      const firstBad = controls[results.indexOf(false)];
+      if (firstBad) {
+        firstBad.focus();
+        return;
+      }
+
+      const data = Object.fromEntries(new FormData(form)) as Record<string, string>;
+      data.whatsapp = `+91${digits(data.whatsapp)}`;
+
+      const endpoint = form.dataset.endpoint;
+      if (!endpoint) {
+        const text = [
+          "Hi, I'd like to book a Study Buddy demo.",
+          `Name: ${data.name}`,
+          `Role: ${data.role}`,
+          `Institution: ${data.institution}`,
+          `City: ${data.city}`,
+          `Students: ${data.students}`,
+        ].join('\n');
+        window.open(`https://wa.me/${form.dataset.wa}?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
+        showSuccess(data.name, true);
+        return;
+      }
+
+      submit.disabled = true;
+      submitLabel.textContent = 'Sending…';
+      try {
+        const res = await fetch(endpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify(data),
+        });
+        if (!res.ok) throw new Error(String(res.status));
+        showSuccess(data.name, false);
+      } catch {
+        formError.textContent = 'Something went wrong. Please try again, or message us on WhatsApp.';
+        formError.hidden = false;
+      } finally {
+        submit.disabled = false;
+        submitLabel.textContent = defaultLabel;
+      }
+    });
+  }
+</script>

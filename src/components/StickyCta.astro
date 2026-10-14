@@ -56,11 +56,12 @@ import { CTA_PRIMARY, CTA_PRIMARY_HREF, CTA_WHATSAPP, WHATSAPP_HREF } from '../d
       heroVisible = e.isIntersecting;
       update();
     }).observe(hero);
-    if (stops.length) {
-      new IntersectionObserver((entries) => {
-        stopVisible = entries.some((e) => e.isIntersecting);
-        update();
-      }).observe(stops[0]);
-    }
+    const visibleStops = new Set<Element>();
+    const stopObserver = new IntersectionObserver((entries) => {
+      entries.forEach((e) => (e.isIntersecting ? visibleStops.add(e.target) : visibleStops.delete(e.target)));
+      stopVisible = visibleStops.size > 0;
+      update();
+    });
+    stops.forEach((s) => stopObserver.observe(s));
   }
 </script>

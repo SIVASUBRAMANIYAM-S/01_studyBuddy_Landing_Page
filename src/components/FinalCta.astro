@@ -1,0 +1,38 @@
+---
+import Eyebrow from './Eyebrow.astro';
+import Icon from './Icon.astro';
+import DemoForm from './DemoForm.astro';
+import { CTA_WHATSAPP, WHATSAPP_HREF } from '../data/site';
+---
+
+<section id="demo" aria-labelledby="demo-title" class="section-y bg-ink text-white" data-hide-sticky>
+  <div class="container-page grid-page items-start gap-y-10">
+    <div class="col-span-4 sm:col-span-8 lg:col-span-5 lg:pt-6" data-reveal>
+      <Eyebrow dark>Plan your next step</Eyebrow>
+      <h2 id="demo-title" class="mt-4 text-h1 text-white lg:mt-5">See whether a focused pilot fits your school.</h2>
+      <p class="mt-5 text-lead text-ink-on-dark">
+        Tell us about your classes, your current assessment cycle and the results you want to improve. We'll show you
+        how Study Buddy would work for your institute, and share a plan and pricing that fit.
+      </p>
+      <p aria-hidden="true" class="mt-8 -rotate-2 font-note text-note text-accent-on-dark">
+        We build the path, you build the future.
+      </p>
+      <p class="mt-8 text-ink-on-dark">
+        Prefer to talk now?
+        <a
+          href={WHATSAPP_HREF}
+          target="_blank"
+          rel="noopener"
+          class="ml-1 inline-flex min-h-11 items-center gap-2 font-semibold text-white underline decoration-1 underline-offset-[3px] hover:decoration-2"
+        >
+          <Icon name="message-circle" size={20} />
+          {CTA_WHATSAPP}<span class="sr-only"> (opens in a new tab)</span>
+        </a>
+      </p>
+    </div>
+
+    <div class="col-span-4 sm:col-span-8 lg:col-span-6 lg:col-start-7">
+      <DemoForm />
+    </div>
+  </div>
+</section>

@@ -1,0 +1,81 @@
+---
+import Eyebrow from './Eyebrow.astro';
+import Button from './Button.astro';
+import { CTA_PRIMARY, CTA_PRIMARY_HREF } from '../data/site';
+
+const steps = [
+  {
+    n: '01',
+    when: 'Day 0',
+    title: 'Set a baseline',
+    body: 'In your free demo, choose one cohort, the subjects and the measures you want to improve.',
+  },
+  {
+    n: '02',
+    when: 'Within 48 hours',
+    title: 'Go live in 48 hours',
+    body: 'We set up your branded portal, student rosters and teacher accounts.',
+  },
+  {
+    n: '03',
+    when: 'Days 1–30',
+    title: 'Run a 30-day pilot',
+    body: 'Daily practice, the AI tutor, mock tests and answer-sheet evaluation for one cohort.',
+  },
+  {
+    n: '04',
+    when: 'Day 30',
+    title: 'Review the evidence',
+    body: 'Compare participation and results with your baseline, then decide how far to expand.',
+  },
+];
+---
+
+<section id="pilot" aria-labelledby="pilot-title" class="section-y">
+  <div class="container-page">
+    <div class="grid-page items-end gap-y-6">
+      <div class="col-span-4 sm:col-span-8 lg:col-span-6" data-reveal>
+        <Eyebrow>Start with evidence</Eyebrow>
+        <h2 id="pilot-title" class="mt-4 text-h1 lg:mt-5">Start with one cohort. Expand only if it works.</h2>
+      </div>
+      <div class="col-span-4 sm:col-span-8 lg:col-span-5 lg:col-start-8" data-reveal>
+        <p class="text-lead text-ink-2">
+          No institute-wide rollout on day one. Run a 30-day pilot with a small group, measured against indicators
+          your school already trusts, and see the impact before you commit.
+        </p>
+      </div>
+    </div>
+
+    <p aria-hidden="true" class="mt-10 -rotate-2 font-note text-note text-accent-ink lg:mt-14">start small ↓</p>
+
+    <ol class="relative mt-6 grid gap-0 lg:grid-cols-4 lg:gap-6">
+      {
+        steps.map((s, i) => (
+          <li
+            class="relative border-l-2 border-line pb-10 pl-7 last:border-l-transparent last:pb-0 lg:border-l-0 lg:border-t-2 lg:pt-8 lg:pb-0 lg:pl-0 lg:last:border-t-accent"
+            data-reveal
+            style={`--reveal-i:${i}`}
+          >
+            <span
+              aria-hidden="true"
+              class:list={[
+                'absolute top-0 -left-[9px] size-4 rounded-full border-2 lg:-top-[9px] lg:left-0',
+                i === steps.length - 1 ? 'border-accent bg-accent' : 'border-teal bg-paper',
+              ]}
+            />
+            <p class="flex items-center gap-3 text-small">
+              <span class="font-semibold tabular-nums text-accent-ink">{s.n}</span>
+              <span class="rounded-sm bg-teal-tint px-2 py-0.5 text-[0.8125rem] font-semibold text-teal-ink">{s.when}</span>
+            </p>
+            <h3 class="mt-3 text-h3 font-semibold">{s.title}</h3>
+            <p class="mt-2 text-ink-2">{s.body}</p>
+          </li>
+        ))
+      }
+    </ol>
+
+    <div class="mt-12 lg:mt-16">
+      <Button href={CTA_PRIMARY_HREF} block>{CTA_PRIMARY}</Button>
+    </div>
+  </div>
+</section>

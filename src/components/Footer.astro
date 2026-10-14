@@ -1,0 +1,99 @@
+---
+import Logo from './Logo.astro';
+import Icon from './Icon.astro';
+import { SIGN_IN_HREF, WHATSAPP_HREF, WHATSAPP_DISPLAY, CONTACT_EMAIL } from '../data/site';
+
+const columns = [
+  {
+    title: 'Platform',
+    links: [
+      { label: 'For management', href: '#management' },
+      { label: 'For teachers', href: '#platform' },
+      { label: 'For parents', href: '#platform' },
+      { label: 'For students', href: '#platform' },
+    ],
+  },
+  {
+    title: 'Company',
+    links: [
+      { label: 'About Vivodha', href: 'https://www.vivodha.com/' },
+      { label: 'Contact', href: `mailto:${CONTACT_EMAIL}` },
+    ],
+  },
+  {
+    title: 'Legal',
+    links: [
+      { label: 'Privacy policy', href: '/privacy-policy' },
+      { label: 'Terms of use', href: '/terms-of-use' },
+    ],
+  },
+];
+
+const signIn = ['Student', 'Parent', 'Teacher', 'Management'];
+const link = 'inline-flex min-h-11 items-center text-ink-2 underline-offset-4 transition-colors hover:text-ink hover:underline';
+---
+
+<footer class="border-t border-line bg-paper-2" data-hide-sticky>
+  <div class="container-page grid-page gap-y-10 py-14 lg:py-20">
+    <div class="col-span-4 sm:col-span-8 lg:col-span-4">
+      <Logo />
+      <p class="mt-5 font-display text-h3 italic text-ink">We build the path, you build the future.</p>
+      <ul class="mt-6 space-y-1 text-[0.9375rem]">
+        <li>
+          <a href={WHATSAPP_HREF} target="_blank" rel="noopener" class:list={[link, 'gap-2']}>
+            <Icon name="message-circle" size={18} class="text-teal" />
+            WhatsApp {WHATSAPP_DISPLAY}<span class="sr-only"> (opens in a new tab)</span>
+          </a>
+        </li>
+        <li>
+          <a href={`mailto:${CONTACT_EMAIL}`} class:list={[link, 'gap-2']}>
+            <Icon name="mail" size={18} class="text-teal" />
+            {CONTACT_EMAIL}
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <nav aria-label="Footer" class="col-span-4 grid grid-cols-2 gap-x-6 gap-y-8 sm:col-span-8 sm:grid-cols-3 lg:col-span-5 lg:col-start-6">
+      {
+        columns.map((c) => (
+          <div>
+            <h2 class="font-body text-small font-semibold text-ink">{c.title}</h2>
+            <ul class="mt-2 text-[0.9375rem]">
+              {c.links.map((l) => (
+                <li>
+                  <a href={l.href} class={link}>
+                    {l.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </nav>
+
+    <div class="col-span-4 sm:col-span-8 lg:col-span-2 lg:col-start-11">
+      <h2 class="font-body text-small font-semibold text-ink">Sign in</h2>
+      <ul class="mt-2 grid grid-cols-2 gap-x-6 text-[0.9375rem] lg:grid-cols-1">
+        {
+          signIn.map((role) => (
+            <li>
+              <a href={SIGN_IN_HREF} class={link}>
+                {role}
+                <span class="sr-only"> sign in</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+
+  <div class="border-t border-line">
+    <div class="container-page flex flex-col gap-2 py-6 text-[0.8125rem] text-ink-2 sm:flex-row sm:items-center sm:justify-between">
+      <p>CBSE · Tamil Nadu State Board · JEE · NEET</p>
+      <p>© 2026 Vivodha Pvt Ltd. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
