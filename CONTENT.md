@@ -410,7 +410,8 @@ Tell us about your classes, your current assessment cycle and the results you wa
 
 ### WhatsApp pre-filled message
 Hi, I'm interested in a Study Buddy demo for my institute.
-[CONFIRM: WhatsApp business number]
+
+**Link:** `https://wa.me/917397108049?text=Hi%2C%20I%27m%20interested%20in%20a%20Study%20Buddy%20demo%20for%20my%20institute.`
 
 ---
 
@@ -422,7 +423,7 @@ Hi, I'm interested in a Study Buddy demo for my institute.
   - **Platform:** For management · For teachers · For parents · For students
   - **Company:** About Vivodha · Contact
   - **Legal:** Privacy policy · Terms of use [CONFIRM: pages exist; a privacy policy is required under the DPDP Act]
-- **Contact:** info@vivodha.com · WhatsApp [CONFIRM: number]
+- **Contact:** info@vivodha.com · WhatsApp +91 73971 08049
 - **Coverage line:** CBSE · Tamil Nadu State Board · JEE · NEET
 - **Right:** `Sign in` (students, parents, teachers and staff)
 - **Bottom:** © 2026 Vivodha Pvt Ltd. All rights reserved. [CONFIRM: legal entity name]
@@ -432,6 +433,5 @@ Hi, I'm interested in a Study Buddy demo for my institute.
 ## Open items before launch
 1. Every `[CONFIRM: …]`, especially the data-security wording (§10, FAQ 6) and teacher control over AI marks.
 2. The §11 footnote saying what the figures are based on.
-3. The WhatsApp business number.
-4. Real testimonials with signed consent.
-5. Real, consented student photography (DESIGN.md §10).
+3. Real testimonials with signed consent.
+4. Real, consented student photography (DESIGN.md §10).
