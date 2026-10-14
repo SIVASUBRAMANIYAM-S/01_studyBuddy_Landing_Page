@@ -15,7 +15,7 @@ This document is the single source of truth for the landing page's visual and in
 | **Arriving from** | Instagram, Facebook and YouTube ads |
 | **Device** | Mostly mid-range Android phones, 360–412px wide, often on 4G |
 | **Mindset** | Evaluating a vendor, not studying. They are skeptical of edtech hype and want to know: *Is this credible? Will it help my results and my teachers? What does a start look like?* |
-| **Primary action** | "Discuss an institute pilot" (form or WhatsApp) |
+| **Primary action** | "Book a free institute demo" (form), with "Chat on WhatsApp" as the secondary action. Final copy lives in [CONTENT.md](CONTENT.md). |
 
 **Design implication:** the page has to read as trustworthy within 5 seconds on a small screen. We earn that with calm editorial confidence, real people and honest evidence, not with visual noise.
 
@@ -225,7 +225,7 @@ Each component lists its anatomy, states, mobile behaviour, and the thing not to
 
 | Variant | Style | Use |
 |---|---|---|
-| **Primary** | `--accent` fill, white Source Sans 3 600 16px, `--r-sm`, padding 14×22, trailing arrow icon (Lucide `arrow-right`, 18px) | One per viewport: "Discuss an institute pilot" |
+| **Primary** | `--accent` fill, white Source Sans 3 600 16px, `--r-sm`, padding 14×22, trailing arrow icon (Lucide `arrow-right`, 18px) | One per viewport: "Book a free institute demo" |
 | **Secondary** | Transparent, 1.5px `--ink` border, `--ink` text | "Explore the platform" |
 | **Text link** | `--accent-ink`, underline offset 3px, thickness 1px → 2px on hover | Inline links |
 | **On dark** | Primary unchanged; secondary uses a white border and white text | CTA band |
@@ -271,7 +271,7 @@ Example: `—  A SMARTER WAY TO LEARN`
 - **Don't:** use boxed cards with shadows for each question, or chevrons that are too small to tap.
 
 ### 7.7 Form inputs (pilot enquiry)
-- **Fields:** Name, Role (select: Principal / Owner / Academic head / Other), Institution, City, Phone (+91), Approx. student count (select), and an optional message.
+- **Fields:** Name, Role (select), Institution name, City, Number of students (select), WhatsApp number (+91). Labels and options are in CONTENT.md §14.
 - **Anatomy:** a label above the field (Source Sans 600, 14px, `--ink`), then a 48px-high input with a `--surface` fill, 1px `--line-strong` border and `--r-sm`. Optional helper text sits below in `--ink-2` 14px.
 - **States:** focus → 2px `--focus` border and ring. Error → `--error` border, an icon and a message below (not colour alone). Success → a `--success` check.
 - **Phone:** a fixed `+91` prefix segment; `inputmode="tel"`, `autocomplete="tel-national"`; validates a 10-digit number starting 6–9.
@@ -280,7 +280,7 @@ Example: `—  A SMARTER WAY TO LEARN`
 - **Don't:** use floating labels, more than 7 fields, or CAPTCHA before a submit attempt.
 
 ### 7.8 Sticky mobile CTA bar (< 640px only)
-- **Anatomy:** a fixed bottom bar on `--surface` with a top 1px `--line` and `--shadow-2`. It holds the primary button "Discuss a pilot" (flex 1) and a 48px square secondary icon button for WhatsApp/call (Lucide `message-circle` or `phone`, with an `aria-label`).
+- **Anatomy:** a fixed bottom bar on `--surface` with a top 1px `--line` and `--shadow-2`. It holds the primary button "Book a free institute demo" (flex 1) and a 48px square secondary icon button for WhatsApp/call (Lucide `message-circle` or `phone`, with an `aria-label`).
 - **Padding:** 12px plus `env(safe-area-inset-bottom)`.
 - **Behaviour:** hidden while the hero CTA is visible, then slides in once the hero CTA scrolls out of view (IntersectionObserver). It hides again when the enquiry form or footer is in view, so it never covers the form. Adds matching bottom padding to `<body>` so no content is covered.
 - **Motion:** translateY 100% → 0 over 250ms.
