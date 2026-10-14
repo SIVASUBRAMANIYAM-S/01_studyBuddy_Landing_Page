@@ -1,18 +1,54 @@
 ---
 import '../styles/global.css';
+import type { FaqItem } from '../data/faq';
 
 interface Props {
   title: string;
   description: string;
   ogTitle: string;
   ogDescription: string;
+  heroPreloadSrcset?: string;
+  heroPreloadSizes?: string;
+  heroPreloadFallback?: string;
+  faqs?: FaqItem[];
 }
 
-const { title, description, ogTitle, ogDescription } = Astro.props;
+const { title, description, ogTitle, ogDescription, heroPreloadSrcset, heroPreloadSizes, heroPreloadFallback, faqs } =
+  Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
-const fontsCore =
-  'https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,500..600,0..100;1,9..144,500,0..100&family=Source+Sans+3:wght@400;600&display=swap';
-const fontsNote = 'https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap';
+const ogImage = new URL('/og-image.jpg', Astro.site);
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Study Buddy',
+  alternateName: 'Vivodha',
+  url: new URL('/', Astro.site).toString(),
+  logo: new URL('/apple-touch-icon.png', Astro.site).toString(),
+  description: 'AI learning platform for schools and coaching academies, covering CBSE, Tamil Nadu State Board, JEE and NEET.',
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: '+91-73971-08049',
+    email: 'info@vivodha.com',
+    contactType: 'sales',
+    areaServed: 'IN',
+    availableLanguage: ['English'],
+  },
+};
+
+// Built from the exact same `faqs` array Faq.astro renders (src/data/faq.ts),
+// so this schema can never say something the visible accordion doesn't.
+const faqSchema = faqs?.length
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqs.map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    }
+  : null;
 ---
 
 <!doctype html>
@@ -22,27 +58,114 @@ const fontsNote = 'https://fonts.googleapis.com/css2?family=Caveat:wght@500&disp
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
     <link rel="canonical" href={canonical} />
     <meta name="theme-color" content="#FBF7F0" />
 
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="/favicon-16.png" type="image/png" sizes="16x16" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Study Buddy" />
     <meta property="og:title" content={ogTitle} />
     <meta property="og:description" content={ogDescription} />
     <meta property="og:url" content={canonical} />
     <meta property="og:locale" content="en_IN" />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={ogTitle} />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={ogTitle} />
+    <meta name="twitter:description" content={ogDescription} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content={ogTitle} />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href={fontsCore} />
-    <link rel="stylesheet" href={fontsNote} media="print" onload="this.media='all'" />
-    <noscript><link rel="stylesheet" href={fontsNote} /></noscript>
+    <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+    {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
+
+    <!-- Self-hosted fonts (see global.css): preload only what's needed above the fold. -->
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/fraunces-roman-variable-latin.woff2" crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/fraunces-italic-variable-latin.woff2" crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/source-sans-3-variable-latin.woff2" crossorigin />
+
+    <!-- LCP image: preload at the same widths/sizes the hero <Picture> uses, so the
+         browser can start the fetch from <head> instead of waiting to parse the body. -->
+    {
+      heroPreloadFallback && (
+        <link
+          rel="preload"
+          as="image"
+          href={heroPreloadFallback}
+          imagesrcset={heroPreloadSrcset}
+          imagesizes={heroPreloadSizes}
+          fetchpriority="high"
+        />
+      )
+    }
 
     <script is:inline>
       if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         document.documentElement.classList.add('motion-ok');
       }
     </script>
+
+    <!--
+      Lead attribution: capture utm_source/utm_medium/utm_campaign from the landing
+      URL (social ads link here) into sessionStorage, so the value survives the rest
+      of the visit even once the visitor has scrolled past the querystring. Only
+      overwrites when the URL actually carries UTM params, so an organic page
+      refresh mid-session doesn't erase the ad that brought them here.
+      Read back via src/scripts/utm.ts (used by DemoForm.astro).
+    -->
+    <script is:inline>
+      (function () {
+        try {
+          var params = new URLSearchParams(location.search);
+          var keys = ['utm_source', 'utm_medium', 'utm_campaign'];
+          var utm = {};
+          var has = false;
+          keys.forEach(function (k) {
+            var v = params.get(k);
+            if (v) {
+              utm[k] = v;
+              has = true;
+            }
+          });
+          if (has) sessionStorage.setItem('sb_utm', JSON.stringify(utm));
+        } catch (e) {}
+      })();
+    </script>
+
+    <!--
+      Analytics placeholders — intentionally inert until real IDs are supplied.
+      Neither block fires a network request as written below.
+
+      Meta Pixel: replace YOUR_PIXEL_ID, then uncomment the <script> tag (not just
+      its contents) to activate.
+    <script is:inline>
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+      document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', 'YOUR_PIXEL_ID');
+      fbq('track', 'PageView');
+    </script>
+    -->
+
+    <!--
+      GA4: replace G-XXXXXXXXXX, then uncomment the <script> tags to activate.
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    -->
   </head>
   <body class="min-h-dvh">
     <a

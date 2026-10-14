@@ -20,6 +20,12 @@ const error = 'mt-1.5 flex items-center gap-1.5 text-[0.875rem] text-error';
     aria-describedby="demo-privacy"
     class="grid gap-5 sm:grid-cols-2"
   >
+    <!-- Populated from sessionStorage by the script below (src/scripts/utm.ts); empty when the
+         visitor didn't arrive via a tagged link. Ready for the Apps Script endpoint to read. -->
+    <input type="hidden" name="utm_source" data-utm="utm_source" />
+    <input type="hidden" name="utm_medium" data-utm="utm_medium" />
+    <input type="hidden" name="utm_campaign" data-utm="utm_campaign" />
+
     <div class="sm:col-span-2">
       <label for="demo-name" class={label}>Your name</label>
       <input id="demo-name" name="name" type="text" autocomplete="name" required class:list={[control, 'mt-1.5']} data-field="your name" />
@@ -108,9 +114,17 @@ const error = 'mt-1.5 flex items-center gap-1.5 text-[0.875rem] text-error';
 </div>
 
 <script>
+  import { readUtm } from '../scripts/utm';
+
   const root = document.querySelector<HTMLElement>('[data-demo]');
   const form = root?.querySelector<HTMLFormElement>('[data-demo-form]');
   if (root && form) {
+    const utm = readUtm();
+    form.querySelectorAll<HTMLInputElement>('[data-utm]').forEach((el) => {
+      const key = el.dataset.utm as keyof typeof utm;
+      if (utm[key]) el.value = utm[key]!;
+    });
+
     const controls = Array.from(form.querySelectorAll<HTMLInputElement | HTMLSelectElement>('[data-field]'));
     const submit = form.querySelector<HTMLButtonElement>('[data-submit]')!;
     const submitLabel = form.querySelector<HTMLElement>('[data-submit-label]')!;
@@ -179,14 +193,20 @@ const error = 'mt-1.5 flex items-center gap-1.5 text-[0.875rem] text-error';
 
       const endpoint = form.dataset.endpoint;
       if (!endpoint) {
-        const text = [
+        const lines = [
           "Hi, I'd like to book a Study Buddy demo.",
           `Name: ${data.name}`,
           `Role: ${data.role}`,
           `Institution: ${data.institution}`,
           `City: ${data.city}`,
           `Students: ${data.students}`,
-        ].join('\n');
+        ];
+        if (data.utm_source || data.utm_medium || data.utm_campaign) {
+          lines.push(
+            `Source: ${[data.utm_source, data.utm_medium, data.utm_campaign].filter(Boolean).join(' / ')}`,
+          );
+        }
+        const text = lines.join('\n');
         window.open(`https://wa.me/${form.dataset.wa}?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
         showSuccess(data.name, true);
         return;
