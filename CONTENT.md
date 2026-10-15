@@ -1,6 +1,8 @@
 # Study Buddy — Landing Page Copy
 
-Final copy for every section, in page order. This document pairs with [DESIGN.md](DESIGN.md), which defines how each block looks.
+Final copy for every section. This document pairs with [DESIGN.md](DESIGN.md), which defines how each block looks.
+
+**Page order (after the Phase 7 design review):** Header → Hero → Coverage strip → Proof (§11) → Problem → Feature spotlights → Management dashboard → One platform, four roles → Start from Class 8 → What the school gains → Pilot path → FAQ → Final CTA → Footer. Section numbers below are kept for reference; §6 was removed.
 
 **Brand name:** Study Buddy (always two words, capital S and B). Company: Vivodha. Use "Study Buddy by Vivodha" once in the header and footer; everywhere else, just "Study Buddy".
 **Reader:** school principals, school owners and coaching-academy directors in India, usually on a phone, arriving from a social ad.
@@ -37,10 +39,10 @@ Final copy for every section, in page order. This document pairs with [DESIGN.md
 ## 1. Header
 
 - **Logo:** Study Buddy · *by Vivodha*
-- **Nav (desktop):** Platform · Features · For management · Pilot · FAQ
+- **Nav (desktop):** Features · For management · Platform · Pilot · FAQ
 - **Right side:** `Sign in` (text link → studybuddy.vivodha.com/login) · `Book a free institute demo` (primary button)
 - **Mobile:** logo, then `Sign in`, then a menu icon (aria-label: "Open menu"). The primary CTA moves to the sticky bottom bar once the visitor scrolls past the hero.
-- **Mobile menu items:** Platform · Features · For management · Pilot · FAQ, then the `Book a free institute demo` button, then `Chat on WhatsApp`.
+- **Mobile menu items:** Features · For management · Platform · Pilot · FAQ, then the `Book a free institute demo` button, then `Chat on WhatsApp`.
 
 ---
 
@@ -53,25 +55,23 @@ Final copy for every section, in page order. This document pairs with [DESIGN.md
 **Tagline (Fraunces italic, directly under the H1):** We build the path, you build the future.
 
 **Lead:**
-Study Buddy gives your institute one AI platform for practice, doubt-solving, answer-sheet evaluation and progress reports. Your teachers spend less time correcting, and you see where results need support, while there is still time to act.
+AI that checks handwritten answer sheets, sets fresh practice that never repeats, and shows you which classes need help this week. Built for CBSE, Tamil Nadu State Board, JEE and NEET.
 
 **Buttons:**
 - Primary: `Book a free institute demo`
 - Secondary: `Chat on WhatsApp`
 
-**Under the buttons (small, `--ink-2`):** Trusted by 10,000+ students · Live in your institute within 48 hours [SOURCE]
+**Under the buttons (small, `--ink-2`):** **10,000+ students** already learning on Study Buddy · Live in your institute within 48 hours [SOURCE]
 
-**Annotation next to the student photo** *(handwritten 1 of 3)*: From classroom to confidence ↘
+~~Annotation next to the student photo~~ — removed in the design review (decoration competing with the headline underline and tagline).
 
 **Dashboard mockup (DESIGN.md §7.9):**
-- Title: Academic overview
-- Sub-label: Illustrative preview
-- Columns: Participation — *by class* · Topic progress — *by subject* · Mock-test trends — *over time*
-- Bars: Practice completed · Topics needing support · Mock-test readiness
-- Note: Use learning signals to plan teacher follow-up, revision and the next practice cycle.
-- Footer chip: Management · Teacher · Parent · Student views
+- Title: This week · Class 10
+- Label (one only): Illustrative
+- Bars: Practice completed — *10 A – 10 D* · Electricity · Physics — *Needs revision* · Board mock readiness — *Rising*
+- Alert: **10 C has gone quiet this week.** Suggested: a teacher follow-up.
 
-**Photo alt:** A Class 10 student in uniform writing notes at her classroom desk.
+**Photo alt:** Senior-secondary students in school uniform listening closely in a classroom.
 
 ---
 
@@ -150,7 +150,9 @@ Everyone works from the same data, so nobody is guessing. Each role sees only wh
 
 ---
 
-## 6. Student journey
+## 6. Student journey — REMOVED
+
+Cut in the design review: a student-facing routine that the Students tab in §5 already covers, on a page aimed at owners. Copy kept below for reference only.
 
 **Eyebrow:** HOW STUDENTS LEARN
 
@@ -172,22 +174,21 @@ A simple daily routine your teachers can guide and your management can measure.
 
 ## 7. Feature spotlights
 
-**Eyebrow:** WHAT MAKES STUDY BUDDY DIFFERENT
-
-**H2:** Built for how Indian schools actually run.
+No umbrella heading: each spotlight is its own section with an eyebrow and H2, so the eye has one entry point per feature.
 
 ### Spotlight 1 — AI handwritten answer-sheet evaluation
-**H3:** Handwritten answer sheets, evaluated by AI.
+**Eyebrow:** AI ANSWER-SHEET EVALUATION
+**H2:** Handwritten answer sheets, evaluated by AI.
 **Copy:**
 Students keep writing on paper, just as they will in the board exam. Teachers scan or photograph the sheets, and Study Buddy grades them in seconds, highlighting every mistake with step-wise feedback. Your teachers see each evaluated sheet and remain in charge of the final result.
 **Points:**
 - Works with your existing written tests. No need to move to online-only exams.
-- Every mistake is highlighted, so students know exactly what to fix.
 - Teachers stay in charge of final results. [CONFIRM: teachers can review and change a mark before results are shared]
 - Results flow straight into class, student and parent reports.
 
 ### Spotlight 2 — A question bank that doesn't repeat
-**H3:** A question bank that doesn't repeat itself.
+**Eyebrow:** QUESTION BANK
+**H2:** A question bank that doesn't repeat itself.
 **Copy:**
 Questions are generated fresh by chapter, difficulty and exam pattern, so students can take as many practice tests as they need without memorising answers. They have to understand the concept.
 **Points:**
@@ -201,7 +202,8 @@ Questions are generated fresh by chapter, difficulty and exam pattern, so studen
 Each mistake is saved with the student's answer, the correct answer, a worked solution and a memory tip. An AI study plan then tells each student what to revise next, and teachers can see which mistakes keep coming back across the class.
 
 ### Spotlight 4 — Your institute's brand, front and centre
-**H3:** Your logo, your name, your colours.
+**Eyebrow:** YOUR BRAND
+**H2:** Your logo, your name, your colours.
 **Copy:**
 Make the platform your own. Your institute's logo, name and brand colours appear across the student, parent and teacher dashboards. Families see your trusted brand, with a small "Powered by Vivodha" mark in the corner.
 
@@ -252,9 +254,9 @@ Entrance-exam success starts with strong concepts in Classes 8, 9 and 10. The ea
 
 **H2:** What your institute gains.
 
-**Intro:** Helping every student learn better, helping every school perform better.
+**Intro:** Results parents notice, workload your teachers feel, and a reputation that brings in admissions.
 
-**Six blocks (icon + title + copy):**
+**Four blocks (numeral + title + copy):**
 
 1. **Higher average marks and pass percentage**
    Personal practice lifts average and below-average students, and early intervention catches weak topics before the exam.
@@ -266,16 +268,10 @@ Entrance-exam success starts with strong concepts in Classes 8, 9 and 10. The ea
    Parents see progress, strengths and gaps throughout the year, not just at report-card time.
 
 4. **A reputation that drives admissions**
-   Better results and happier parents become the reason families choose your institute.
-
-5. **An edge over nearby institutes**
-   An AI learning platform under your own brand sets you apart as a modern, technology-led institution.
-
-6. **Decisions based on data**
-   Find learning gaps, compare batches and plan extra classes where the evidence says they're needed.
+   Better results, happier parents and a modern platform under your own brand become the reason families choose you.
 
 ### Sub-block: Your data stays protected
-**H3:** Student data, protected to Indian standards.
+**H3:** Student data stays in India, and stays yours.
 
 - **Hosted in India.** Enterprise-grade cloud infrastructure, with all student and institute data stored on Indian servers. [CONFIRM: cloud provider and region]
 - **Encrypted end to end.** AES-256 encryption for stored data and TLS 1.2+ for data in transit. [CONFIRM with tech team]
@@ -286,9 +282,9 @@ Entrance-exam success starts with strong concepts in Classes 8, 9 and 10. The ea
 
 ## 11. Proof
 
-**Eyebrow:** RESULTS SO FAR
+**Placement:** directly under the coverage strip, as a compact band.
 
-**H2:** What the numbers and school leaders say.
+**H2 (styled as an eyebrow):** RESULTS SO FAR
 
 **Evidence (editorial figure blocks in Fraunces, each with a one-line context. Not a stat-counter row; see DESIGN.md §2):**
 
@@ -297,9 +293,9 @@ Entrance-exam success starts with strong concepts in Classes 8, 9 and 10. The ea
 | **10,000+** | students learning on Study Buddy |
 | **98%** | pass rate among Study Buddy students |
 | **94%** | of students reported improvement with the AI study plan |
-| **68 → 95** | one student's JEE Main percentile after focused practice |
+| **68 → 95** | one student's JEE Main percentile, before and after |
 
-**Footnote (small, required):** Based on Study Buddy platform data, [CONFIRM: month and year, and who the 98% pass rate covers, e.g. "board-exam students active on the platform in 2025–26"].
+**Footnote (small, required, below the figures):** From Study Buddy platform data. Ask us for the breakdown in your demo. Still needed: [CONFIRM: month and year, and who the 98% pass rate covers, e.g. "board-exam students active on the platform in 2025–26"].
 *Why the footnote:* principals will ask "98% of whom?". A clear basis turns a claim they would doubt into evidence they can trust.
 
 **Testimonials:**

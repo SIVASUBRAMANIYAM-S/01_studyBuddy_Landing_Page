@@ -137,7 +137,7 @@ A warm paper base with deep-green ink, one burnt-orange accent, and teal taken f
 **Future Hindi/regional:** pair with *Noto Serif Devanagari* (display) and *Hind* (body), both designed to sit alongside the Latin faces above.
 
 ### Handwritten rule: a maximum of 3 uses on the whole page
-1. Hero annotation next to the student photo ("From classroom to confidence ↘")
+1. ~~Hero annotation next to the student photo~~: removed in the Phase 7 design review. The hero already carries the underline, italic tagline and dashboard, and a fourth decorative layer read as trying too hard.
 2. One margin note in the pilot section ("start small ↓")
 3. CTA band scribble ("We build the path, you build the future")
 

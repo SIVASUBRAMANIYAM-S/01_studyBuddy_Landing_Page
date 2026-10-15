@@ -7,7 +7,6 @@ import BrandingVisual from './spotlights/BrandingVisual.astro';
 
 const answerPoints = [
   'Works with your existing written tests. No need to move to online-only exams.',
-  'Every mistake is highlighted, so students know exactly what to fix.',
   'Teachers stay in charge of final results.',
   'Results flow straight into class, student and parent reports.',
 ];
@@ -26,31 +25,20 @@ const mistakeFields = [
 ];
 ---
 
-<section id="features" aria-labelledby="features-title">
-  <div class="border-t border-line">
+<div id="features">
+  <section aria-labelledby="answer-sheet-title" class="border-t border-line">
     <div class="container-page section-y">
-      <div class="max-w-[46rem]" data-reveal>
-        <Eyebrow>What makes Study Buddy different</Eyebrow>
-        <h2 id="features-title" class="mt-4 text-h2 lg:mt-5">Built for how Indian schools actually run.</h2>
-      </div>
-
-      <div class="grid-page mt-12 items-center gap-y-12 lg:mt-20">
+      <div class="grid-page items-center gap-y-12">
         <div class="col-span-4 sm:col-span-8 lg:col-span-5" data-reveal>
-          <h3 class="text-h2 font-medium">Handwritten answer sheets, evaluated by AI.</h3>
+          <Eyebrow>AI answer-sheet evaluation</Eyebrow>
+          <h2 id="answer-sheet-title" class="mt-4 text-h2 lg:mt-5">Handwritten answer sheets, evaluated by AI.</h2>
           <p class="measure mt-5 text-ink-2">
             Students keep writing on paper, just as they will in the board exam. Teachers scan or photograph the
             sheets, and Study Buddy grades them in seconds, highlighting every mistake with step-wise feedback. Your
             teachers see each evaluated sheet and remain in charge of the final result.
           </p>
-          <ul class="mt-6 space-y-3">
-            {
-              answerPoints.map((p) => (
-                <li class="flex gap-3">
-                  <Icon name="check" size={20} class="mt-[3px] text-teal" />
-                  <span>{p}</span>
-                </li>
-              ))
-            }
+          <ul class="mt-6 border-b border-line">
+            {answerPoints.map((p) => <li class="border-t border-line py-3 text-ink">{p}</li>)}
           </ul>
         </div>
         <div class="col-span-4 sm:col-span-8 lg:col-span-7">
@@ -58,26 +46,20 @@ const mistakeFields = [
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="bg-ink text-white">
+  <section aria-labelledby="question-bank-title" class="bg-ink text-white">
     <div class="container-page section-y">
       <div class="grid-page items-center gap-y-12">
         <div class="col-span-4 sm:col-span-8 lg:col-span-5" data-reveal>
-          <h3 class="text-h2 font-medium text-white">A question bank that doesn't repeat itself.</h3>
+          <Eyebrow dark>Question bank</Eyebrow>
+          <h2 id="question-bank-title" class="mt-4 text-h2 text-white lg:mt-5">A question bank that doesn't repeat itself.</h2>
           <p class="measure mt-5 text-ink-on-dark">
             Questions are generated fresh by chapter, difficulty and exam pattern, so students can take as many
             practice tests as they need without memorising answers. They have to understand the concept.
           </p>
-          <ul class="mt-6 space-y-3 text-ink-on-dark">
-            {
-              bankPoints.map((p) => (
-                <li class="flex gap-3">
-                  <Icon name="check" size={20} class="mt-[3px] text-teal-tint" />
-                  <span>{p}</span>
-                </li>
-              ))
-            }
+          <ul class="mt-6 border-b border-white/15">
+            {bankPoints.map((p) => <li class="border-t border-white/15 py-3 text-ink-on-dark">{p}</li>)}
           </ul>
         </div>
         <div class="col-span-4 sm:col-span-8 lg:col-span-6 lg:col-start-7">
@@ -122,16 +104,17 @@ const mistakeFields = [
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="bg-paper-2">
+  <section aria-labelledby="branding-title" class="bg-paper-2">
     <div class="container-page section-y">
       <div class="grid-page items-center gap-y-10">
         <div class="order-2 col-span-4 sm:col-span-8 lg:order-1 lg:col-span-7">
           <BrandingVisual />
         </div>
         <div class="order-1 col-span-4 sm:col-span-8 lg:order-2 lg:col-span-4 lg:col-start-9" data-reveal>
-          <h3 class="text-h2 font-medium">Your logo, your name, your colours.</h3>
+          <Eyebrow>Your brand</Eyebrow>
+          <h2 id="branding-title" class="mt-4 text-h2 lg:mt-5">Your logo, your name, your colours.</h2>
           <p class="mt-5 text-ink-2">
             Make the platform your own. Your institute's logo, name and brand colours appear across the student,
             parent and teacher dashboards. Families see your trusted brand, with a small "Powered by Vivodha" mark in
@@ -140,5 +123,5 @@ const mistakeFields = [
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</div>

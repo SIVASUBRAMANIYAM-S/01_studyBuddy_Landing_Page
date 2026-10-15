@@ -12,9 +12,9 @@ export const WHATSAPP_HREF = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIC
 export const SIGN_IN_HREF = 'https://studybuddy.vivodha.com/login';
 
 export const NAV = [
-  { label: 'Platform', href: '#platform' },
   { label: 'Features', href: '#features' },
   { label: 'For management', href: '#management' },
+  { label: 'Platform', href: '#platform' },
   { label: 'Pilot', href: '#pilot' },
   { label: 'FAQ', href: '#faq' },
 ];

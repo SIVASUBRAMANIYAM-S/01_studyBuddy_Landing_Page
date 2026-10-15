@@ -6,16 +6,10 @@ interface Props {
 }
 const { class: className = '' } = Astro.props;
 
-const columns = [
-  { label: 'Participation', value: 'By class' },
-  { label: 'Topic progress', value: 'By subject' },
-  { label: 'Mock-test trends', value: 'Over time' },
-];
-
 const bars = [
-  { label: 'Practice completed', meta: 'Weekly view', width: '78%', color: 'bg-accent' },
-  { label: 'Topics needing support', meta: 'By subject', width: '46%', color: 'bg-teal' },
-  { label: 'Mock-test readiness', meta: 'Trend over time', width: '64%', color: 'bg-ochre' },
+  { label: 'Practice completed', meta: '10 A – 10 D', width: '78%', color: 'bg-teal' },
+  { label: 'Electricity · Physics', meta: 'Needs revision', width: '46%', color: 'bg-ochre' },
+  { label: 'Board mock readiness', meta: 'Rising', width: '64%', color: 'bg-teal' },
 ];
 ---
 
@@ -24,45 +18,16 @@ const bars = [
   data-reveal
 >
   <figcaption class="sr-only">
-    Illustrative preview of the Study Buddy academic overview. It shows participation by class, topic progress by
-    subject and mock-test trends over time. Example indicators only, not real school results.
+    Illustrative example of the Study Buddy weekly overview for Class 10: practice completion, a physics topic that
+    needs revision, board mock readiness, and an alert that section 10 C has gone quiet this week.
   </figcaption>
 
-  <div aria-hidden="true" class="flex h-7 items-center gap-1.5 border-b border-line bg-paper-2 px-3">
-    <span class="size-2 rounded-full bg-line-strong/60"></span>
-    <span class="size-2 rounded-full bg-line-strong/60"></span>
-    <span class="size-2 rounded-full bg-line-strong/60"></span>
-  </div>
-
   <div aria-hidden="true" class="p-4 sm:p-5">
-    <div class="flex items-start justify-between gap-3">
-      <div>
-        <p class="text-[0.9375rem] font-semibold leading-tight">Academic overview</p>
-        <p class="mt-1 text-[0.75rem] text-ink-2">Illustrative preview</p>
-      </div>
-      <span class="inline-flex items-center gap-1.5 rounded-sm border border-line px-2 py-1 text-[0.75rem] text-ink-2">
-        <Icon name="calendar" size={14} />
-        Weekly view
+    <div class="flex items-center justify-between gap-3">
+      <p class="text-[0.9375rem] font-semibold leading-tight">This week · Class 10</p>
+      <span class="rounded-sm bg-paper-2 px-2 py-1 text-[0.6875rem] font-semibold uppercase tracking-[0.08em] text-ink-2">
+        Illustrative
       </span>
-    </div>
-
-    <div class="mt-4 grid grid-cols-3 divide-x divide-line rounded-sm border border-line">
-      {
-        columns.map((c) => (
-          <div class="px-2.5 py-2.5 sm:px-3">
-            <p class="text-[0.6875rem] leading-tight text-ink-2 sm:text-[0.75rem]">{c.label}</p>
-            <p class="mt-1 text-[0.8125rem] font-semibold leading-tight">{c.value}</p>
-          </div>
-        ))
-      }
-    </div>
-
-    <div class="mt-5 flex items-start justify-between gap-3">
-      <div>
-        <p class="text-[0.875rem] font-semibold leading-tight">Signals for the next check-in</p>
-        <p class="mt-1 text-[0.75rem] text-ink-2">Example indicators, not school results</p>
-      </div>
-      <span class="text-accent"><Icon name="target" size={18} /></span>
     </div>
 
     <ul class="mt-4 space-y-3.5">
@@ -71,7 +36,7 @@ const bars = [
           <li>
             <div class="flex items-baseline justify-between gap-3 text-[0.8125rem]">
               <span class="font-semibold">{b.label}</span>
-              <span class="text-[0.6875rem] text-ink-2">{b.meta}</span>
+              <span class="text-[0.75rem] text-ink-2">{b.meta}</span>
             </div>
             <div class="mt-1.5 h-2 overflow-hidden rounded-full bg-paper-2">
               <div class:list={['dash-bar h-full rounded-full', b.color]} style={`width:${b.width};--bar-i:${i}`} />
@@ -81,17 +46,9 @@ const bars = [
       }
     </ul>
 
-    <div class="mt-5 flex items-start gap-2.5 rounded-sm bg-teal-tint px-3 py-2.5 text-[0.75rem] leading-snug text-teal-ink">
-      <Icon name="message-circle" size={16} class="mt-px" />
-      <p>Use learning signals to plan teacher follow-up, revision and the next practice cycle.</p>
-    </div>
-
-    <div class="mt-4 flex items-center justify-between gap-3 border-t border-line pt-3 text-[0.6875rem] text-ink-2">
-      <span class="flex items-center gap-1.5">
-        <span class="size-1.5 rounded-full bg-success"></span>
-        Management · Teacher · Parent · Student views
-      </span>
-      <span class="hidden sm:inline">Illustration only</span>
+    <div class="mt-4 flex items-start gap-2.5 rounded-sm bg-accent-tint px-3 py-2.5 text-[0.8125rem] leading-snug text-ink">
+      <Icon name="bell" size={16} class="mt-0.5 text-accent-ink" />
+      <p><strong class="font-semibold">10 C has gone quiet this week.</strong> Suggested: a teacher follow-up.</p>
     </div>
   </div>
 </figure>

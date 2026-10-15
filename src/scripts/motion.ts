@@ -33,22 +33,6 @@ function heroTilt() {
   });
 }
 
-function journeyLine() {
-  const list = document.querySelector('[data-journey]');
-  const segments = gsap.utils.toArray<HTMLElement>('[data-journey-segment]');
-  if (!list || !segments.length) return;
-
-  const mm = gsap.matchMedia();
-  mm.add({ desktop: '(min-width: 1024px)', mobile: '(max-width: 1023.98px)' }, (ctx) => {
-    const axis = ctx.conditions!.desktop ? 'scaleX' : 'scaleY';
-    gsap.set(segments, { [axis]: 0 });
-    const tl = gsap.timeline({
-      scrollTrigger: { trigger: list, start: 'top 80%', end: ctx.conditions!.desktop ? 'top 35%' : 'bottom 65%', scrub: 0.5 },
-    });
-    segments.forEach((s) => tl.to(s, { [axis]: 1, ease: 'none', duration: 1 }));
-  });
-}
-
 function answerSheet() {
   const fig = document.querySelector<HTMLElement>('figure.answer');
   if (!fig) return;
@@ -105,7 +89,6 @@ function countUp() {
 
 export function initMotion() {
   heroTilt();
-  journeyLine();
   answerSheet();
   countUp();
 }

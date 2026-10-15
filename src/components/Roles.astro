@@ -54,7 +54,7 @@ const roles = [
 ];
 ---
 
-<section id="platform" aria-labelledby="platform-title" class="section-y bg-paper-2">
+<section id="platform" aria-labelledby="platform-title" class="section-y border-t border-line">
   <div class="container-page">
     <div class="max-w-[46rem]" data-reveal>
       <Eyebrow>One platform</Eyebrow>
@@ -205,7 +205,7 @@ const roles = [
 
     const initial = Math.max(0, tabs.findIndex((t) => t.getAttribute('aria-selected') === 'true'));
     panels.forEach((p, i) => (p.hidden = i !== initial));
-    moveIndicator(tabs[initial]);
+    requestAnimationFrame(() => moveIndicator(tabs[initial]));
     window.addEventListener('resize', () => moveIndicator(tabs.find((t) => t.tabIndex === 0) ?? tabs[0]));
     document.fonts?.ready.then(() => moveIndicator(tabs.find((t) => t.tabIndex === 0) ?? tabs[0]));
   });

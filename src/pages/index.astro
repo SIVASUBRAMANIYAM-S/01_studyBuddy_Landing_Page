@@ -6,7 +6,6 @@ import Hero from '../components/Hero.astro';
 import CoverageStrip from '../components/CoverageStrip.astro';
 import Problem from '../components/Problem.astro';
 import Roles from '../components/Roles.astro';
-import Journey from '../components/Journey.astro';
 import Spotlights from '../components/Spotlights.astro';
 import Management from '../components/Management.astro';
 import Foundation from '../components/Foundation.astro';
@@ -17,7 +16,7 @@ import Faq from '../components/Faq.astro';
 import FinalCta from '../components/FinalCta.astro';
 import Footer from '../components/Footer.astro';
 import StickyCta from '../components/StickyCta.astro';
-import heroPhoto from '../assets/photos/hero-students-classroom.jpg';
+import heroPhoto from '../assets/photos/hero-students-senior.jpg';
 import { faqs } from '../data/faq';
 
 // Preload the LCP image at the same widths/format Hero's <Picture> generates,
@@ -49,14 +48,13 @@ const heroPreloadFallback = (await getImage({ src: heroPhoto, format: 'avif', wi
   <main id="main">
     <Hero />
     <CoverageStrip />
+    <Proof />
     <Problem />
-    <Roles />
-    <Journey />
     <Spotlights />
     <Management />
+    <Roles />
     <Foundation />
     <Gains />
-    <Proof />
     <Pilot />
     <Faq />
     <FinalCta />

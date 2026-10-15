@@ -4,34 +4,20 @@ import Icon from './Icon.astro';
 
 const gains = [
   {
-    icon: 'trending-up',
     title: 'Higher average marks and pass percentage',
     body: 'Personal practice lifts average and below-average students, and early intervention catches weak topics before the exam.',
   },
   {
-    icon: 'hourglass',
     title: 'Lighter teacher workload',
     body: 'AI answer-sheet evaluation, ready tests and a round-the-clock AI tutor give teachers time back for teaching.',
   },
   {
-    icon: 'heart-handshake',
     title: 'Stronger parent trust',
     body: 'Parents see progress, strengths and gaps throughout the year, not just at report-card time.',
   },
   {
-    icon: 'award',
     title: 'A reputation that drives admissions',
-    body: 'Better results and happier parents become the reason families choose your institute.',
-  },
-  {
-    icon: 'flag',
-    title: 'An edge over nearby institutes',
-    body: 'An AI learning platform under your own brand sets you apart as a modern, technology-led institution.',
-  },
-  {
-    icon: 'chart-column',
-    title: 'Decisions based on data',
-    body: "Find learning gaps, compare batches and plan extra classes where the evidence says they're needed.",
+    body: 'Better results, happier parents and a modern platform under your own brand become the reason families choose you.',
   },
 ];
 
@@ -60,9 +46,9 @@ const protections = [
     <div class="col-span-4 sm:col-span-8 lg:col-span-4">
       <div class="lg:sticky lg:top-28" data-reveal>
         <Eyebrow>The outcome</Eyebrow>
-        <h2 id="outcomes-title" class="mt-4 text-h1 lg:mt-5">What your institute gains.</h2>
-        <p class="mt-5 max-w-[24ch] font-display text-h3 italic text-ink-2">
-          Helping every student learn better, helping every school perform better.
+        <h2 id="outcomes-title" class="mt-4 text-h2 lg:mt-5">What your institute gains.</h2>
+        <p class="measure mt-5 text-ink-2">
+          Results parents notice, workload your teachers feel, and a reputation that brings in admissions.
         </p>
       </div>
     </div>
@@ -71,14 +57,10 @@ const protections = [
       {
         gains.map((g, i) => (
           <li class="border-t border-line py-7" data-reveal style={`--reveal-i:${i % 2}`}>
-            <div class="flex items-center gap-3">
-              <span class="font-display text-[1rem] font-semibold tabular-nums text-accent-ink">
-                {String(i + 1).padStart(2, '0')}
-              </span>
-              <span class="h-px flex-1 bg-line" aria-hidden="true" />
-              <Icon name={g.icon} size={22} class="text-teal" />
-            </div>
-            <h3 class="mt-4 text-h3 font-semibold">{g.title}</h3>
+            <span class="font-display text-[1rem] font-semibold tabular-nums text-accent-ink">
+              {String(i + 1).padStart(2, '0')}
+            </span>
+            <h3 class="mt-2 text-h3 font-semibold">{g.title}</h3>
             <p class="mt-2 text-ink-2">{g.body}</p>
           </li>
         ))
@@ -92,7 +74,7 @@ const protections = [
         <span class="grid size-12 place-items-center rounded-sm bg-surface text-teal-ink shadow-1">
           <Icon name="shield-check" size={26} />
         </span>
-        <h3 class="mt-5 text-h3 font-semibold">Student data, protected to Indian standards.</h3>
+        <h3 class="mt-5 text-h3 font-semibold">Student data stays in India, and stays yours.</h3>
       </div>
       <ul class="col-span-4 grid gap-6 sm:col-span-8 sm:grid-cols-2 lg:col-span-8 lg:gap-x-10">
         {
