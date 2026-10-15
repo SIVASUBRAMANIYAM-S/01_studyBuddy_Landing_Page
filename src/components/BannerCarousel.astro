@@ -1,0 +1,299 @@
+---
+import Icon from './Icon.astro';
+import { CTA_PRIMARY, CTA_PRIMARY_HREF } from '../data/site';
+
+const total = 4;
+const cta =
+  'btn-press group inline-flex min-h-11 items-center justify-center gap-2 rounded-sm px-4 text-[0.9375rem] font-semibold leading-tight lg:px-5 lg:text-base';
+const ctaLight = `${cta} bg-white text-ink hover:bg-paper-2`;
+const ctaPrimary = `${cta} bg-primary text-white hover:bg-primary-hover`;
+const slide =
+  'relative flex h-full w-full shrink-0 snap-start snap-always items-center gap-8 overflow-hidden px-5 py-4 sm:px-8 lg:px-20';
+const eyebrow = 'text-[0.6875rem] font-semibold uppercase tracking-[0.12em] sm:text-eyebrow';
+const headline = 'mt-1.5 max-w-[22ch] font-display text-[1.3rem] leading-[1.15] font-medium sm:mt-2 sm:text-[1.75rem] lg:text-[2.125rem]';
+---
+
+<section
+  class="container-page pt-4 lg:pt-6"
+  aria-roledescription="carousel"
+  aria-label="Study Buddy highlights"
+  data-carousel
+>
+  <div class="relative">
+    <div
+      class="banner-track relative flex h-[176px] snap-x snap-mandatory overflow-x-auto overflow-y-hidden rounded-lg sm:h-[220px] lg:h-[272px]"
+      data-track
+      tabindex="-1"
+    >
+      
+      <div class:list={[slide, 'bg-band text-white']} role="group" aria-roledescription="slide" aria-label={`1 of ${total}`}>
+        <div class="relative z-10 min-w-0 flex-1">
+          <p class:list={[eyebrow, 'text-accent-on-dark']}>AI answer-sheet evaluation</p>
+          <p class:list={[headline, 'text-white']}>Handwritten answer sheets, checked by AI in seconds.</p>
+          <a href={CTA_PRIMARY_HREF} class:list={[ctaLight, 'mt-3 sm:mt-4']}>
+            {CTA_PRIMARY}
+            <Icon name="arrow-right" size={18} class="transition-transform group-hover:translate-x-[3px]" />
+          </a>
+        </div>
+        <div aria-hidden="true" class="relative z-10 hidden shrink-0 items-center gap-5 lg:flex">
+          <div class="w-56 -rotate-2 rounded-[3px] bg-white px-4 py-3 text-ink shadow-2">
+            <p class="text-[0.6875rem] text-ink-2">Q3 · Solve 2x + 5 = 17</p>
+            <p class="mt-1 flex items-center gap-2 font-note text-[1.35rem] leading-8">
+              <span class="text-accent"><Icon name="x" size={14} strokeWidth={2.5} /></span>2x = 17 + 5
+            </p>
+            <p class="flex items-center gap-2 pl-[22px] font-note text-[1.35rem] leading-8">2x = 22</p>
+            <p class="flex items-center gap-2 font-note text-[1.35rem] leading-8">
+              <span class="text-accent"><Icon name="x" size={14} strokeWidth={2.5} /></span>x = 11
+            </p>
+          </div>
+          <div class="flex flex-col items-start gap-2">
+            <span class="inline-flex items-center gap-2 rounded-sm bg-white/10 px-3 py-1.5 text-[0.8125rem] font-semibold text-white">
+              <Icon name="scan-line" size={16} /> Graded in seconds
+            </span>
+            <span class="inline-flex items-center gap-2 rounded-sm bg-white/10 px-3 py-1.5 text-[0.8125rem] text-ink-on-dark">
+              Every mistake highlighted
+            </span>
+            <span class="inline-flex items-center gap-2 rounded-sm bg-white/10 px-3 py-1.5 text-[0.8125rem] text-ink-on-dark">
+              Teachers stay in charge
+            </span>
+          </div>
+        </div>
+        <span aria-hidden="true" class="absolute -top-24 -right-24 size-72 rounded-full bg-accent/25 blur-3xl"></span>
+      </div>
+
+      
+      <div class:list={[slide, 'bg-[image:var(--gradient-brand)] text-white']} role="group" aria-roledescription="slide" aria-label={`2 of ${total}`}>
+        <div class="relative z-10 min-w-0 flex-1">
+          <p class:list={[eyebrow, 'text-white/85']}>30-day pilot</p>
+          <p class:list={[headline, 'text-white']}>Start with one cohort. Live in 48&nbsp;hours.</p>
+          <p class="mt-1 hidden text-[0.9375rem] text-white/85 sm:block">No long-term commitment.</p>
+          <a href={CTA_PRIMARY_HREF} class:list={[ctaLight, 'mt-3 sm:mt-4']}>
+            {CTA_PRIMARY}
+            <Icon name="arrow-right" size={18} class="transition-transform group-hover:translate-x-[3px]" />
+          </a>
+        </div>
+        <ol aria-hidden="true" class="relative z-10 hidden shrink-0 grid-cols-2 gap-2.5 lg:grid">
+          {
+            [
+              ['Day 0', 'Set a baseline'],
+              ['48 hours', 'Go live'],
+              ['Days 1–30', 'Run the pilot'],
+              ['Day 30', 'Review evidence'],
+            ].map(([k, v]) => (
+              <li class="w-40 rounded-md bg-white/12 px-4 py-3 ring-1 ring-white/20">
+                <p class="text-[0.75rem] font-semibold uppercase tracking-[0.08em] text-white/80">{k}</p>
+                <p class="mt-1 font-display text-[1.0625rem] text-white">{v}</p>
+              </li>
+            ))
+          }
+        </ol>
+      </div>
+
+      
+      <div class:list={[slide, 'bg-paper-2 text-ink']} role="group" aria-roledescription="slide" aria-label={`3 of ${total}`}>
+        <div class="relative z-10 min-w-0 flex-1">
+          <p class:list={[eyebrow, 'text-accent-ink']}>Results so far</p>
+          <p class:list={[headline, 'text-ink']}>
+            <span class="text-gradient">10,000+ students</span> already learning on Study Buddy.
+          </p>
+          <a href={CTA_PRIMARY_HREF} class:list={[ctaPrimary, 'mt-3 sm:mt-4']}>
+            {CTA_PRIMARY}
+            <Icon name="arrow-right" size={18} class="transition-transform group-hover:translate-x-[3px]" />
+          </a>
+        </div>
+        <dl class="relative z-10 hidden shrink-0 gap-3 lg:flex">
+          {
+            [
+              ['98%', 'pass rate among Study Buddy students'],
+              ['94%', 'reported improvement with the AI study plan'],
+            ].map(([n, t]) => (
+              <div class="flex w-44 flex-col-reverse gap-1 rounded-md bg-surface px-4 py-4 shadow-1">
+                <dt class="text-[0.8125rem] leading-snug text-ink-2">{t}</dt>
+                <dd class="font-display text-[2.25rem] leading-none text-ink">{n}</dd>
+              </div>
+            ))
+          }
+        </dl>
+        <p class="absolute right-5 bottom-2 z-10 hidden text-[0.75rem] text-ink-2 lg:block">Study Buddy platform data</p>
+      </div>
+
+      
+      <div class:list={[slide, 'bg-teal-tint text-ink']} role="group" aria-roledescription="slide" aria-label={`4 of ${total}`}>
+        <div class="relative z-10 min-w-0 flex-1">
+          <p class:list={[eyebrow, 'text-teal-ink']}>Your boards, your brand</p>
+          <p class:list={[headline, 'text-ink']}>CBSE, Tamil Nadu State Board, JEE and NEET, under your own logo.</p>
+          <a href={CTA_PRIMARY_HREF} class:list={[ctaPrimary, 'mt-3 sm:mt-4']}>
+            {CTA_PRIMARY}
+            <Icon name="arrow-right" size={18} class="transition-transform group-hover:translate-x-[3px]" />
+          </a>
+        </div>
+        <div aria-hidden="true" class="relative z-10 hidden shrink-0 flex-col items-end gap-3 lg:flex">
+          <div class="flex w-64 items-center gap-3 rounded-md bg-surface px-4 py-3 shadow-2">
+            <span class="grid size-10 place-items-center rounded-sm bg-primary text-white"><Icon name="shield" size={20} strokeWidth={2} /></span>
+            <span>
+              <span class="block text-[0.9375rem] font-semibold">Your School Name</span>
+              <span class="block text-[0.6875rem] text-ink-2">Powered by Vivodha</span>
+            </span>
+          </div>
+          <div class="flex flex-wrap justify-end gap-2">
+            {['CBSE', 'TN State Board', 'JEE', 'NEET'].map((b) => (
+              <span class="rounded-sm bg-surface px-3 py-1 text-[0.8125rem] font-semibold text-teal-ink shadow-1">{b}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button
+      type="button"
+      class="absolute top-1/2 left-3 z-20 hidden size-11 -translate-y-1/2 place-items-center rounded-full bg-white/90 text-ink shadow-2 btn-press hover:bg-white lg:grid"
+      aria-label="Previous slide"
+      data-prev
+    >
+      <Icon name="chevron-left" size={22} />
+    </button>
+    <button
+      type="button"
+      class="absolute top-1/2 right-3 z-20 hidden size-11 -translate-y-1/2 place-items-center rounded-full bg-white/90 text-ink shadow-2 btn-press hover:bg-white lg:grid"
+      aria-label="Next slide"
+      data-next
+    >
+      <Icon name="chevron-right" size={22} />
+    </button>
+  </div>
+
+  <div class="mt-1 flex items-center justify-center gap-1">
+    <div class="flex items-center" role="group" aria-label="Choose slide">
+      {
+        Array.from({ length: total }, (_, i) => (
+          <button
+            type="button"
+            class="banner-dot grid size-11 place-items-center"
+            aria-label={`Show slide ${i + 1} of ${total}`}
+            aria-current={i === 0 ? 'true' : 'false'}
+            data-dot={i}
+          >
+            <span class="block h-2 rounded-full transition-[width,background-color] duration-(--dur-base) ease-(--ease-out)" />
+          </button>
+        ))
+      }
+    </div>
+    <button
+      type="button"
+      class="grid size-11 place-items-center rounded-full text-ink-2 hover:text-ink"
+      aria-label="Pause slideshow"
+      data-pause
+      hidden
+    >
+      <span data-icon-pause><Icon name="pause" size={18} /></span>
+      <span data-icon-play hidden><Icon name="play" size={18} /></span>
+    </button>
+  </div>
+</section>
+
+<style>
+  .banner-track {
+    scrollbar-width: none;
+    overscroll-behavior-x: contain;
+  }
+  .banner-track::-webkit-scrollbar {
+    display: none;
+  }
+  .banner-dot span {
+    width: 8px;
+    background: var(--color-line-strong);
+    opacity: 0.55;
+  }
+  .banner-dot[aria-current='true'] span {
+    width: 24px;
+    opacity: 1;
+    background-image: var(--gradient-brand);
+  }
+</style>
+
+<script>
+  const root = document.querySelector<HTMLElement>('[data-carousel]');
+  const track = root?.querySelector<HTMLElement>('[data-track]');
+  if (root && track) {
+    const slides = Array.from(track.children) as HTMLElement[];
+    const dots = Array.from(root.querySelectorAll<HTMLButtonElement>('[data-dot]'));
+    const pauseBtn = root.querySelector<HTMLButtonElement>('[data-pause]')!;
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const INTERVAL = 5000;
+    let index = 0;
+    let userPaused = reduce;
+    let hovering = false;
+    let keyboardFocus = false;
+    let inView = true;
+    let timer = 0;
+
+    const setActive = (i: number) => {
+      index = i;
+      dots.forEach((d, k) => d.setAttribute('aria-current', String(k === i)));
+      slides.forEach((s, k) => (s.inert = k !== i));
+    };
+    const go = (i: number) => {
+      const next = (i + slides.length) % slides.length;
+      track.scrollTo({ left: slides[next].offsetLeft, behavior: reduce ? 'auto' : 'smooth' });
+      setActive(next);
+    };
+    const tick = () => {
+      if (!userPaused && !hovering && !keyboardFocus && inView && !document.hidden) go(index + 1);
+    };
+    const restart = () => {
+      window.clearInterval(timer);
+      timer = window.setInterval(tick, INTERVAL);
+    };
+
+    // Keep dots in step with manual swipes (scroll-snap does the snapping natively).
+    let queued = false;
+    track.addEventListener(
+      'scroll',
+      () => {
+        if (queued) return;
+        queued = true;
+        requestAnimationFrame(() => {
+          queued = false;
+          const i = Math.round(track.scrollLeft / track.clientWidth);
+          if (i !== index && i >= 0 && i < slides.length) setActive(i);
+        });
+      },
+      { passive: true },
+    );
+
+    dots.forEach((d) => d.addEventListener('click', () => { go(Number(d.dataset.dot)); restart(); }));
+    root.querySelector('[data-prev]')?.addEventListener('click', () => { go(index - 1); restart(); });
+    root.querySelector('[data-next]')?.addEventListener('click', () => { go(index + 1); restart(); });
+    root.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') { e.preventDefault(); go(index + 1); restart(); }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); go(index - 1); restart(); }
+    });
+
+    root.addEventListener('pointerenter', (e) => { if (e.pointerType === 'mouse') hovering = true; });
+    root.addEventListener('pointerleave', (e) => { if (e.pointerType === 'mouse') hovering = false; });
+    // Pause for keyboard users reading a slide; a mouse click on a dot shouldn't freeze autoplay.
+    root.addEventListener('focusin', (e) => (keyboardFocus = (e.target as Element).matches(':focus-visible')));
+    root.addEventListener('focusout', (e) => { if (!root.contains(e.relatedTarget as Node)) keyboardFocus = false; });
+    track.addEventListener('touchstart', restart, { passive: true });
+
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(([entry]) => (inView = entry.isIntersecting)).observe(root);
+    }
+
+    const showPause = (paused: boolean) => {
+      pauseBtn.setAttribute('aria-label', paused ? 'Play slideshow' : 'Pause slideshow');
+      pauseBtn.querySelector<HTMLElement>('[data-icon-pause]')!.hidden = paused;
+      pauseBtn.querySelector<HTMLElement>('[data-icon-play]')!.hidden = !paused;
+    };
+    pauseBtn.hidden = false;
+    showPause(userPaused);
+    pauseBtn.addEventListener('click', () => {
+      userPaused = !userPaused;
+      showPause(userPaused);
+      if (!userPaused) restart();
+    });
+
+    setActive(0);
+    restart();
+  }
+</script>

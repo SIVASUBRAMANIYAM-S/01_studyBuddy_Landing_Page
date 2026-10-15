@@ -32,12 +32,12 @@ const steps = [
             {i < steps.length - 1 && (
               <span
                 aria-hidden="true"
-                class="absolute top-3 -bottom-9 left-[3.5px] w-[3px] rounded-full bg-line lg:top-[3.5px] lg:right-[-2rem] lg:bottom-auto lg:left-3 lg:h-[3px] lg:w-auto"
+                class="absolute top-[5px] -bottom-[41px] left-[3.5px] w-[3px] rounded-full bg-line lg:top-[3.5px] lg:right-[-37px] lg:bottom-auto lg:left-[5px] lg:h-[3px] lg:w-auto"
               >
                 <span class="block size-full origin-top rounded-full bg-[image:var(--gradient-brand)] lg:origin-left" data-journey-segment />
               </span>
             )}
-            <span aria-hidden="true" class="absolute top-0 left-0 size-2.5 rounded-full bg-accent ring-4 ring-paper" />
+            <span aria-hidden="true" class="journey-dot absolute top-0 left-0 z-10 size-2.5 rounded-full bg-accent" data-journey-dot />
             <div class="flex items-center justify-between gap-4">
               <span class="text-small font-semibold tabular-nums text-accent-ink">{s.n}</span>
               <span class="text-teal">

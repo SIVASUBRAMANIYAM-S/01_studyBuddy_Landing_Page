@@ -99,29 +99,69 @@ function headingWords() {
 }
 
 function journeyLine() {
-  const list = document.querySelector('[data-journey]');
-  const segments = gsap.utils.toArray<HTMLElement>('[data-journey-segment]');
-  if (!list || !segments.length) return;
+  const list = document.querySelector<HTMLElement>('[data-journey]');
+  if (!list) return;
+  const items = gsap.utils.toArray<HTMLElement>(list.querySelectorAll(':scope > li'));
+  const dots = items.map((li) => li.querySelector<HTMLElement>('[data-journey-dot]')!);
+  const segments = items.map((li) => li.querySelector<HTMLElement>('[data-journey-segment]'));
+  const activate = (i: number, on = true) => dots[i]?.classList.toggle('is-active', on);
 
   const mm = gsap.matchMedia();
-  mm.add({ desktop: DESKTOP, mobile: MOBILE }, (ctx) => {
-    const axis = ctx.conditions!.desktop ? 'scaleX' : 'scaleY';
-    gsap.set(segments, { [axis]: 0 });
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: list,
-        start: 'top 85%',
-        end: ctx.conditions!.desktop ? 'top 40%' : 'bottom 75%',
-        scrub: 0.5,
-      },
+
+  // Desktop: steps read left to right, so draw dot → line → dot as one short sequence once the
+  // row is in view. Finishes in ~2s while the visitor is looking at it.
+  mm.add(DESKTOP, () => {
+    const segs = segments.filter(Boolean) as HTMLElement[];
+    gsap.set(segs, { scaleX: 0, scaleY: 1 });
+    dots.forEach((_, i) => activate(i, false));
+    const tl = gsap.timeline({ paused: true });
+    dots.forEach((_, i) => {
+      tl.call(() => activate(i));
+      if (segments[i]) tl.to(segments[i], { scaleX: 1, duration: 0.45, ease: 'power1.inOut' }, '+=0.08');
     });
-    segments.forEach((s) => tl.to(s, { [axis]: 1, ease: 'none', duration: 1 }));
+    whenReached(list, 0.75, () => tl.play());
+    return () => {
+      tl.kill();
+      dots.forEach((_, i) => activate(i, true));
+    };
+  });
+
+  // Mobile/tablet: steps stack vertically, so each segment fills while its own step is being
+  // read, and the next dot lights up exactly when the line arrives.
+  mm.add(MOBILE, () => {
+    activate(0);
+    dots.slice(1).forEach((_, i) => activate(i + 1, false));
+    const tweens = items.map((li, i) => {
+      const seg = segments[i];
+      if (!seg) return null;
+      return gsap.fromTo(
+        seg,
+        { scaleY: 0, scaleX: 1 },
+        {
+          scaleY: 1,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: li,
+            start: 'top 70%',
+            end: 'bottom 70%',
+            scrub: 0.3,
+            onUpdate: (st) => activate(i + 1, st.progress > 0.98),
+            onRefresh: (st) => activate(i + 1, st.progress > 0.98),
+          },
+        },
+      );
+    });
+    return () => {
+      tweens.forEach((t) => t?.scrollTrigger?.kill());
+      dots.forEach((_, i) => activate(i, true));
+    };
   });
 }
 
 function answerSheet() {
   const fig = document.querySelector<HTMLElement>('figure.answer');
-  if (!fig) return;
+  const card = fig?.querySelector<HTMLElement>('[data-feedback]');
+  if (!fig || !card) return;
   const okRows = fig.querySelectorAll('[data-row="ok"]');
   const mistakeRows = gsap.utils.toArray<HTMLElement>(fig.querySelectorAll('[data-row="mistake"]'));
   const marks = gsap.utils.toArray<HTMLElement>(fig.querySelectorAll('[data-mark]'));
@@ -136,16 +176,19 @@ function answerSheet() {
   gsap.set(markPaths, { strokeDasharray: 1, strokeDashoffset: 1 });
   gsap.set(score, { autoAlpha: 0 });
 
+  // ~1.5s total. Each mistake: highlight on the handwriting, cross drawn, feedback row slides in.
   const tl = gsap.timeline({ paused: true, defaults: { ease: EASE } });
-  tl.to(okRows, { autoAlpha: 1, x: 0, duration: 0.4 });
+  tl.to(okRows, { autoAlpha: 1, x: 0, duration: 0.3 });
   mistakeRows.forEach((row, i) => {
-    tl.to(sweeps[i], { scaleX: 1, duration: 0.35 }, '>+0.25')
-      .to(marks[i].querySelectorAll('path'), { strokeDashoffset: 0, duration: 0.25, stagger: 0.1 }, '<0.1')
-      .to(row, { autoAlpha: 1, x: 0, duration: 0.4 }, '<0.1');
+    tl.to(sweeps[i], { scaleX: 1, duration: 0.25 }, '>+0.12')
+      .to(marks[i].querySelectorAll('path'), { strokeDashoffset: 0, duration: 0.2, stagger: 0.06 }, '<')
+      .to(row, { autoAlpha: 1, x: 0, duration: 0.3 }, '<0.05');
   });
-  tl.to(score, { autoAlpha: 1, duration: 0.3 }, '>+0.15');
+  tl.to(score, { autoAlpha: 1, duration: 0.25 }, '>+0.08');
 
-  whenReached(fig, 0.85, () => tl.play());
+  // Trigger from the graded card itself: on phones it sits below the handwritten paper, so
+  // keying off the figure top would play the sequence while the card is still off-screen.
+  whenReached(card, 0.8, () => tl.play());
 }
 
 function countUp() {

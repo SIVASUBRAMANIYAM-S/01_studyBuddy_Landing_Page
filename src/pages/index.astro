@@ -2,6 +2,7 @@
 import { getImage } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import Header from '../components/Header.astro';
+import BannerCarousel from '../components/BannerCarousel.astro';
 import Hero from '../components/Hero.astro';
 import CoverageStrip from '../components/CoverageStrip.astro';
 import Problem from '../components/Problem.astro';
@@ -47,6 +48,7 @@ const heroPreloadFallback = (await getImage({ src: heroPhoto, format: 'avif', wi
 >
   <Header />
   <main id="main">
+    <BannerCarousel />
     <Hero />
     <CoverageStrip />
     <Problem />

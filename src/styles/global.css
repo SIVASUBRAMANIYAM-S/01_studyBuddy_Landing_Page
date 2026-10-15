@@ -286,6 +286,22 @@
   display: inline-block;
 }
 
+/* Journey dots light up as the line reaches them (driven by motion.ts). Static when motion is off. */
+@media (prefers-reduced-motion: no-preference) {
+  .motion-ok .journey-dot:not(.is-active) {
+    background: var(--color-paper);
+    box-shadow: inset 0 0 0 2px var(--color-line-strong);
+  }
+  .motion-ok .journey-dot.is-active {
+    animation: dot-pop 300ms var(--ease-out);
+  }
+}
+@keyframes dot-pop {
+  50% {
+    transform: scale(1.7);
+  }
+}
+
 /* Hero dashboard starts tilted from first paint; motion.ts scrubs it flat on scroll. */
 @media (prefers-reduced-motion: no-preference) {
   .motion-ok [data-tilt] {

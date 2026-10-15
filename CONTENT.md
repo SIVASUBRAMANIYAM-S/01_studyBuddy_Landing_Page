@@ -44,6 +44,21 @@ Final copy for every section, in page order. This document pairs with [DESIGN.md
 
 ---
 
+## 1b. Banner carousel (directly under the header, before the hero)
+
+Four slides, autoplay every 5s (pauses on hover, keyboard focus, the pause button, and under reduced motion). Every slide's button is `Book a free institute demo` → #demo.
+
+| # | Eyebrow | Headline | Desktop extras |
+|---|---|---|---|
+| 1 | AI ANSWER-SHEET EVALUATION | Handwritten answer sheets, checked by AI in seconds. | Mini answer sheet with marked mistakes · "Graded in seconds" · "Every mistake highlighted" · "Teachers stay in charge" |
+| 2 | 30-DAY PILOT | Start with one cohort. Live in 48 hours. | Sub-line "No long-term commitment." · tiles: Day 0 Set a baseline · 48 hours Go live · Days 1–30 Run the pilot · Day 30 Review evidence |
+| 3 | RESULTS SO FAR | **10,000+ students** already learning on Study Buddy. | 98% pass rate among Study Buddy students · 94% reported improvement with the AI study plan · "Study Buddy platform data" |
+| 4 | YOUR BOARDS, YOUR BRAND | CBSE, Tamil Nadu State Board, JEE and NEET, under your own logo. | "Your School Name · Powered by Vivodha" card · CBSE / TN State Board / JEE / NEET chips |
+
+Do not describe the pilot as "free" until that's confirmed.
+
+---
+
 ## 2. Hero
 
 **Audience badge:** FOR PRINCIPALS, SCHOOL OWNERS AND ACADEMY DIRECTORS

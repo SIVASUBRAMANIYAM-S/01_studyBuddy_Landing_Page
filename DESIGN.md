@@ -292,6 +292,13 @@ Example: `—  A SMARTER WAY TO LEARN`
 
 ---
 
+### 7.10 Banner carousel (under the header)
+- **Size:** contained to the 1200px grid, `--r-lg` corners; height 176px (mobile) / 220px (≥640) / 272px (≥1024), reserved so nothing shifts.
+- **Slides:** HTML/CSS, not images — navy band, brand gradient, ice blue, indigo tint. Each has an eyebrow, a Fraunces headline (2 lines max on mobile) and one CTA (white on dark slides, `--primary` on light). Desktop adds an illustration or tiles on the right; mobile hides them.
+- **Behaviour:** native scroll-snap (swipe works with no JS); autoplay 5s with loop; dots (24px active gradient pill, 8px others, 44px hit areas); prev/next arrows on desktop only, inset 12px with 80px slide padding so they never cover text; pause/play button (WCAG 2.2.2); ← → keys.
+- **Pauses:** mouse hover, keyboard focus inside (`:focus-visible` only, so a mouse click on a dot doesn't freeze it), the pause button, tab hidden, banner off-screen. No autoplay under reduced motion.
+- **A11y:** `aria-roledescription="carousel"`, slides `role="group"` "n of 4", off-screen slides `inert`.
+
 ## 8. Iconography & decoration
 - **Icons:** Lucide only, 1.5px stroke, 20–24px, `currentColor`. *Why: one consistent line style looks considered and matches the serif's fine detail.*
 - **Hand-drawn marks:** an underline stroke under the hero highlight and one curved arrow next to the annotation, both in `--accent`, as inline SVG with `stroke-linecap: round`. These are the only decorative graphics.
@@ -319,8 +326,8 @@ Example: `—  A SMARTER WAY TO LEARN`
 - Hero headline: words settle in on first paint (CSS only, 450ms each, 55ms stagger). Words start at 35% opacity, never hidden, so the headline is readable and the CTA clickable from the first frame.
 - Hero dashboard: tilts to a subtle perspective (≤ 10°) on load, then flattens as the hero scrolls away (scrubbed to scroll position).
 - Hand-drawn marks (hero underline and arrow, pilot "start small" arrow) draw in once with `stroke-dashoffset`.
-- Student journey: the connecting line fills step to step, tied to scroll position.
-- Answer-sheet spotlight: mistakes reveal one at a time (highlight sweep, then cross mark, then feedback row), once.
+- Student journey: dots start as outlines and light up (300ms pop) only when the line reaches them. Desktop: dot → line → dot sequence plays once (~2s) when the row is in view. Mobile/tablet: each segment fills while its own step is read (scrubbed), and the line runs dot-centre to dot-centre.
+- Answer-sheet spotlight: mistakes reveal one at a time (highlight sweep, then cross mark, then feedback row), once, in ~1s. Triggered by the graded card itself (not the figure), so on phones it plays where the visitor is looking.
 - Proof figures count up from 0 in 1.4s (an allowed exception to the 600ms ceiling, so the count reads clearly), once per page view, with the final value's width reserved so nothing shifts.
 - Dashboard bars grow from 0 to their value once (400ms).
 - Tab indicator slide, accordion expand, sticky bar slide, button arrow nudge.
