@@ -60,7 +60,7 @@ const faqSchema = faqs?.length
     <meta name="description" content={description} />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href={canonical} />
-    <meta name="theme-color" content="#F5F8FF" />
+    <meta name="theme-color" content="#FAFBFF" />
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
@@ -176,19 +176,35 @@ const faqSchema = faqs?.length
     <slot />
     <script>
       const root = document.documentElement;
-      if (root.classList.contains('motion-ok') && 'IntersectionObserver' in window) {
-        const io = new IntersectionObserver(
-          (entries) => {
-            for (const entry of entries) {
-              if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-                io.unobserve(entry.target);
-              }
+      if (root.classList.contains('motion-ok')) {
+        // Reveal everything whose top has crossed 90% of the viewport, checked once per frame
+        // while scrolling. Unlike an IntersectionObserver, this also catches elements that a fast
+        // flick or an anchor jump (nav links, #demo) carries straight past without intersecting.
+        const pending = new Set(document.querySelectorAll<HTMLElement>('[data-reveal]'));
+        let queued = false;
+        const reveal = () => {
+          queued = false;
+          const line = window.innerHeight * 0.9;
+          for (const el of [...pending]) {
+            if (el.getBoundingClientRect().top < line) {
+              el.classList.add('is-visible');
+              pending.delete(el);
             }
-          },
-          { rootMargin: '0px 0px -10% 0px', threshold: 0.1 },
-        );
-        document.querySelectorAll('[data-reveal]').forEach((el) => io.observe(el));
+          }
+          if (!pending.size) {
+            window.removeEventListener('scroll', schedule);
+            window.removeEventListener('resize', schedule);
+          }
+        };
+        const schedule = () => {
+          if (!queued) {
+            queued = true;
+            requestAnimationFrame(reveal);
+          }
+        };
+        window.addEventListener('scroll', schedule, { passive: true });
+        window.addEventListener('resize', schedule, { passive: true });
+        requestAnimationFrame(reveal);
       } else {
         document.querySelectorAll('[data-reveal]').forEach((el) => el.classList.add('is-visible'));
       }
@@ -196,7 +212,7 @@ const faqSchema = faqs?.length
       if (root.classList.contains('motion-ok')) {
         const loadMotion = () => import('../scripts/motion').then((m) => m.initMotion());
         const whenIdle = () =>
-          'requestIdleCallback' in window ? requestIdleCallback(loadMotion, { timeout: 2000 }) : setTimeout(loadMotion, 200);
+          'requestIdleCallback' in window ? requestIdleCallback(loadMotion, { timeout: 800 }) : setTimeout(loadMotion, 200);
         if (document.readyState === 'complete') whenIdle();
         else window.addEventListener('load', whenIdle, { once: true });
       }

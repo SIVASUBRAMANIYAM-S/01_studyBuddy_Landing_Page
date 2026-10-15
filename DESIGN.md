@@ -36,7 +36,7 @@ These are the visual habits of the current app and posters 1–2. **They must no
 
 | Don't | Why |
 |---|---|
-| Purple–blue gradients | They're the default "AI startup" look and make us interchangeable with every other edtech app. |
+| Purple–blue gradients **outside the brand uses in §3** | Overused, they become the default "AI startup" look. The blue→violet brand gradient is allowed only for the hero highlight, thin brand lines and navy bands. |
 | Glassmorphism, frosted panels | Poor contrast, heavy GPU cost on cheap phones, and no meaning. |
 | Glowing or neon cards, coloured outer glows | They read as gaming or crypto, not as a school. |
 | Emoji as icons (👋 🧪 💰) | They render inconsistently across Android OEMs and look informal. |
@@ -50,81 +50,72 @@ These are the visual habits of the current app and posters 1–2. **They must no
 
 ## 3. Colour tokens
 
-Matched to the Study Buddy app (studybuddy.vivodha.com): a light blue-white page, deep navy ink and dark bands like the app sidebar, royal-blue buttons like the app's Sign In, an orange/amber energy accent like "Score Higher" on the login page, and indigo as the quiet support colour. Token names were kept from the first theme so components didn't change (`teal` now holds indigo).
+Matched to the Study Buddy app (studybuddy.vivodha.com): a crisp white page, deep navy ink and navy bands like the app sidebar, royal-blue buttons like the app's Sign In, and violet as the accent, with the app's blue→violet login gradient reserved for the headline highlight, the dark bands and thin brand lines. Token names were kept from the first theme so components didn't change (`teal` now holds indigo, `accent` holds violet).
 
 ```css
 :root {
   /* Surfaces */
-  --paper:        #F5F8FF;  /* page background, light blue-white */
-  --paper-2:      #EAF0FD;  /* alternate section band */
+  --paper:        #FAFBFF;  /* page background, crisp white with a hint of blue */
+  --paper-2:      #F1F4FF;  /* alternate section band (ice blue) */
   --surface:      #FFFFFF;  /* cards, inputs, dashboard frame */
 
   /* Ink */
-  --ink:          #13235B;  /* headings, body, navy dark bands */
-  --ink-2:        #4A5677;  /* secondary / muted text */
-  --ink-on-dark:  #C8D3F5;  /* body text on --ink bands */
+  --ink:          #0F1B4C;  /* headings, body, navy dark bands */
+  --ink-2:        #4B5578;  /* secondary / muted text */
+  --ink-on-dark:  #C7D0F2;  /* body text on navy bands */
 
   /* Primary: royal blue (actions) */
-  --primary:       #2563EB; /* button fill, logo mark, focus ring */
-  --primary-hover: #1D4ED8; /* button hover */
+  --primary:       #2563EB; /* buttons, logo mark, focus ring */
+  --primary-hover: #1D4ED8;
 
-  /* Accent: orange / amber (energy and emphasis, not buttons) */
-  --accent:       #EA580C;  /* large highlight words, underline stroke, eyebrow rules, markers */
-  --accent-hover: #C2410C;
-  --accent-ink:   #C2410C;  /* small orange text on paper (eyebrows, links), numbered markers */
-  --accent-on-dark:#FBBF24; /* amber eyebrows/script on --ink bands */
-  --accent-tint:  #FFEDD5;  /* audience badge background, highlights */
+  /* Accent: violet (emphasis, never buttons) */
+  --accent:       #7C3AED;  /* eyebrow rules, markers, journey dots, large accents */
+  --accent-hover: #6D28D9;
+  --accent-ink:   #6D28D9;  /* small violet text: eyebrows, links, Class 11 node */
+  --accent-on-dark:#C4B5FD; /* lavender eyebrows/script on navy */
+  --accent-tint:  #EDE9FE;  /* audience badge, highlight sweeps */
 
   /* Support: indigo (data and reassurance). Token still named "teal". */
-  --teal:         #4F46E5;  /* chart bars, icons, check marks */
-  --teal-ink:     #4338CA;  /* indigo text/labels */
-  --teal-tint:    #E0E7FF;  /* soft info backgrounds */
+  --teal:         #4F46E5;
+  --teal-ink:     #4338CA;
+  --teal-tint:    #E0E7FF;
 
-  /* Chart-only third hue (dashboard mockup) */
-  --ochre:        #F59E0B;
+  --ochre:        #F59E0B;  /* "needs revision" data only */
+  --line:         #E2E7F6;
+  --line-strong:  #7C88A6;
+  --error: #B42318; --success: #1F7A4D; --warning: #8A5A00;
+  --focus:        #2563EB;
 
-  /* Lines */
-  --line:         #DCE3F3;  /* hairline dividers & card borders (decorative) */
-  --line-strong:  #7C88A6;  /* input borders (meets 3:1 non-text) */
-
-  /* Feedback (forms only) */
-  --error:        #B42318;
-  --success:      #1F7A4D;
-  --warning:      #8A5A00;
-
-  /* Focus */
-  --focus:        #2563EB;  /* 2px ring + 2px offset in --paper */
+  /* Brand gradients (the only gradients allowed) */
+  --gradient-brand: linear-gradient(90deg, #2563EB, #7C3AED); /* "visible progress.", scroll-progress bar, journey line */
+  --gradient-band:  linear-gradient(135deg, #0F1B4C, #1E1B5E); /* navy bands: question bank, final CTA */
 }
 ```
 
-*Why blue and navy:* principals who sign up land in the Study Buddy app, so the page should already feel like the product they'll use. One brand, one first impression.
-*Why blue buttons and orange highlights:* blue says "act here" consistently with the app, and orange gives the headline and markers energy without competing with the buttons.
-*Why indigo is support only:* it carries data (bars, checks, icons) and stays quieter than both blue and orange.
+*Why blue and navy:* principals who sign up land in the Study Buddy app, so the page should already feel like the product.
+*Why violet, not orange:* orange fought the blue. Violet sits next to blue on the colour wheel, matches the app's login gradient, and still reads as a distinct accent.
+*Why gradients are limited:* the blue→violet ramp is the brand signature, so it appears only on the hero highlight, thin brand lines and the navy bands, never on cards, buttons or icons, and never with glow.
 
 ### Contrast ratios (WCAG 2.1, computed)
 
 | Foreground | Background | Ratio | Use | AA |
 |---|---|---|---|---|
-| `--ink` #13235B | `--paper` #F5F8FF | **13.92** | Body, headings | ✅ AAA |
-| `--ink` #13235B | `--surface` #FFFFFF | **14.80** | Card text | ✅ AAA |
-| `--ink-2` #4A5677 | `--paper` | **6.84** | Muted text | ✅ |
-| `--ink-2` #4A5677 | `--paper-2` #EAF0FD | **6.36** | Muted text on bands | ✅ |
+| `--ink` #0F1B4C | `--paper` #FAFBFF | **15.85** | Body, headings | ✅ AAA |
+| `--ink-2` #4B5578 | `--paper` | **7.08** | Muted text | ✅ AAA |
+| `--ink-2` #4B5578 | `--paper-2` #F1F4FF | **6.66** | Muted text on bands | ✅ |
 | #FFFFFF | `--primary` #2563EB | **5.17** | Button label | ✅ |
-| #FFFFFF | `--primary-hover` #1D4ED8 | **6.70** | Button hover | ✅ |
-| `--accent-ink` #C2410C | `--paper` | **4.87** | Eyebrows, links | ✅ |
-| `--accent-ink` #C2410C | `--paper-2` | **4.53** | Eyebrows on bands | ✅ |
-| `--accent` #EA580C | `--paper` | **3.35** | **Large display text only** (≥24px, or ≥18.66px bold) | ✅ large / ❌ small |
-| `--teal` #4F46E5 | `--paper` | **5.91** | Icons, indigo text | ✅ |
+| `--accent-ink` #6D28D9 | `--paper` | **6.87** | Eyebrows, links | ✅ |
+| #FFFFFF | `--accent-ink` #6D28D9 | **7.10** | Class 11 node, markers | ✅ AAA |
+| `--accent` #7C3AED | `--paper` | **5.51** | Large accents | ✅ |
+| Gradient ends #2563EB / #7C3AED | `--paper` | **5.00 / 5.51** | "visible progress." (72px display) | ✅ |
 | `--teal-ink` #4338CA | `--teal-tint` #E0E7FF | **6.41** | Info notes | ✅ |
-| #FFFFFF | `--ink` #13235B | **14.80** | Headline on navy band | ✅ AAA |
-| `--ink-on-dark` #C8D3F5 | `--ink` | **9.93** | Body on navy band | ✅ AAA |
-| `--accent-on-dark` #FBBF24 | `--ink` | **8.86** | Eyebrow/script on navy band | ✅ AAA |
-| `--ink` | `--accent-tint` #FFEDD5 | **12.91** | Audience badge | ✅ AAA |
-| `--line-strong` #7C88A6 | `--surface` | **3.54** | Input borders (non-text, needs 3:1) | ✅ |
-| `--error` #B42318 | `--surface` | **6.57** | Error message | ✅ |
-| `--success` #1F7A4D | `--surface` | **5.32** | Success message | ✅ |
+| #FFFFFF | navy band (#0F1B4C → #1E1B5E) | **16.39 → 15.29** | Headline on navy | ✅ AAA |
+| `--ink-on-dark` #C7D0F2 | navy band | **10.72 → 10.00** | Body on navy | ✅ AAA |
+| `--accent-on-dark` #C4B5FD | navy band | **8.88 → 8.28** | Eyebrow/script on navy | ✅ AAA |
+| `--ink` | `--accent-tint` #EDE9FE | **13.80** | Audience badge | ✅ AAA |
+| `--line-strong` #7C88A6 | `--surface` | **3.54** | Input borders (needs 3:1) | ✅ |
 
-**Rule:** `--accent` is never used for text under 24px. Use `--accent-ink` instead. White labels on small orange fills (Class 11 node, numbered markers) use `--accent-ink`. `--line` is decorative only and never the sole boundary of an interactive control.
+**Rule:** buttons are always `--primary`. Violet is for emphasis and markers. `--line` is decorative only.
 
 ---
 
@@ -321,18 +312,23 @@ Example: `—  A SMARTER WAY TO LEARN`
 | `--ease-out` | `cubic-bezier(.2, .7, .2, 1)` |
 
 **Allowed**
-- Section reveal: opacity 0→1 plus translateY 12px→0, once per element, with a 60ms stagger and at most 4 items.
+- Section reveal: opacity 0→1 plus translateY 24px→0 and scale 0.98→1 (500ms), once per element, with a 70ms stagger. Triggered by a per-frame position check, so anchor jumps and fast flicks never leave content hidden.
+- Section headings (h2): words rise from behind a mask, 600ms, 45ms stagger, once.
+- Scroll-progress bar: 3px brand gradient under the header, tied to scroll position.
+- Hero photo parallax: up to 40px (24px on mobile), tied to scroll.
 - Hero headline: words settle in on first paint (CSS only, 450ms each, 55ms stagger). Words start at 35% opacity, never hidden, so the headline is readable and the CTA clickable from the first frame.
 - Hero dashboard: tilts to a subtle perspective (≤ 10°) on load, then flattens as the hero scrolls away (scrubbed to scroll position).
 - Hand-drawn marks (hero underline and arrow, pilot "start small" arrow) draw in once with `stroke-dashoffset`.
 - Student journey: the connecting line fills step to step, tied to scroll position.
 - Answer-sheet spotlight: mistakes reveal one at a time (highlight sweep, then cross mark, then feedback row), once.
-- Proof figures count up from 0 in 600ms, once per page view, with the final value's width reserved so nothing shifts.
+- Proof figures count up from 0 in 1.4s (an allowed exception to the 600ms ceiling, so the count reads clearly), once per page view, with the final value's width reserved so nothing shifts.
 - Dashboard bars grow from 0 to their value once (400ms).
 - Tab indicator slide, accordion expand, sticky bar slide, button arrow nudge.
 - Hover/tap: buttons gain `--shadow-2` on hover and press to `scale(0.97)`; cards lift 2px with `--shadow-2`. All ≤ 150ms.
 
-**Implementation:** GSAP + ScrollTrigger, loaded as a separate chunk after `load` when the browser is idle, and never downloaded under `prefers-reduced-motion: reduce`. Budget: ≤ 60KB gzipped for all animation JS.
+**Reliability rule:** every scroll-triggered animation that hides content first must also play immediately if the visitor is already past its trigger when GSAP initialises (`whenReached` in `src/scripts/motion.ts`). The hero tilt's starting pose is set in CSS so it's visible from first paint.
+
+**Implementation:** GSAP + ScrollTrigger, loaded as a separate chunk after `load` when the browser is idle (≤ 800ms), and never downloaded under `prefers-reduced-motion: reduce`. Budget: ≤ 60KB gzipped for all animation JS.
 
 **Forbidden:** parallax backgrounds, auto-playing carousels, looping or pulsing animation, counters that re-run on every scroll, scroll-jacking, WebGL/Three.js, and animating layout properties (only `transform`, `opacity` and SVG stroke properties are animated).
 

@@ -47,24 +47,24 @@
   --color-transparent: transparent;
   --color-current: currentColor;
 
-  /* Study Buddy app palette (studybuddy.vivodha.com): blue-white page, navy ink and bands,
-     royal-blue buttons, orange/amber energy accent, indigo secondary. */
-  --color-paper: #f5f8ff;
-  --color-paper-2: #eaf0fd;
+  /* Study Buddy app palette (studybuddy.vivodha.com): crisp white page, navy ink and bands,
+     royal-blue buttons, violet accent and a blue→violet brand gradient, indigo support. */
+  --color-paper: #fafbff;
+  --color-paper-2: #f1f4ff;
   --color-surface: #ffffff;
 
-  --color-ink: #13235b;
-  --color-ink-2: #4a5677;
-  --color-ink-on-dark: #c8d3f5;
+  --color-ink: #0f1b4c;
+  --color-ink-2: #4b5578;
+  --color-ink-on-dark: #c7d0f2;
 
   --color-primary: #2563eb;
   --color-primary-hover: #1d4ed8;
 
-  --color-accent: #ea580c;
-  --color-accent-hover: #c2410c;
-  --color-accent-ink: #c2410c;
-  --color-accent-on-dark: #fbbf24;
-  --color-accent-tint: #ffedd5;
+  --color-accent: #7c3aed;
+  --color-accent-hover: #6d28d9;
+  --color-accent-ink: #6d28d9;
+  --color-accent-on-dark: #c4b5fd;
+  --color-accent-tint: #ede9fe;
 
   /* Token names kept from the original theme so components don't change; "teal" now holds the indigo secondary. */
   --color-teal: #4f46e5;
@@ -73,7 +73,7 @@
 
   --color-ochre: #f59e0b;
 
-  --color-line: #dce3f3;
+  --color-line: #e2e7f6;
   --color-line-strong: #7c88a6;
 
   --color-error: #b42318;
@@ -81,6 +81,9 @@
   --color-warning: #8a5a00;
 
   --color-focus: #2563eb;
+
+  --gradient-brand: linear-gradient(90deg, #2563eb 0%, #7c3aed 100%);
+  --gradient-band: linear-gradient(135deg, #0f1b4c 0%, #1e1b5e 100%);
 
   --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
   --font-body: 'Source Sans 3', 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
@@ -112,8 +115,8 @@
   --radius-lg: 20px;
   --radius-full: 999px;
 
-  --shadow-1: 0 1px 2px rgb(19 35 91 / 0.06), 0 1px 1px rgb(19 35 91 / 0.04);
-  --shadow-2: 0 12px 32px -12px rgb(19 35 91 / 0.2), 0 2px 6px rgb(19 35 91 / 0.06);
+  --shadow-1: 0 1px 2px rgb(15 27 76 / 0.06), 0 1px 1px rgb(15 27 76 / 0.04);
+  --shadow-2: 0 12px 32px -12px rgb(15 27 76 / 0.2), 0 2px 6px rgb(15 27 76 / 0.06);
 
   --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
   --dur-fast: 150ms;
@@ -192,11 +195,11 @@
 /* Reveal only once JS has confirmed motion is allowed (DESIGN.md §9). */
 .motion-ok [data-reveal] {
   opacity: 0;
-  transform: translateY(12px);
+  transform: translateY(24px) scale(0.98);
   transition:
-    opacity var(--dur-slow) var(--ease-out),
-    transform var(--dur-slow) var(--ease-out);
-  transition-delay: calc(var(--reveal-i, 0) * 60ms);
+    opacity 500ms var(--ease-out),
+    transform 500ms var(--ease-out);
+  transition-delay: calc(var(--reveal-i, 0) * 70ms);
 }
 .motion-ok [data-reveal].is-visible {
   opacity: 1;
@@ -256,6 +259,43 @@
   }
   &:active {
     transform: scale(0.99);
+  }
+}
+
+@utility text-gradient {
+  background-image: var(--gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+@utility bg-band {
+  background-color: var(--color-ink);
+  background-image: var(--gradient-band);
+}
+
+.hword {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  padding-bottom: 0.14em;
+  margin-bottom: -0.14em;
+}
+.hword-in {
+  display: inline-block;
+}
+
+/* Hero dashboard starts tilted from first paint; motion.ts scrubs it flat on scroll. */
+@media (prefers-reduced-motion: no-preference) {
+  .motion-ok [data-tilt] {
+    transform: perspective(1400px) rotateX(5deg);
+    transform-origin: 50% 100%;
+  }
+  @media (width >= 64rem) {
+    .motion-ok [data-tilt] {
+      transform: perspective(1400px) rotateX(6deg) rotateY(-10deg);
+    }
   }
 }
 

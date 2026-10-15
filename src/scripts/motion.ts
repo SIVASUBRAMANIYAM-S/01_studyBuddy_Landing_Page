@@ -4,6 +4,19 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const EASE = 'power2.out';
+const DESKTOP = '(min-width: 1024px)';
+const MOBILE = '(max-width: 1023.98px)';
+
+// Plays `fn` once when `el`'s top crosses `fraction` of the viewport. If the visitor is already
+// at or past that point when this runs (GSAP loads after idle, or they arrived via an anchor),
+// play straight away instead of waiting for a scroll that may never come.
+function whenReached(el: Element, fraction: number, fn: () => void) {
+  if (el.getBoundingClientRect().top < window.innerHeight * fraction) {
+    fn();
+    return;
+  }
+  ScrollTrigger.create({ trigger: el, start: `top ${fraction * 100}%`, once: true, onEnter: fn });
+}
 
 function heroTilt() {
   const el = document.querySelector<HTMLElement>('[data-tilt]');
@@ -11,25 +24,77 @@ function heroTilt() {
   if (!el || !hero) return;
 
   const mm = gsap.matchMedia();
-  mm.add({ desktop: '(min-width: 1024px)', mobile: '(max-width: 1023.98px)' }, (ctx) => {
-    const tilt = ctx.conditions!.desktop ? { rotateX: 7, rotateY: -10 } : { rotateX: 6, rotateY: 0 };
-    gsap.set(el, { transformPerspective: 1400, transformOrigin: '50% 100%' });
-    gsap
-      .timeline()
-      .fromTo(el, { rotateX: 0, rotateY: 0 }, { ...tilt, duration: 0.6, ease: EASE })
-      .add(() => {
-        gsap.fromTo(
-          el,
-          tilt,
-          {
-            rotateX: 0,
-            rotateY: 0,
-            ease: 'none',
-            immediateRender: false,
-            scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom 35%', scrub: 0.4 },
-          },
-        );
-      });
+  mm.add({ desktop: DESKTOP, mobile: MOBILE }, (ctx) => {
+    // Matches the CSS starting tilt in global.css, so taking over is seamless.
+    const tilt = ctx.conditions!.desktop ? { rotateX: 6, rotateY: -10 } : { rotateX: 5, rotateY: 0 };
+    gsap.set(el, { transformPerspective: 1400, transformOrigin: '50% 100%', ...tilt });
+    gsap.to(el, {
+      rotateX: 0,
+      rotateY: 0,
+      ease: 'none',
+      scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom 35%', scrub: 0.4 },
+    });
+  });
+}
+
+function heroParallax() {
+  const img = document.querySelector<HTMLElement>('[data-parallax] img');
+  const hero = img?.closest('section');
+  if (!img || !hero) return;
+
+  const mm = gsap.matchMedia();
+  mm.add({ desktop: DESKTOP, mobile: MOBILE }, (ctx) => {
+    gsap.fromTo(
+      img,
+      { y: 0, scale: 1.08 },
+      {
+        y: ctx.conditions!.desktop ? -40 : -24,
+        scale: 1.08,
+        ease: 'none',
+        scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: true },
+      },
+    );
+  });
+}
+
+function progressBar() {
+  const bar = document.querySelector<HTMLElement>('[data-progress]');
+  if (!bar) return;
+  gsap.fromTo(
+    bar,
+    { scaleX: 0 },
+    { scaleX: 1, ease: 'none', scrollTrigger: { start: 0, end: 'max', scrub: 0.2 } },
+  );
+}
+
+function headingWords() {
+  const headings = gsap.utils.toArray<HTMLElement>('main section h2.text-h2, main section h2.text-h1');
+  headings.forEach((h) => {
+    if (h.childElementCount > 0 || h.closest('[aria-hidden="true"]')) return;
+    const text = (h.textContent ?? '').trim().replace(/\s+/g, ' ');
+    if (!text) return;
+
+    h.setAttribute('aria-label', text);
+    const frag = document.createDocumentFragment();
+    const inners: HTMLElement[] = [];
+    text.split(' ').forEach((word, i) => {
+      if (i > 0) frag.append(' ');
+      const outer = document.createElement('span');
+      outer.className = 'hword';
+      outer.setAttribute('aria-hidden', 'true');
+      const inner = document.createElement('span');
+      inner.className = 'hword-in';
+      inner.textContent = word;
+      outer.append(inner);
+      frag.append(outer);
+      inners.push(inner);
+    });
+    h.replaceChildren(frag);
+
+    gsap.set(inners, { yPercent: 105 });
+    whenReached(h, 0.88, () =>
+      gsap.to(inners, { yPercent: 0, duration: 0.6, ease: 'power3.out', stagger: 0.045 }),
+    );
   });
 }
 
@@ -39,11 +104,16 @@ function journeyLine() {
   if (!list || !segments.length) return;
 
   const mm = gsap.matchMedia();
-  mm.add({ desktop: '(min-width: 1024px)', mobile: '(max-width: 1023.98px)' }, (ctx) => {
+  mm.add({ desktop: DESKTOP, mobile: MOBILE }, (ctx) => {
     const axis = ctx.conditions!.desktop ? 'scaleX' : 'scaleY';
     gsap.set(segments, { [axis]: 0 });
     const tl = gsap.timeline({
-      scrollTrigger: { trigger: list, start: 'top 80%', end: ctx.conditions!.desktop ? 'top 35%' : 'bottom 65%', scrub: 0.5 },
+      scrollTrigger: {
+        trigger: list,
+        start: 'top 85%',
+        end: ctx.conditions!.desktop ? 'top 40%' : 'bottom 75%',
+        scrub: 0.5,
+      },
     });
     segments.forEach((s) => tl.to(s, { [axis]: 1, ease: 'none', duration: 1 }));
   });
@@ -67,16 +137,15 @@ function answerSheet() {
   gsap.set(score, { autoAlpha: 0 });
 
   const tl = gsap.timeline({ paused: true, defaults: { ease: EASE } });
-  tl.to(okRows, { autoAlpha: 1, x: 0, duration: 0.35 });
+  tl.to(okRows, { autoAlpha: 1, x: 0, duration: 0.4 });
   mistakeRows.forEach((row, i) => {
-    const at = `>+0.15`;
-    tl.to(sweeps[i], { scaleX: 1, duration: 0.3 }, at)
-      .to(marks[i].querySelectorAll('path'), { strokeDashoffset: 0, duration: 0.2, stagger: 0.08 }, '<0.1')
-      .to(row, { autoAlpha: 1, x: 0, duration: 0.35 }, '<0.1');
+    tl.to(sweeps[i], { scaleX: 1, duration: 0.35 }, '>+0.25')
+      .to(marks[i].querySelectorAll('path'), { strokeDashoffset: 0, duration: 0.25, stagger: 0.1 }, '<0.1')
+      .to(row, { autoAlpha: 1, x: 0, duration: 0.4 }, '<0.1');
   });
-  tl.to(score, { autoAlpha: 1, duration: 0.25 }, '>+0.1');
+  tl.to(score, { autoAlpha: 1, duration: 0.3 }, '>+0.15');
 
-  ScrollTrigger.create({ trigger: fig, start: 'top 70%', once: true, onEnter: () => tl.play() });
+  whenReached(fig, 0.85, () => tl.play());
 }
 
 function countUp() {
@@ -91,21 +160,26 @@ function countUp() {
       const state = { v: 0 };
       gsap.to(state, {
         v: target,
-        duration: 0.6,
-        ease: EASE,
+        duration: 1.4,
+        ease: 'power3.out',
         onUpdate: () => (el.textContent = format(state.v)),
       });
     });
 
-  if (block.getBoundingClientRect().top > window.innerHeight * 0.8) {
-    counters.forEach((el) => (el.textContent = '0'));
-  }
-  ScrollTrigger.create({ trigger: block, start: 'top 80%', once: true, onEnter: start });
+  // Already in view (or scrolled past) when GSAP arrives: count from 0 right away rather than
+  // leaving the final figures static.
+  counters.forEach((el) => (el.textContent = '0'));
+  whenReached(block, 0.85, start);
 }
 
 export function initMotion() {
+  progressBar();
   heroTilt();
+  heroParallax();
+  headingWords();
   journeyLine();
   answerSheet();
   countUp();
+  // Fonts or the late-loading hero image can shift trigger positions slightly.
+  document.fonts?.ready.then(() => ScrollTrigger.refresh());
 }
