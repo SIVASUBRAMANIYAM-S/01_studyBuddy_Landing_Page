@@ -50,38 +50,42 @@ These are the visual habits of the current app and posters 1–2. **They must no
 
 ## 3. Colour tokens
 
-A warm paper base with deep-green ink, one burnt-orange accent, and teal taken from the Vivodha logo as a quiet support colour.
+Matched to the Study Buddy app (studybuddy.vivodha.com): a light blue-white page, deep navy ink and dark bands like the app sidebar, royal-blue buttons like the app's Sign In, an orange/amber energy accent like "Score Higher" on the login page, and indigo as the quiet support colour. Token names were kept from the first theme so components didn't change (`teal` now holds indigo).
 
 ```css
 :root {
   /* Surfaces */
-  --paper:        #FBF7F0;  /* page background, warm off-white */
-  --paper-2:      #F3ECE0;  /* alternate section band */
+  --paper:        #F5F8FF;  /* page background, light blue-white */
+  --paper-2:      #EAF0FD;  /* alternate section band */
   --surface:      #FFFFFF;  /* cards, inputs, dashboard frame */
 
   /* Ink */
-  --ink:          #12302A;  /* headings, body, dark CTA band */
-  --ink-2:        #4A5A55;  /* secondary / muted text */
-  --ink-on-dark:  #C9D6D1;  /* body text on --ink bands */
+  --ink:          #13235B;  /* headings, body, navy dark bands */
+  --ink-2:        #4A5677;  /* secondary / muted text */
+  --ink-on-dark:  #C8D3F5;  /* body text on --ink bands */
 
-  /* Accent: burnt orange (decisions only) */
-  --accent:       #C2541B;  /* primary button fill, large highlight words, underline stroke */
-  --accent-hover: #A84716;  /* button hover/active */
-  --accent-ink:   #9E4314;  /* small orange text on paper (eyebrows, links) */
-  --accent-on-dark:#F08A4B; /* orange text/eyebrows on --ink bands */
-  --accent-tint:  #FBE6D6;  /* audience badge background, highlights */
+  /* Primary: royal blue (actions) */
+  --primary:       #2563EB; /* button fill, logo mark, focus ring */
+  --primary-hover: #1D4ED8; /* button hover */
 
-  /* Support: teal from logo (data and reassurance) */
-  --teal:         #0E7C86;  /* chart bars, icons, check marks */
-  --teal-ink:     #0B6670;  /* teal text */
-  --teal-tint:    #E0F0EF;  /* soft info backgrounds */
+  /* Accent: orange / amber (energy and emphasis, not buttons) */
+  --accent:       #EA580C;  /* large highlight words, underline stroke, eyebrow rules, markers */
+  --accent-hover: #C2410C;
+  --accent-ink:   #C2410C;  /* small orange text on paper (eyebrows, links), numbered markers */
+  --accent-on-dark:#FBBF24; /* amber eyebrows/script on --ink bands */
+  --accent-tint:  #FFEDD5;  /* audience badge background, highlights */
+
+  /* Support: indigo (data and reassurance). Token still named "teal". */
+  --teal:         #4F46E5;  /* chart bars, icons, check marks */
+  --teal-ink:     #4338CA;  /* indigo text/labels */
+  --teal-tint:    #E0E7FF;  /* soft info backgrounds */
 
   /* Chart-only third hue (dashboard mockup) */
-  --ochre:        #D9A21B;
+  --ochre:        #F59E0B;
 
   /* Lines */
-  --line:         #E4DCCD;  /* hairline dividers & card borders (decorative) */
-  --line-strong:  #8C8273;  /* input borders (meets 3:1 non-text) */
+  --line:         #DCE3F3;  /* hairline dividers & card borders (decorative) */
+  --line-strong:  #7C88A6;  /* input borders (meets 3:1 non-text) */
 
   /* Feedback (forms only) */
   --error:        #B42318;
@@ -89,39 +93,38 @@ A warm paper base with deep-green ink, one burnt-orange accent, and teal taken f
   --warning:      #8A5A00;
 
   /* Focus */
-  --focus:        #0B6670;  /* 2px ring + 2px offset in --paper */
+  --focus:        #2563EB;  /* 2px ring + 2px offset in --paper */
 }
 ```
 
-*Why green ink rather than black or navy:* it is softer than black, distinct from the navy used by every edtech competitor, and matches poster 3's footer band.
-*Why only one accent:* if orange only ever means "act here", the eye finds the CTA without effort.
-*Why teal is support only:* it ties the page back to the logo without competing with orange for attention.
+*Why blue and navy:* principals who sign up land in the Study Buddy app, so the page should already feel like the product they'll use. One brand, one first impression.
+*Why blue buttons and orange highlights:* blue says "act here" consistently with the app, and orange gives the headline and markers energy without competing with the buttons.
+*Why indigo is support only:* it carries data (bars, checks, icons) and stays quieter than both blue and orange.
 
 ### Contrast ratios (WCAG 2.1, computed)
 
 | Foreground | Background | Ratio | Use | AA |
 |---|---|---|---|---|
-| `--ink` #12302A | `--paper` #FBF7F0 | **13.27** | Body, headings | ✅ AAA |
-| `--ink` #12302A | `--surface` #FFFFFF | **14.17** | Card text | ✅ AAA |
-| `--ink-2` #4A5A55 | `--paper` | **6.82** | Muted text | ✅ |
-| `--ink-2` #4A5A55 | `--paper-2` #F3ECE0 | **6.20** | Muted text on bands | ✅ |
-| #FFFFFF | `--accent` #C2541B | **4.59** | Primary button label | ✅ |
-| #FFFFFF | `--accent-hover` #A84716 | **5.87** | Button hover | ✅ |
-| `--accent-ink` #9E4314 | `--paper` | **6.02** | Eyebrows, links | ✅ |
-| `--accent-ink` #9E4314 | `--paper-2` | **5.47** | Eyebrows on bands | ✅ |
-| `--accent` #C2541B | `--paper` | **4.30** | **Large display text only** (≥24px, or ≥18.66px bold) | ✅ large / ❌ small |
-| `--teal` #0E7C86 | `--paper` | **4.63** | Icons, teal text | ✅ |
-| `--teal-ink` #0B6670 | `--paper` | **6.25** | Teal links/labels | ✅ |
-| `--teal-ink` #0B6670 | `--teal-tint` #E0F0EF | **5.68** | Info notes | ✅ |
-| #FFFFFF | `--ink` #12302A | **14.17** | Headline on dark band | ✅ AAA |
-| `--ink-on-dark` #C9D6D1 | `--ink` | **9.46** | Body on dark band | ✅ AAA |
-| `--accent-on-dark` #F08A4B | `--ink` | **5.70** | Eyebrow on dark band | ✅ |
-| `--ink` | `--accent-tint` #FBE6D6 | **11.74** | Audience badge | ✅ AAA |
-| `--line-strong` #8C8273 | `--surface` | **3.78** | Input borders (non-text, needs 3:1) | ✅ |
+| `--ink` #13235B | `--paper` #F5F8FF | **13.92** | Body, headings | ✅ AAA |
+| `--ink` #13235B | `--surface` #FFFFFF | **14.80** | Card text | ✅ AAA |
+| `--ink-2` #4A5677 | `--paper` | **6.84** | Muted text | ✅ |
+| `--ink-2` #4A5677 | `--paper-2` #EAF0FD | **6.36** | Muted text on bands | ✅ |
+| #FFFFFF | `--primary` #2563EB | **5.17** | Button label | ✅ |
+| #FFFFFF | `--primary-hover` #1D4ED8 | **6.70** | Button hover | ✅ |
+| `--accent-ink` #C2410C | `--paper` | **4.87** | Eyebrows, links | ✅ |
+| `--accent-ink` #C2410C | `--paper-2` | **4.53** | Eyebrows on bands | ✅ |
+| `--accent` #EA580C | `--paper` | **3.35** | **Large display text only** (≥24px, or ≥18.66px bold) | ✅ large / ❌ small |
+| `--teal` #4F46E5 | `--paper` | **5.91** | Icons, indigo text | ✅ |
+| `--teal-ink` #4338CA | `--teal-tint` #E0E7FF | **6.41** | Info notes | ✅ |
+| #FFFFFF | `--ink` #13235B | **14.80** | Headline on navy band | ✅ AAA |
+| `--ink-on-dark` #C8D3F5 | `--ink` | **9.93** | Body on navy band | ✅ AAA |
+| `--accent-on-dark` #FBBF24 | `--ink` | **8.86** | Eyebrow/script on navy band | ✅ AAA |
+| `--ink` | `--accent-tint` #FFEDD5 | **12.91** | Audience badge | ✅ AAA |
+| `--line-strong` #7C88A6 | `--surface` | **3.54** | Input borders (non-text, needs 3:1) | ✅ |
 | `--error` #B42318 | `--surface` | **6.57** | Error message | ✅ |
 | `--success` #1F7A4D | `--surface` | **5.32** | Success message | ✅ |
 
-**Rule:** `--accent` is never used for text under 24px. Use `--accent-ink` instead. `--line` (1.28:1) is decorative only and never the sole boundary of an interactive control.
+**Rule:** `--accent` is never used for text under 24px. Use `--accent-ink` instead. White labels on small orange fills (Class 11 node, numbered markers) use `--accent-ink`. `--line` is decorative only and never the sole boundary of an interactive control.
 
 ---
 
@@ -227,13 +230,13 @@ Each component lists its anatomy, states, mobile behaviour, and the thing not to
 
 | Variant | Style | Use |
 |---|---|---|
-| **Primary** | `--accent` fill, white Source Sans 3 600 16px, `--r-sm`, padding 14×22, trailing arrow icon (Lucide `arrow-right`, 18px) | One per viewport: "Book a free institute demo" |
+| **Primary** | `--primary` fill, white Source Sans 3 600 16px, `--r-sm`, padding 14×22, trailing arrow icon (Lucide `arrow-right`, 18px) | One per viewport: "Book a free institute demo" |
 | **Secondary** | Transparent, 1.5px `--ink` border, `--ink` text | "Explore the platform" |
 | **Text link** | `--accent-ink`, underline offset 3px, thickness 1px → 2px on hover | Inline links |
 | **On dark** | Primary unchanged; secondary uses a white border and white text | CTA band |
 
 - **Height:** 48px minimum on mobile and 44px on desktop. Full-width on mobile when stacked.
-- **States:** hover → `--accent-hover`, and the arrow shifts right by 3px (150ms). Active → translateY(1px). Focus-visible → 2px `--focus` ring with 2px offset. Disabled → 40% opacity and `cursor: not-allowed`, never only grey.
+- **States:** hover → `--primary-hover`, and the arrow shifts right by 3px (150ms). Active → translateY(1px). Focus-visible → 2px `--focus` ring with 2px offset. Disabled → 40% opacity and `cursor: not-allowed`, never only grey.
 - **Loading:** label stays, with an inline 16px spinner; width is locked to prevent layout shift.
 - **Don't:** use gradients, glows, more than one primary per screen, or all-caps labels.
 

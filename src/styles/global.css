@@ -47,34 +47,40 @@
   --color-transparent: transparent;
   --color-current: currentColor;
 
-  --color-paper: #fbf7f0;
-  --color-paper-2: #f3ece0;
+  /* Study Buddy app palette (studybuddy.vivodha.com): blue-white page, navy ink and bands,
+     royal-blue buttons, orange/amber energy accent, indigo secondary. */
+  --color-paper: #f5f8ff;
+  --color-paper-2: #eaf0fd;
   --color-surface: #ffffff;
 
-  --color-ink: #12302a;
-  --color-ink-2: #4a5a55;
-  --color-ink-on-dark: #c9d6d1;
+  --color-ink: #13235b;
+  --color-ink-2: #4a5677;
+  --color-ink-on-dark: #c8d3f5;
 
-  --color-accent: #c2541b;
-  --color-accent-hover: #a84716;
-  --color-accent-ink: #9e4314;
-  --color-accent-on-dark: #f08a4b;
-  --color-accent-tint: #fbe6d6;
+  --color-primary: #2563eb;
+  --color-primary-hover: #1d4ed8;
 
-  --color-teal: #0e7c86;
-  --color-teal-ink: #0b6670;
-  --color-teal-tint: #e0f0ef;
+  --color-accent: #ea580c;
+  --color-accent-hover: #c2410c;
+  --color-accent-ink: #c2410c;
+  --color-accent-on-dark: #fbbf24;
+  --color-accent-tint: #ffedd5;
 
-  --color-ochre: #d9a21b;
+  /* Token names kept from the original theme so components don't change; "teal" now holds the indigo secondary. */
+  --color-teal: #4f46e5;
+  --color-teal-ink: #4338ca;
+  --color-teal-tint: #e0e7ff;
 
-  --color-line: #e4dccd;
-  --color-line-strong: #8c8273;
+  --color-ochre: #f59e0b;
+
+  --color-line: #dce3f3;
+  --color-line-strong: #7c88a6;
 
   --color-error: #b42318;
   --color-success: #1f7a4d;
   --color-warning: #8a5a00;
 
-  --color-focus: #0b6670;
+  --color-focus: #2563eb;
 
   --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
   --font-body: 'Source Sans 3', 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
@@ -106,8 +112,8 @@
   --radius-lg: 20px;
   --radius-full: 999px;
 
-  --shadow-1: 0 1px 2px rgb(18 48 42 / 0.06), 0 1px 1px rgb(18 48 42 / 0.04);
-  --shadow-2: 0 12px 32px -12px rgb(18 48 42 / 0.18), 0 2px 6px rgb(18 48 42 / 0.06);
+  --shadow-1: 0 1px 2px rgb(19 35 91 / 0.06), 0 1px 1px rgb(19 35 91 / 0.04);
+  --shadow-2: 0 12px 32px -12px rgb(19 35 91 / 0.2), 0 2px 6px rgb(19 35 91 / 0.06);
 
   --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
   --dur-fast: 150ms;
